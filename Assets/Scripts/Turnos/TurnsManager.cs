@@ -82,7 +82,12 @@ public class TurnsManager : MonoBehaviour
 
     private void ResultadoRuleta(int Res)
     {
-        enemigoSeleccionado.Damagear(Res);
+        if (enemigoSeleccionado.Damagear(Res))
+        {
+            enemigoSeleccionado = null;
+            navegation.performed += Navegation_performed;
+            GuirarRuleta.interactable = false;
+        }
         jugadorListo = true;
 
     }
@@ -99,10 +104,19 @@ public class TurnsManager : MonoBehaviour
         if (enemigosUI.Count == 0) return;
 
         int currentIndex = enemigosUI.FindIndex(e => e.EstaSeleccionado);
-        int newIndex = (currentIndex + direction + enemigosUI.Count) % enemigosUI.Count;
+        int newIndex = currentIndex;
+        int intentos = 0;
 
+        do
+        {
+            newIndex = (newIndex + direction + enemigosUI.Count) % enemigosUI.Count;
+            intentos++;
+        } while (!enemigosUI[newIndex].IsAlive && intentos < enemigosUI.Count);
 
-        if (currentIndex != -1)
+        // Si no encontramos ninguno vivo, no hacer nada
+        if (!enemigosUI[newIndex].IsAlive) return;
+
+        if (currentIndex != -1 && enemigosUI[currentIndex].IsAlive)
             enemigosUI[currentIndex].DeselectEnemy();
 
         enemigoSeleccionado = enemigosUI[newIndex];
@@ -111,7 +125,6 @@ public class TurnsManager : MonoBehaviour
 
     private void FixEnemy(InputAction.CallbackContext context)
     {
-        if (enemigoSeleccionado == null) return;
         // TODO Soniditos de fijar y desfijar
         if (enemigoSeleccionado.Fijado)
         {

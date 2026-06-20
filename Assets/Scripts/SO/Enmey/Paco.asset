@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Paco
   vida: 10
   tierEnemy: 0
-  currentShild: 0
+  currentShild: 23
   spriteEnemy: {fileID: -4670321437042714542, guid: 2245da6f0dc9b1247af3c0a97803b09b, type: 3}
+  spriteMuerto: {fileID: 21300000, guid: a80a6665a2899534489a23d5839ea2c2, type: 3}
   dmg: 0

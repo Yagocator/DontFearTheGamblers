@@ -133,7 +133,7 @@ public class EnemyUI : MonoBehaviour
         return colorNormal;
     }
 
-    public void Damagear(int Damage)
+    public bool Damagear(int Damage)
     {
         int dañoRestante = Damage;
 
@@ -151,15 +151,21 @@ public class EnemyUI : MonoBehaviour
             {
                 enemySO.vida = 0;
                 Morir();
+                return true;
             }
         }
-
         UpdateUI();
+        return false;
     }
 
     private void Morir()
     {
         IsAlive = false;
+        ImageEnemy.sprite = enemySO.spriteMuerto;
+        DeselectEnemy();
+        panelHighlight.color = Color.black;
+        Fijado = false;
+        UpdateUI();
     }
 
 
