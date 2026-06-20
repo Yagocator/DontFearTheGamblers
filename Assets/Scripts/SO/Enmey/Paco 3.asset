@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   name: Luprecia
   vida: 21
+  vidaMax: 21
   tierEnemy: 0
   currentShild: 23
   spriteEnemy: {fileID: -7071371588039393918, guid: 19ea6a9163f6d834a93bb77b614c0734, type: 3}
   spriteMuerto: {fileID: 21300000, guid: a80a6665a2899534489a23d5839ea2c2, type: 3}
-  dmg: 0
+  dmg: 3

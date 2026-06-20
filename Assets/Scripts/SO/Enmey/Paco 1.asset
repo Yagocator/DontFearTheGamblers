@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   name: Alegandro
   vida: 200
+  vidaMax: 200
   tierEnemy: 1
   currentShild: 34
   spriteEnemy: {fileID: -6996019691302424102, guid: dad8a9e2e0510b24eac4795253b76868, type: 3}
   spriteMuerto: {fileID: 21300000, guid: a80a6665a2899534489a23d5839ea2c2, type: 3}
-  dmg: 0
+  dmg: 3

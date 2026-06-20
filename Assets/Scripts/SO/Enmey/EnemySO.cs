@@ -4,6 +4,7 @@ public class EnemySO : ScriptableObject
 {
     public string name;
     public int vida;
+    public int vidaMax;
     public TierEnmey tierEnemy;
     public int currentShild;
     public Sprite spriteEnemy;

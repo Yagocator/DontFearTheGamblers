@@ -17,6 +17,9 @@ public class TurnsManager : MonoBehaviour
 
     public EnemyUI enemigoSeleccionado;
 
+    // true mientras hay un enemigo fijado (o la ruleta en marcha): bloquea cambiar selección
+    private bool seleccionBloqueada = false;
+
     public InputActionAsset inputActions;
 
     private InputAction navegation;
@@ -34,6 +37,10 @@ public class TurnsManager : MonoBehaviour
     {
         while (!win)
         {
+            foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
+            {
+                enemigo.Intencion();
+            }
             if (isPlayerTurn)
             {
                 fixEnemy.performed += FixEnemy;
@@ -47,7 +54,10 @@ public class TurnsManager : MonoBehaviour
             {
                 // Lógica para el turno del enemigo
                 Debug.Log("Turno del enemigo");
-                // Aquí puedes agregar la lógica para que el enemigo realice su acción
+                foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))// ejecutar acciones
+                {
+                    yield return enemigo.EjecutarAccionResaltada();
+                }
                 yield return new WaitForSeconds(1f); // Simulación de tiempo de acción del enemigo
                 isPlayerTurn = true; // Cambiar al turno del jugador
             }
@@ -61,6 +71,8 @@ public class TurnsManager : MonoBehaviour
     {
         RuletaController.ResultRuleta += ResultadoRuleta;
         RuletaController.ButtonPressed += BotonPressed;
+        EnemyUI.EnemyHovered += EnemyHovered_performed;
+        EnemyUI.EnemyClicked += EnemyClicked_performed;
         inputActions.Enable();
         navegation.performed += Navegation_performed;
         fixEnemy.performed += FixEnemy;
@@ -69,6 +81,8 @@ public class TurnsManager : MonoBehaviour
     {
         RuletaController.ResultRuleta -= ResultadoRuleta;
         RuletaController.ButtonPressed -= BotonPressed;
+        EnemyUI.EnemyHovered -= EnemyHovered_performed;
+        EnemyUI.EnemyClicked -= EnemyClicked_performed;
         inputActions.Disable();
         navegation.performed -= Navegation_performed;
         fixEnemy.performed -= FixEnemy;
@@ -87,6 +101,7 @@ public class TurnsManager : MonoBehaviour
             enemigoSeleccionado = null;
             navegation.performed += Navegation_performed;
             GuirarRuleta.interactable = false;
+            seleccionBloqueada = false;
         }
         jugadorListo = true;
 
@@ -97,6 +112,19 @@ public class TurnsManager : MonoBehaviour
         float y = context.ReadValue<Vector2>().y;
         float x = context.ReadValue<Vector2>().x;
         changeEnemySelection(y > 0 ? -1 : (y < 0 ? 1 : 0));
+    }
+
+    private void EnemyHovered_performed(EnemyUI enemy)
+    {
+        // Si hay un enemigo fijado, o la selección está bloqueada, el ratón no puede cambiarla
+        if (seleccionBloqueada) return;
+        if (enemy == enemigoSeleccionado || !enemy.IsAlive) return;
+
+        if (enemigoSeleccionado != null && enemigoSeleccionado.IsAlive)
+            enemigoSeleccionado.DeselectEnemy();
+
+        enemigoSeleccionado = enemy;
+        enemy.SelectedEnemy();
     }
 
     public void changeEnemySelection(int direction)
@@ -125,21 +153,36 @@ public class TurnsManager : MonoBehaviour
 
     private void FixEnemy(InputAction.CallbackContext context)
     {
+        ToggleFijarEnemigo();
+    }
+
+    private void EnemyClicked_performed(EnemyUI enemy)
+    {
+        // Solo fija si el clic ha sido encima del enemigo que ya está seleccionado
+        // (con el ratón, hover ya selecciona; con teclado/mando, debe coincidir con la selección actual)
+        if (enemy != enemigoSeleccionado) return;
+        ToggleFijarEnemigo();
+    }
+
+    private void ToggleFijarEnemigo()
+    {
+        if (enemigoSeleccionado == null) return;
+
         // TODO Soniditos de fijar y desfijar
         if (enemigoSeleccionado.Fijado)
         {
             enemigoSeleccionado.Fijar(false);
             GuirarRuleta.interactable = false;
             navegation.performed += Navegation_performed;
+            seleccionBloqueada = false;
         }
         else
         {
             enemigoSeleccionado.Fijar(true);
             GuirarRuleta.interactable = true;
             navegation.performed -= Navegation_performed;
+            seleccionBloqueada = true;
         }
-
-
     }
 
 
