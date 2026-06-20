@@ -13,41 +13,41 @@ public class InitCombat : MonoBehaviour
     public TextMeshProUGUI pjVida;
     public TextMeshProUGUI pjShild;
     public TurnsManager TurnsManager;
-        void Start()
+    void Start()
     {
         InitPJ();
         InitEnemy();
     }
     private void InitEnemy()
-{
-    int cuantEnemys = Random.Range(1, 4); // da 1, 2 o 3
-
-    for (int i = 0; i < Enemys.Length; i++)
     {
-        if (i < cuantEnemys)
+        int cuantEnemys = Random.Range(1, 4); // da 1, 2 o 3
+
+        for (int i = 0; i < Enemys.Length; i++)
         {
-            Enemys[i].SetActive(true);
-
-            EnemyUI enemyUI = Enemys[i].GetComponent<EnemyUI>();
-
-            while (true)
+            if (i < cuantEnemys)
             {
-                int indexEnemySO = Random.Range(0, posibleEnemySos.Length);
-                if (posibleEnemySos[indexEnemySO].tierEnemy == DificultadDelNivel)
+                Enemys[i].SetActive(true);
+
+                EnemyUI enemyUI = Enemys[i].GetComponent<EnemyUI>();
+
+                while (true)
                 {
-                    enemyUI.enemySO = posibleEnemySos[indexEnemySO];
-                    TurnsManager.enemigosUI.Add(enemyUI);
-                    TurnsManager.enemigosSO.Add(enemyUI.enemySO);
-                    break;
+                    int indexEnemySO = Random.Range(0, posibleEnemySos.Length);
+                    if (posibleEnemySos[indexEnemySO].tierEnemy == DificultadDelNivel)
+                    {
+                        enemyUI.InitializeEnemy(posibleEnemySos[indexEnemySO]);
+                        TurnsManager.enemigosUI.Add(enemyUI);
+                        TurnsManager.enemigosSO.Add(posibleEnemySos[indexEnemySO]);
+                        break;
+                    }
                 }
             }
-        }
-        else
-        {
-            Enemys[i].SetActive(false); // esto es lo que faltaba
+            else
+            {
+                Enemys[i].SetActive(false); // esto es lo que faltaba
+            }
         }
     }
-}
 
     private void InitPJ()
     {

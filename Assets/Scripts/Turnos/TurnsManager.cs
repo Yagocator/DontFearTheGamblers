@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,15 +13,17 @@ public class TurnsManager : MonoBehaviour
     public List<EnemyUI> enemigosUI = new List<EnemyUI>();
     public List<EnemySO> enemigosSO = new List<EnemySO>();
 
-    private EnemyUI enemigoSeleccionado;
+    public EnemyUI enemigoSeleccionado;
 
     public InputActionAsset inputActions;
-    
+
     private InputAction navegation;
+    private InputAction fixEnemy;
 
     void Awake()
     {
         navegation = inputActions.FindActionMap("UI").FindAction("Navigate");
+        fixEnemy = inputActions.FindActionMap("UI").FindAction("FixEnemy");
 
     }
 
@@ -32,7 +35,7 @@ public class TurnsManager : MonoBehaviour
             {
                 // Lógica para el turno del jugador
                 Debug.Log("Turno del jugador");
-                 yield return new WaitUntil(() => jugadorListo);
+                yield return new WaitUntil(() => jugadorListo);
                 isPlayerTurn = false;
             }
             else
@@ -51,13 +54,15 @@ public class TurnsManager : MonoBehaviour
     }
     void OnEnable()
     {
-        navegation.Enable();
+        inputActions.Enable();
         navegation.performed += Navegation_performed;
+        fixEnemy.performed += FixEnemy;
     }
     void OnDisable()
     {
-        navegation.Disable();
+        inputActions.Disable();
         navegation.performed -= Navegation_performed;
+        fixEnemy.performed -= FixEnemy;
     }
 
     private void Navegation_performed(InputAction.CallbackContext context)
@@ -80,6 +85,24 @@ public class TurnsManager : MonoBehaviour
 
         enemigoSeleccionado = enemigosUI[newIndex];
         enemigosUI[newIndex].SelectedEnemy();
+    }
+
+    private void FixEnemy(InputAction.CallbackContext context)
+    {
+        if (enemigoSeleccionado == null) return;
+        // TODO Soniditos de fijar y desfijar
+        if (enemigoSeleccionado.Fijado)
+        {
+            enemigoSeleccionado.Fijar(false);
+            navegation.performed += Navegation_performed;
+        }
+        else
+        {
+            enemigoSeleccionado.Fijar(true);
+            navegation.performed -= Navegation_performed;
+        }
+
+
     }
 
 
