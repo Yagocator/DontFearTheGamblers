@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -100,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     private void Morir()
     {
-
+        // TODO hay que hacer que te puedas morir
     }
 
     private void UpdateUI()
@@ -108,5 +109,12 @@ public class GameManager : MonoBehaviour
         pjVida.text = playerSO.vida.ToString();
         pjShild.text = playerSO.shild.ToString();
     }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
+
+
 }
 

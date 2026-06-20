@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602e42fdd85a9224fa16e1e8d854cfa2, type: 3}
   m_Name: PJ
   m_EditorClassIdentifier: Assembly-CSharp::PJSO
-  vida: 10
-  shild: 2
+  vida: 30
+  vidaMax: 30
+  shild: 5

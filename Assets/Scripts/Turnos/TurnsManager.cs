@@ -17,7 +17,6 @@ public class TurnsManager : MonoBehaviour
 
     public EnemyUI enemigoSeleccionado;
 
-    // true mientras hay un enemigo fijado (o la ruleta en marcha): bloquea cambiar selección
     private bool seleccionBloqueada = false;
 
     public InputActionAsset inputActions;
