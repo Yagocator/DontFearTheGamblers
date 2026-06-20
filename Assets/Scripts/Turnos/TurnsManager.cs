@@ -67,7 +67,7 @@ public class TurnsManager : MonoBehaviour
     }
     void OnEnable()
     {
-        RuletaController.ResultRuleta += ResultadoRuleta;
+        //RuletaController.ResultRuleta += ResultadoRuleta;
         RuletaController.ButtonPressed += BotonPressed;
         EnemyUI.EnemyHovered += EnemyHovered_performed;
         EnemyUI.EnemyClicked += EnemyClicked_performed;
@@ -77,7 +77,7 @@ public class TurnsManager : MonoBehaviour
     }
     void OnDisable()
     {
-        RuletaController.ResultRuleta -= ResultadoRuleta;
+        //RuletaController.ResultRuleta -= ResultadoRuleta;
         RuletaController.ButtonPressed -= BotonPressed;
         EnemyUI.EnemyHovered -= EnemyHovered_performed;
         EnemyUI.EnemyClicked -= EnemyClicked_performed;

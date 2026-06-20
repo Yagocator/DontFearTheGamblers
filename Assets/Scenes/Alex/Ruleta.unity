@@ -255,7 +255,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1957086675}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -281,6 +281,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2122546812}
+  - {fileID: 624352685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -288,6 +289,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &624352684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624352685}
+  m_Layer: 0
+  m_Name: Pinchos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &624352685
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624352684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 425071846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -910, y: -330}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1781438900
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,11 +365,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1781438900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a9a1ed3b049d604687e4d843cbeef32, type: 3}
+  m_Script: {fileID: 11500000, guid: 488c7b6ede89e0d48901ffd951eef72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuletaController
   ruleta: {fileID: 415392190}
-  SlootTemplate: {fileID: 5551508858614013693, guid: a3ae86b94081abc459a79c6ce7700bb1, type: 3}
+  slootTemplate: {fileID: 5551508858614013693, guid: a3ae86b94081abc459a79c6ce7700bb1, type: 3}
+  pinchosTemplate: {fileID: 8937760465104197661, guid: 101ecec31366cdf4a811b59af2b9338e, type: 3}
+  huecoTemplate: {fileID: 5426067801339103049, guid: 2bd8789aad6bb5c43be6864b53064f61, type: 3}
+  huecosParent: {fileID: 425071846}
+  huecoOffsetLocalY: 1
+  pinchosParent: {fileID: 624352685}
+  canvas: {fileID: 425071845}
+  pinchosIniciales: 5
+  maxPinchos: 8
+  primeraPosicionPincho: {x: 0, y: 250}
+  separacionEntrePinchos: 90
 --- !u!1 &1957086673
 GameObject:
   m_ObjectHideFlags: 0

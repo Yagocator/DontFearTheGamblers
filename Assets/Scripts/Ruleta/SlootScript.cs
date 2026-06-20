@@ -9,6 +9,8 @@ public class SlootScript : MonoBehaviour
     private int suma; 
 
     private int factorEscala; 
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public SpriteRenderer spriteRenderer;
 

@@ -66,9 +66,20 @@ public class RuletaScript : MonoBehaviour
     public int casillaPrincipal()
     {
         float parte = 9.72972972972f; 
+        float halfParte = parte / 2;
 
         float z = transform.localEulerAngles.z; 
-        int valor = (int) (z / parte);
+        int valor = (int) ((z + halfParte) / parte);
+        return valor; 
+    }
+
+    public int casillaWithRotation(float rotation)
+    {
+        float parte = 9.72972972972f; 
+        float halfParte = parte / 2;
+
+        float z = transform.localEulerAngles.z; 
+        int valor = ((int) ((z + rotation + halfParte) / parte) % 37);
         return valor; 
     }
 }
