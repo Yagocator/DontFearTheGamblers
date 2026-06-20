@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class TurnsManager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class TurnsManager : MonoBehaviour
     private InputAction navegation;
     private InputAction fixEnemy;
 
+    [SerializeField] private Button GuirarRuleta;
     void Awake()
     {
         navegation = inputActions.FindActionMap("UI").FindAction("Navigate");
@@ -33,9 +36,11 @@ public class TurnsManager : MonoBehaviour
         {
             if (isPlayerTurn)
             {
+                fixEnemy.performed += FixEnemy;
                 // Lógica para el turno del jugador
                 Debug.Log("Turno del jugador");
                 yield return new WaitUntil(() => jugadorListo);
+                jugadorListo = false;
                 isPlayerTurn = false;
             }
             else
@@ -54,15 +59,32 @@ public class TurnsManager : MonoBehaviour
     }
     void OnEnable()
     {
+        RuletaController.ResultRuleta += ResultadoRuleta;
+        RuletaController.ButtonPressed += BotonPressed;
         inputActions.Enable();
         navegation.performed += Navegation_performed;
         fixEnemy.performed += FixEnemy;
     }
     void OnDisable()
     {
+        RuletaController.ResultRuleta -= ResultadoRuleta;
+        RuletaController.ButtonPressed -= BotonPressed;
         inputActions.Disable();
         navegation.performed -= Navegation_performed;
         fixEnemy.performed -= FixEnemy;
+    }
+
+    private void BotonPressed(bool bol)
+    {
+        navegation.performed -= Navegation_performed;
+        fixEnemy.performed -= FixEnemy;
+    }
+
+    private void ResultadoRuleta(int Res)
+    {
+        enemigoSeleccionado.Damagear(Res);
+        jugadorListo = true;
+
     }
 
     private void Navegation_performed(InputAction.CallbackContext context)
@@ -94,11 +116,13 @@ public class TurnsManager : MonoBehaviour
         if (enemigoSeleccionado.Fijado)
         {
             enemigoSeleccionado.Fijar(false);
+            GuirarRuleta.interactable = false;
             navegation.performed += Navegation_performed;
         }
         else
         {
             enemigoSeleccionado.Fijar(true);
+            GuirarRuleta.interactable = true;
             navegation.performed -= Navegation_performed;
         }
 

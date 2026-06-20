@@ -17,3 +17,4 @@ MonoBehaviour:
   tierEnemy: 0
   currentShild: 0
   spriteEnemy: {fileID: -4670321437042714542, guid: 2245da6f0dc9b1247af3c0a97803b09b, type: 3}
+  dmg: 0

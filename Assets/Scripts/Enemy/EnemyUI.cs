@@ -27,6 +27,7 @@ public class EnemyUI : MonoBehaviour
     [Header("Fijado")]
     public Color colorFijado = Color.red;
     public bool Fijado = false;
+    public bool IsAlive = true;
 
     void Start()
     {
@@ -47,6 +48,12 @@ public class EnemyUI : MonoBehaviour
         vidaEnemy.text = enemySO.vida.ToString();
         ShildEnemy.text = enemySO.currentShild.ToString();
         ImageEnemy.sprite = enemySO.spriteEnemy;
+    }
+
+    private void UpdateUI()
+    {
+        vidaEnemy.text = enemySO.vida.ToString();
+        ShildEnemy.text = enemySO.currentShild.ToString();
     }
 
     public void SelectedEnemy()
@@ -126,7 +133,34 @@ public class EnemyUI : MonoBehaviour
         return colorNormal;
     }
 
+    public void Damagear(int Damage)
+    {
+        int dañoRestante = Damage;
 
+        if (enemySO.currentShild > 0)
+        {
+            int dañoAlEscudo = Mathf.Min(enemySO.currentShild, dañoRestante);
+            enemySO.currentShild -= dañoAlEscudo;
+            dañoRestante -= dañoAlEscudo;
+        }
+
+        if (dañoRestante > 0)
+        {
+            enemySO.vida -= dañoRestante;
+            if (enemySO.vida <= 0)
+            {
+                enemySO.vida = 0;
+                Morir();
+            }
+        }
+
+        UpdateUI();
+    }
+
+    private void Morir()
+    {
+        IsAlive = false;
+    }
 
 
 }

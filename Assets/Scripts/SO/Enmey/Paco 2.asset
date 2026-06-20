@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Paco 2
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   name: federico
-  vida: 23
+  vida: 20
   tierEnemy: 0
-  currentShild: 1
+  currentShild: 0
   spriteEnemy: {fileID: 6454496833014990509, guid: 308bb22efeaeefb4a846e46fc345a4cd, type: 3}
+  dmg: 0

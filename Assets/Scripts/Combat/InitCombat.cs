@@ -35,9 +35,10 @@ public class InitCombat : MonoBehaviour
                     int indexEnemySO = Random.Range(0, posibleEnemySos.Length);
                     if (posibleEnemySos[indexEnemySO].tierEnemy == DificultadDelNivel)
                     {
-                        enemyUI.InitializeEnemy(posibleEnemySos[indexEnemySO]);
+                        EnemySO enemyInstance = Instantiate(posibleEnemySos[indexEnemySO]);
+                        enemyUI.InitializeEnemy(enemyInstance);
                         TurnsManager.enemigosUI.Add(enemyUI);
-                        TurnsManager.enemigosSO.Add(posibleEnemySos[indexEnemySO]);
+                        TurnsManager.enemigosSO.Add(enemyInstance);
                         break;
                     }
                 }
