@@ -36,7 +36,9 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public Vector3 escalaSeleccionado = Vector3.one * 1.08f;
     public float duracionAnim = 0.18f;
 
-    private Coroutine animCoroutine; // mutex: lo comparten selección, fijado, daño y resaltado de turno
+    private Coroutine animCoroutine;     // selección y fijado
+    private Coroutine feedbackCoroutine; // daño y curación (flash visual)
+    private Coroutine accionCoroutine;   // resaltado de turno / ejecución de acción
     private bool estaSeleccionado;
     public bool EstaSeleccionado => estaSeleccionado;
 
@@ -51,6 +53,12 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public float shakeFuerza = 12f;
     public float shakeDuracion = 0.2f;
 
+    [Header("Animación de curación")]
+    public Color colorCuracion = Color.green;
+    public float duracionCuracion = 0.08f;
+    public float shakePosFuerza = 8f;
+    public float shakePosDuracion = 0.25f;
+
     [Header("Resaltado de turno (ejecutando acción)")]
     public Color colorAccion = Color.green;
     public float duracionResaltadoAccion = 0.15f;
@@ -58,9 +66,13 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private RectTransform padreRect;
     private Coroutine shakeCoroutine;
+    private RectTransform vidaRect;
+    private RectTransform shildRect;
+    private Color colorOriginalVida;
+    private Color colorOriginalShild;
 
-    private AccionEnemy accionEnemy;
-    private int potencia;
+    public AccionEnemy accionEnemy;
+    public int potencia;
 
     void Start()
     {
@@ -68,6 +80,11 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             panelHighlight = Padre.GetComponentInChildren<Image>();
 
         padreRect = Padre.GetComponent<RectTransform>();
+        vidaRect = vidaEnemy.GetComponent<RectTransform>();
+        shildRect = ShildEnemy.GetComponent<RectTransform>();
+
+        colorOriginalVida = vidaEnemy.color;
+        colorOriginalShild = ShildEnemy.color;
 
         Padre.transform.localScale = escalaNormal;
         if (panelHighlight != null)
@@ -181,11 +198,20 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private void RecibirDamage()
     {
-        if (animCoroutine != null) StopCoroutine(animCoroutine);
-        animCoroutine = StartCoroutine(AnimarDamage());
+        if (feedbackCoroutine != null) StopCoroutine(feedbackCoroutine);
+        feedbackCoroutine = StartCoroutine(AnimarDamage());
 
         if (shakeCoroutine != null) StopCoroutine(shakeCoroutine);
         shakeCoroutine = StartCoroutine(AnimarShake());
+    }
+
+    private void RecibirCuracion()
+    {
+        if (feedbackCoroutine != null) StopCoroutine(feedbackCoroutine);
+        feedbackCoroutine = StartCoroutine(AnimarCuracion());
+
+        if (shakeCoroutine != null) StopCoroutine(shakeCoroutine);
+        shakeCoroutine = StartCoroutine(AnimarShakePositivo());
     }
 
     private IEnumerator AnimarDamage()
@@ -219,6 +245,37 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         animCoroutine = null;
     }
 
+    private IEnumerator AnimarCuracion()
+    {
+        Color colorInicio = panelHighlight != null ? panelHighlight.color : Color.white;
+        Color colorBase = ColorObjetivo();
+
+        float t = 0f;
+        while (t < duracionCuracion)
+        {
+            t += Time.unscaledDeltaTime;
+            float progreso = Mathf.Clamp01(t / duracionCuracion);
+            if (panelHighlight != null)
+                panelHighlight.color = Color.Lerp(colorInicio, colorCuracion, progreso);
+            yield return null;
+        }
+
+        t = 0f;
+        while (t < duracionCuracion)
+        {
+            t += Time.unscaledDeltaTime;
+            float progreso = Mathf.Clamp01(t / duracionCuracion);
+            if (panelHighlight != null)
+                panelHighlight.color = Color.Lerp(colorCuracion, colorBase, progreso);
+            yield return null;
+        }
+
+        if (panelHighlight != null)
+            panelHighlight.color = colorBase;
+
+        animCoroutine = null;
+    }
+
     private IEnumerator AnimarShake()
     {
         Vector2 posOriginal = padreRect.anchoredPosition;
@@ -237,11 +294,65 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         shakeCoroutine = null;
     }
 
+    private IEnumerator AnimarShakePositivo()
+    {
+        Vector2 posOriginal = padreRect.anchoredPosition;
+        float t = 0f;
+
+        while (t < shakePosDuracion)
+        {
+            t += Time.unscaledDeltaTime;
+            float fuerzaActual = shakePosFuerza * (1f - t / shakePosDuracion);
+            // Vibración más suave y principalmente hacia arriba para dar sensación positiva
+            Vector2 offset = new Vector2(
+                UnityEngine.Random.Range(-fuerzaActual, fuerzaActual) * 0.3f,
+                UnityEngine.Random.Range(0, fuerzaActual)
+            );
+            padreRect.anchoredPosition = posOriginal + offset;
+            yield return null;
+        }
+
+        padreRect.anchoredPosition = posOriginal;
+        shakeCoroutine = null;
+    }
+
+    private IEnumerator FeedbackDañoTextos()
+    {
+        vidaEnemy.color = Color.red;
+        ShildEnemy.color = Color.red;
+
+        float tiempoTranscurrido = 0f;
+        float duracionFeedback = 0.4f;
+        float fuerzaShakeTextos = 5f;
+
+        Vector2 posOriginalVida = vidaRect.anchoredPosition;
+        Vector2 posOriginalShild = shildRect.anchoredPosition;
+
+        while (tiempoTranscurrido < duracionFeedback)
+        {
+            Vector2 shakeOffset = new Vector2(
+                UnityEngine.Random.Range(-fuerzaShakeTextos, fuerzaShakeTextos),
+                UnityEngine.Random.Range(-fuerzaShakeTextos, fuerzaShakeTextos)
+            );
+            vidaRect.anchoredPosition = posOriginalVida + shakeOffset;
+            shildRect.anchoredPosition = posOriginalShild + shakeOffset;
+
+            tiempoTranscurrido += 0.05f;
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        vidaRect.anchoredPosition = posOriginalVida;
+        shildRect.anchoredPosition = posOriginalShild;
+        vidaEnemy.color = colorOriginalVida;
+        ShildEnemy.color = colorOriginalShild;
+    }
+
     public bool Damagear(int Damage)
     {
         int dañoRestante = Damage;
 
         RecibirDamage();
+        StartCoroutine(FeedbackDañoTextos());
 
         if (enemySO.currentShild > 0)
         {
@@ -284,24 +395,21 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     public Coroutine EjecutarAccionResaltada()
     {
-        if (animCoroutine != null) StopCoroutine(animCoroutine);
-        animCoroutine = StartCoroutine(EjecutarAccionRoutine());
-        return animCoroutine;
+        if (accionCoroutine != null) StopCoroutine(accionCoroutine);
+        accionCoroutine = StartCoroutine(EjecutarAccionRoutine());
+        return accionCoroutine;
     }
 
     private IEnumerator EjecutarAccionRoutine()
     {
         yield return AnimarColorResaltado(colorAccion, duracionResaltadoAccion);
-
         EjecutarAccion();
-
         yield return new WaitForSeconds(tiempoVisibleAccion);
 
-        // si ha muerto en su propia acción (poco probable) o ha sido fijado/seleccionado entretanto, respeta eso
         if (IsAlive)
             yield return AnimarColorResaltado(ColorObjetivo(), duracionResaltadoAccion);
 
-        animCoroutine = null;
+        accionCoroutine = null;
     }
 
     private IEnumerator AnimarColorResaltado(Color colorFin, float duracion)
@@ -339,7 +447,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         else
         {
             IntencionSprite.sprite = IntencionSprites[2];
-            accionEnemy = AccionEnemy.DEFENDER;
+            accionEnemy = AccionEnemy.CURAR;
         }
 
         int val = UnityEngine.Random.Range(enemySO.dmg, enemySO.dmg * 3);
@@ -349,6 +457,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private void Curar(int val)
     {
+        RecibirCuracion();
         enemySO.vida += val;
         if (enemySO.vida >= enemySO.vidaMax) enemySO.vida = enemySO.vidaMax;
         UpdateUI();
@@ -356,6 +465,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private void escudo(int cuant)
     {
+        RecibirCuracion();
         enemySO.currentShild += cuant;
         UpdateUI();
     }
@@ -371,11 +481,14 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         {
             case AccionEnemy.ATACAR:
                 Atacar(potencia);
+                print(enemySO.name + "Esta atacando con = " + potencia);
                 break;
             case AccionEnemy.DEFENDER:
+                print(enemySO.name + "Esta defendiendo con = " + potencia);
                 escudo(potencia);
                 break;
             case AccionEnemy.CURAR:
+                print(enemySO.name + "Esta curando con = " + potencia);
                 Curar(potencia);
                 break;
         }

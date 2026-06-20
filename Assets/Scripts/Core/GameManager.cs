@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -9,11 +10,17 @@ public class GameManager : MonoBehaviour
 
     public static event Action<bool> Shakecamara;
 
-
     public static GameManager Instance;
 
     public PJSO playerSO;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField] private float duracionFeedback = 0.4f;
+    [SerializeField] private float fuerzaShake = 5f;
+    private Color colorOriginalVida;
+    private Color colorOriginalShild;
+    private Vector3 posOriginalVida;
+    private Vector3 posOriginalShild;
+
     private void Awake()
     {
         if (Instance == null)
@@ -26,40 +33,80 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+    }
 
+    private void Start()
+    {
+        colorOriginalVida = pjVida.color;
+        colorOriginalShild = pjShild.color;
+        posOriginalVida = pjVida.transform.localPosition;
+        posOriginalShild = pjShild.transform.localPosition;
     }
 
     public void AtacarPJ(int Damage)
     {
         Shakecamara?.Invoke(true);
         int dañoRestante = Damage;
+        bool huboDAño = false;
+
         if (playerSO.shild > 0)
         {
             int dañoAlEscudo = Mathf.Min(playerSO.shild, dañoRestante);
             playerSO.shild -= dañoAlEscudo;
             dañoRestante -= dañoAlEscudo;
+            huboDAño = true;
         }
 
         if (dañoRestante > 0)
         {
             playerSO.vida -= dañoRestante;
+            huboDAño = true;
             if (playerSO.vida <= 0)
             {
                 playerSO.vida = 0;
                 Morir();
             }
         }
+
+        if (huboDAño)
+        {
+            StartCoroutine(FeedbackDaño());
+        }
+
         UpdateUI();
+    }
+
+    private IEnumerator FeedbackDaño()
+    {
+        pjVida.color = Color.red;
+        pjShild.color = Color.red;
+
+        float tiempoTranscurrido = 0f;
+        while (tiempoTranscurrido < duracionFeedback)
+        {
+            Vector3 shakeOffset = new Vector3(UnityEngine.Random.Range(-fuerzaShake, fuerzaShake), UnityEngine.Random.Range(-fuerzaShake, fuerzaShake), 0);
+            pjVida.transform.localPosition = posOriginalVida + shakeOffset;
+            pjShild.transform.localPosition = posOriginalShild + shakeOffset;
+
+            tiempoTranscurrido += 0.05f;
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        pjVida.transform.localPosition = posOriginalVida;
+        pjShild.transform.localPosition = posOriginalShild;
+        pjVida.color = colorOriginalVida;
+        pjShild.color = colorOriginalShild;
     }
 
     private void Morir()
     {
 
     }
+
     private void UpdateUI()
     {
         pjVida.text = playerSO.vida.ToString();
         pjShild.text = playerSO.shild.ToString();
-
     }
 }
+

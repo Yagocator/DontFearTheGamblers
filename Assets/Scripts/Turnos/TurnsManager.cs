@@ -37,29 +37,28 @@ public class TurnsManager : MonoBehaviour
     {
         while (!win)
         {
-            foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
-            {
-                enemigo.Intencion();
-            }
             if (isPlayerTurn)
             {
+
+                foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
+                {
+                    print("Escogiendo intencion");
+                    enemigo.Intencion();
+                }
+
                 fixEnemy.performed += FixEnemy;
-                // Lógica para el turno del jugador
-                Debug.Log("Turno del jugador");
                 yield return new WaitUntil(() => jugadorListo);
                 jugadorListo = false;
                 isPlayerTurn = false;
             }
             else
             {
-                // Lógica para el turno del enemigo
-                Debug.Log("Turno del enemigo");
                 foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))// ejecutar acciones
                 {
                     yield return enemigo.EjecutarAccionResaltada();
                 }
                 yield return new WaitForSeconds(1f); // Simulación de tiempo de acción del enemigo
-                isPlayerTurn = true; // Cambiar al turno del jugador
+                isPlayerTurn = true;
             }
         }
     }
