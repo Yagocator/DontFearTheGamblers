@@ -16,6 +16,13 @@ MonoBehaviour:
   desc: sdasdasdasd
   sprite: {fileID: -8719707897582812397, guid: 7a575bacf4ac5884b9cbb471103a3ca4, type: 3}
   ActivarMejNum: 0
-  numsAfectados: 
+  numsAfectadosNumberMej: 
+  tipoNumberMej: 0
+  powerNumberMej: 0
   ActivarMeColores: 0
   colorAfectado: 0
+  powerColoresMej: 0
+  tipoColoresMej: 0
+  ActivarMejoraIntercamvioColor: 0
+  colorOriguinal: 0
+  colorAcomvertir: 0

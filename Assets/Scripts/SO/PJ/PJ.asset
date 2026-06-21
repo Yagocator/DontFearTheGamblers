@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PJSO
   vida: 30
   vidaMax: 30
-  shild: 5
+  shild: 359
   handSize: 5
   baraja:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  objetos:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

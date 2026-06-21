@@ -4,6 +4,10 @@ public enum colores
 {
     NEGRO, ROJO, VERDE
 }
+public enum TipoMejora
+{
+    MULTI, SUMA
+}
 [CreateAssetMenu(fileName = "ObjetoSo", menuName = "Scriptable Objects/ObjetoSo")]
 public class ObjetoSo : ScriptableObject
 {
@@ -14,10 +18,16 @@ public class ObjetoSo : ScriptableObject
 
     [Header("Mejorar Numero")]
     public bool ActivarMejNum;
-    public int[] numsAfectados;
+    public int[] numsAfectadosNumberMej;
+    public TipoMejora tipoNumberMej;
+    public int powerNumberMej;
     [Header("Mejora de Colores")]
     public bool ActivarMeColores;
     public colores colorAfectado;
-
-
+    public int powerColoresMej;
+    public TipoMejora tipoColoresMej;
+    [Header("Mejora intercamvio de color")]
+    public bool ActivarMejoraIntercamvioColor;
+    public colores colorOriguinal;
+    public colores colorAcomvertir;
 }

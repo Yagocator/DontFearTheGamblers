@@ -1040,7 +1040,7 @@ MonoBehaviour:
   TextoNombreDerecha: {fileID: 1152157125}
   TextoBuffIzquierda: {fileID: 246646067}
   TextoBuffDerecha: {fileID: 625189478}
-  TipoEscena: 1
+  TipoEscena: 0
   ObjDisponibles:
   - {fileID: 11400000, guid: 3b1e672db22a00c4683db9a9d0275b7d, type: 2}
   - {fileID: 11400000, guid: 48222ffbf0d17d847abcb99e7f46b2b1, type: 2}
