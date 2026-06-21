@@ -189,6 +189,30 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             pinchosScript.ResetCasilla();
         }
     }
+    public void LiberarHuecoYResetearSinMover()
+    {
+        if (huecoActual != null)
+        {
+            huecoActual.Liberar(this);
+            huecoActual = null;
+        }
+
+        droppedOnSlot = false;
+
+        PinchosScript pinchosScript = GetComponent<PinchosScript>();
+
+        if (pinchosScript != null)
+        {
+            pinchosScript.ResetCasilla();
+        }
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = false;
+        }
+    }
+
 
     public void OnPointerDown(PointerEventData eventData)
     {

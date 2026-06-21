@@ -15,8 +15,12 @@ MonoBehaviour:
   vida: 30
   vidaMax: 30
   shild: 5
-  handSize: 0
-  baraja: []
-  objetos:
-  - {fileID: 11400000, guid: 48222ffbf0d17d847abcb99e7f46b2b1, type: 2}
-  - {fileID: 11400000, guid: 3b1e672db22a00c4683db9a9d0275b7d, type: 2}
+  handSize: 5
+  baraja:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
