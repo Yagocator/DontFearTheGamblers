@@ -92,11 +92,20 @@ public class Hueco : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag == null) return;
-
         GameObject pinchoObject = eventData.pointerDrag;
 
         DragDrop dragDrop = pinchoObject.GetComponent<DragDrop>();
         if (dragDrop == null) return;
+
+        if (!dragDrop.ArrastreActivo())
+        {
+            return;
+        }
+
+        if (RuletaController.Instance != null && !RuletaController.Instance.PuedeMoverPincho(dragDrop))
+        {
+            return;
+        }
 
         if (pinchoActual != null && pinchoActual != dragDrop) return;
     

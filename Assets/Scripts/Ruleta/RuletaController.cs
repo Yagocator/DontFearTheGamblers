@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
+
 public class RuletaController : MonoBehaviour
 {
     public GameObject ruleta;
@@ -21,9 +22,9 @@ public class RuletaController : MonoBehaviour
     public RectTransform pinchosParent;
     public Canvas canvas;
     public Vector2 primeraPosicionPincho = Vector2.zero;
-
     public float separacionEntrePinchos = 90f;
 
+    [Header("ZonasDondeMoverPinchos")]
     public Transform zonaDeDescartes; 
     public Transform zonaDeRobos; 
 
@@ -39,6 +40,18 @@ public class RuletaController : MonoBehaviour
     public float alphaTrailInicial = 0.28f;
     public float escalaTrail = 0.95f;
 
+    [Header("Animación objetos")]
+    public GameObject efectoObjetoPrefab;
+    public float duracionAnimacionObjeto = 0.45f;
+    public float pausaEntreObjetos = 0.15f;
+    public float escalaPulsoSlot = 1.25f;
+
+    [Header("Bloqueos")]
+    public bool puedeGirarRuleta = false;
+    public bool bloquearMovimientoTodosLosPinchos = false;
+    public bool bloquearPinchosManoSiHayPinchoColocado = true;
+    private bool aplicandoObjetos = false;
+    private bool ruletaGirando = false;
     private bool animandoMano = false;
 
     private RuletaScript ruletaScript;
@@ -54,16 +67,44 @@ public class RuletaController : MonoBehaviour
 
     public static event Action<List<(int cantidad, PinchosType tipo)>> ResultRuleta;
     public static event Action<bool> ButtonPressed;
+    
+    public static RuletaController Instance { get; private set; }
 
     private void Start()
     {
         ruletaScript = ruleta.GetComponent<RuletaScript>();
 
+        StartCoroutine(PrepararRuleta());
+    }
+
+    private IEnumerator PrepararRuleta()
+    {
+        puedeGirarRuleta = false;
+        bloquearMovimientoTodosLosPinchos = true;
+
         createAllSloots();
         createAllHuecos();
         createAllPinchos();
 
-        drawHand(); 
+        yield return StartCoroutine(applyAllObjectsAnimado());
+
+        puedeGirarRuleta = true;
+        bloquearMovimientoTodosLosPinchos = false;
+
+        yield return StartCoroutine(DrawHandAnimada());
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
 
     private void createAllSloots()
@@ -90,7 +131,8 @@ public class RuletaController : MonoBehaviour
 
             if (slootsScripts[i] != null)
             {
-                slootsScripts[i].setValor(i);
+                if (i == 0) slootsScripts[i].setValor(72);
+                else slootsScripts[i].setValor(i);
 
                 if (i == 0) slootsScripts[i].setColor(0);
                 else if (i % 2 == 0) slootsScripts[i].setColor(1);
@@ -168,12 +210,25 @@ public class RuletaController : MonoBehaviour
     }
     public void RuletaButtonPressed()
     {
+        if (!puedeGirarRuleta)
+        {
+            return;
+        }
+
+        if (aplicandoObjetos || ruletaGirando || animandoMano)
+        {
+            return;
+        }
+
         StartCoroutine(RuletaButtonPressed_WithBarrier());
         ButtonPressed?.Invoke(true);
     }
 
     private IEnumerator RuletaButtonPressed_WithBarrier()
     {
+        ruletaGirando = true;
+        bloquearMovimientoTodosLosPinchos = true;
+
         ruletaScript.RotateRuleta();
 
         yield return new WaitUntil(() => ruletaScript.finishRotate);
@@ -181,9 +236,10 @@ public class RuletaController : MonoBehaviour
         int temp = ruletaScript.casillaPrincipal();
         int valor = slootsScripts[temp].getValor();
 
-        Debug.Log("Valor principal: " + valor);
-
         createResult();
+
+        bloquearMovimientoTodosLosPinchos = false;
+        ruletaGirando = false;
     }
 
     private void createResult()
@@ -198,7 +254,6 @@ public class RuletaController : MonoBehaviour
 
             if (!pincho.EstaColocado())
             {
-                Debug.Log("Pincho " + i + " no está colocado. Se ignora.");
                 continue;
             }
 
@@ -207,9 +262,9 @@ public class RuletaController : MonoBehaviour
 
             int casilla = ruletaScript.casillaWithRotation(pincho.getRotation());
 
-            int valorBase = slootsScripts[casilla].getValor();
+            int ValorModifiedSloot = slootsScripts[casilla].getValorModifiedSloot();
 
-            int cantidad = (valorBase + suma) * factorEscala;
+            int cantidad = (ValorModifiedSloot + suma) * factorEscala;
 
             PinchosType tipo = pincho.getType();
 
@@ -219,7 +274,7 @@ public class RuletaController : MonoBehaviour
                 "Pincho " + i +
                 " | hueco original = " + pincho.getCasilla() +
                 " | casilla final = " + casilla +
-                " | valorBase = " + valorBase +
+                " | ValorModifiedSloot = " + ValorModifiedSloot +
                 " | suma = " + suma +
                 " | factor = " + factorEscala +
                 " | cantidad = " + cantidad +
@@ -230,12 +285,6 @@ public class RuletaController : MonoBehaviour
         drawHand(); 
         ResultRuleta?.Invoke(resultados);
     }
-
-    private void toDiscartActivePinchos()
-    {
-        
-    }
-
    
     public void drawHand()
     {
@@ -362,7 +411,6 @@ public class RuletaController : MonoBehaviour
 
         if (zonaDeDescartes == null)
         {
-            Debug.LogError("Falta asignar ZonaDeDescartes en el inspector.");
             yield break;
         }
 
@@ -462,7 +510,6 @@ public class RuletaController : MonoBehaviour
 
         if (zonaDeRobos == null)
         {
-            Debug.LogError("Falta asignar ZonaDeRobos en el inspector.");
             yield break;
         }
 
@@ -649,7 +696,230 @@ public class RuletaController : MonoBehaviour
             Destroy(ghost);
         }
     }
+    
+    private IEnumerator applyAllObjectsAnimado()
+    {
+        aplicandoObjetos = true;
+        puedeGirarRuleta = false;
 
+        for (int i = 0; i < GameManager.Instance.playerSO.objetos.Count; i++)
+        {
+            ObjetoSo objetoActual = GameManager.Instance.playerSO.objetos[i];
+
+            if (objetoActual == null) continue;
+
+            Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+
+            if (objetoActual.mejoraNumero)
+            {
+                yield return StartCoroutine(applyMejoraNumeroAnimada(objetoActual));
+            }
+
+            if (objetoActual.mejoraColor)
+            {
+                yield return StartCoroutine(applyMejoraColorAnimada(objetoActual));
+            }
+
+            if (objetoActual.mejoraIntcvColor)
+            {
+                yield return StartCoroutine(applyMejoraIntcvColorAnimada(objetoActual));
+            }
+
+            yield return new WaitForSeconds(pausaEntreObjetos);
+        }
+
+        aplicandoObjetos = false;
+        puedeGirarRuleta = true;
+    }
+
+    private IEnumerator applyMejoraNumeroAnimada(ObjetoSo objeto)
+    {
+        List<int> slotsAfectados = new List<int>();
+
+        for (int i = 0; i < objeto.mejoraNumeroNumsAfectados.Length; i++)
+        {
+            int numero = objeto.mejoraNumeroNumsAfectados[i];
+
+            if (numero >= 0 && numero < slootsScripts.Length)
+            {
+                if (!slotsAfectados.Contains(numero))
+                {
+                    slotsAfectados.Add(numero);
+                }
+            }
+        }
+
+        yield return StartCoroutine(AnimarSlotsAfectados(slotsAfectados));
+
+        TipoMejora type = objeto.mejoraNumeroTipo;
+        int incremento = objeto.mejoraNumeroIncremento;
+
+        for (int i = 0; i < slotsAfectados.Count; i++)
+        {
+            int numero = slotsAfectados[i];
+
+            if (type == TipoMejora.SUMA)
+            {
+                slootsScripts[numero].increaseValor(incremento);
+            }
+
+            if (type == TipoMejora.MULTI)
+            {
+                slootsScripts[numero].multiplyValor(incremento);
+            }
+        }
+    }
+    private IEnumerator applyMejoraColorAnimada(ObjetoSo objeto)
+    {
+        List<int> slotsAfectados = new List<int>();
+
+        Colores colorAfectado = objeto.mejoraColorColorAfectado;
+
+        for (int i = 0; i < slootsScripts.Length; i++)
+        {
+            if (slootsScripts[i].getColor() == colorAfectado)
+            {
+                slotsAfectados.Add(i);
+            }
+        }
+
+        yield return StartCoroutine(AnimarSlotsAfectados(slotsAfectados));
+
+        TipoMejora type = objeto.mejoraColorTipo;
+        int incremento = objeto.mejoraColorIncremento;
+
+        for (int i = 0; i < slotsAfectados.Count; i++)
+        {
+            int slot = slotsAfectados[i];
+
+            if (type == TipoMejora.SUMA)
+            {
+                slootsScripts[slot].increaseValor(incremento);
+            }
+
+            if (type == TipoMejora.MULTI)
+            {
+                slootsScripts[slot].multiplyValor(incremento);
+            }
+        }
+    }
+    private IEnumerator applyMejoraIntcvColorAnimada(ObjetoSo objeto)
+    {
+        List<int> slotsAfectados = new List<int>();
+
+        Colores colorAfectado = objeto.mejoraIntcvColorColorAfectado;
+        Colores colorNuevo = objeto.mejoraIntcvColorColorNuevo;
+
+        for (int i = 0; i < slootsScripts.Length; i++)
+        {
+            if (slootsScripts[i].getColor() == colorAfectado)
+            {
+                slotsAfectados.Add(i);
+            }
+        }
+
+        yield return StartCoroutine(AnimarSlotsAfectados(slotsAfectados));
+
+        for (int i = 0; i < slotsAfectados.Count; i++)
+        {
+            int slot = slotsAfectados[i];
+            slootsScripts[slot].setColor(colorNuevo);
+        }
+    }
+    private IEnumerator AnimarSlotsAfectados(List<int> slotsAfectados)
+    {
+        if (slotsAfectados == null || slotsAfectados.Count == 0)
+        {
+            yield break;
+        }
+
+        for (int i = 0; i < slotsAfectados.Count; i++)
+        {
+            int slot = slotsAfectados[i];
+
+            if (slot < 0 || slot >= slootsScripts.Length) continue;
+            if (slootsScripts[slot] == null) continue;
+
+            LanzarEfectoEnSlot(slot);
+        }
+
+        yield return new WaitForSeconds(duracionAnimacionObjeto);
+    }
+    private void LanzarEfectoEnSlot(int slot)
+    {
+        if (slot < 0 || slot >= slootsScripts.Length) return;
+        if (slootsScripts[slot] == null) return;
+
+        Transform slotTransform = slootsScripts[slot].transform;
+
+   
+        GameObject efecto = Instantiate(
+            efectoObjetoPrefab,
+            slotTransform.position,
+            Quaternion.identity
+        );
+
+        ParticleSystem ps = efecto.GetComponent<ParticleSystem>();
+        if (ps != null) Destroy(efecto, ps.main.duration + ps.main.startLifetime.constantMax + 0.2f);
+        else Destroy(efecto, duracionAnimacionObjeto + 0.2f);   
+    }
+    public bool maximoNumeroDePinchosColocados()
+    {
+        if (pinchosScripts == null) return false;
+
+        int j = 0;
+        for (int i = 0; i < pinchosScripts.Length; i++)
+        {
+            if (pinchosScripts[i] != null && pinchosScripts[i].EstaColocado())
+            {
+                j++; 
+                if (j >= GameManager.Instance.playerSO.maximumPlayablePinchos) return true;  
+            }
+        }
+
+        return false;
+    }
+
+    public bool PuedeMoverPincho(DragDrop dragDrop)
+    {
+        if (bloquearMovimientoTodosLosPinchos)
+        {
+            return false;
+        }
+
+        if (dragDrop == null)
+        {
+            return false;
+        }
+
+        if (!bloquearPinchosManoSiHayPinchoColocado)
+        {
+            return true;
+        }
+
+        PinchosScript pincho = dragDrop.GetComponent<PinchosScript>();
+
+        bool estePinchoEstaColocado =
+            dragDrop.GetHuecoActual() != null ||
+            (pincho != null && pincho.EstaColocado());
+
+        if (!estePinchoEstaColocado && maximoNumeroDePinchosColocados())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public bool PuedeQuitarPinchoConClickDerecho(DragDrop dragDrop)
+    {
+        if (bloquearMovimientoTodosLosPinchos)
+        {
+            return false;
+        }
+
+        return true;
+    }
 }
 
 

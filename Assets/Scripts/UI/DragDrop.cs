@@ -20,6 +20,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private Vector3 lastValidWorldPosition;
     private Quaternion lastValidRotation;
 
+    private bool arrastreActivo = false;
     private Hueco huecoActual;
 
     private void Awake()
@@ -54,12 +55,21 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
         droppedOnSlot = false;
         huecoActual = null;
+        arrastreActivo = false;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        arrastreActivo = false;
+
         if (eventData.button != PointerEventData.InputButton.Left) return;
 
+        if (RuletaController.Instance != null && !RuletaController.Instance.PuedeMoverPincho(this))
+        {
+            return;
+        }
+
+        arrastreActivo = true;
         droppedOnSlot = false;
 
         Hueco.MostrarIndicadores(true);
@@ -81,8 +91,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (!arrastreActivo) return;
+
         if (eventData.button != PointerEventData.InputButton.Left) return;
         if (canvas == null) return;
+
+        if (RuletaController.Instance != null && !RuletaController.Instance.PuedeMoverPincho(this))
+        {
+            return;
+        }
 
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 
@@ -91,19 +108,31 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (!arrastreActivo)
+        {
+            Hueco.MostrarIndicadores(false);
+            return;
+        }
+
         if (canvasGroup != null)
         {
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
         }
 
-        if (eventData.button != PointerEventData.InputButton.Left) return;
+        if (eventData.button != PointerEventData.InputButton.Left)
+        {
+            arrastreActivo = false;
+            Hueco.MostrarIndicadores(false);
+            return;
+        }
 
         if (!droppedOnSlot)
         {
             VolverAUltimaPosicionValida();
         }
-        
+
+        arrastreActivo = false;
         Hueco.MostrarIndicadores(false);
     }
 
@@ -175,6 +204,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         lastValidRotation = rectTransform.rotation;
 
         droppedOnSlot = false;
+        arrastreActivo = false;
 
         if (canvasGroup != null)
         {
@@ -198,6 +228,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         }
 
         droppedOnSlot = false;
+        arrastreActivo = false;
 
         PinchosScript pinchosScript = GetComponent<PinchosScript>();
 
@@ -209,7 +240,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (canvasGroup != null)
         {
             canvasGroup.alpha = 1f;
-            canvasGroup.blocksRaycasts = false;
+            canvasGroup.blocksRaycasts = true;
         }
     }
 
@@ -218,6 +249,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
+            if (RuletaController.Instance != null && !RuletaController.Instance.PuedeQuitarPinchoConClickDerecho(this))
+            {
+                return;
+            }
+
             VolverAPosicionOriginal();
         }
     }
@@ -253,4 +289,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             canvasGroup.blocksRaycasts = true;
         }
     }
+    public bool ArrastreActivo() {return arrastreActivo;}
+    
 }

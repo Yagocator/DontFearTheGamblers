@@ -1,9 +1,5 @@
 using System;
 using UnityEngine;
-public enum colores
-{
-    NEGRO, ROJO, VERDE
-}
 public enum TipoMejora
 {
     MULTI, SUMA
@@ -13,21 +9,26 @@ public class ObjetoSo : ScriptableObject
 {
     public String nombre;
     public String desc;
-
     public Sprite sprite;
 
+
     [Header("Mejorar Numero")]
-    public bool ActivarMejNum;
-    public int[] numsAfectadosNumberMej;
-    public TipoMejora tipoNumberMej;
-    public int powerNumberMej;
+    public bool mejoraNumero;
+    public int[] mejoraNumeroNumsAfectados;
+    public TipoMejora mejoraNumeroTipo;
+    public int mejoraNumeroIncremento;
+
+
     [Header("Mejora de Colores")]
-    public bool ActivarMeColores;
-    public colores colorAfectado;
-    public int powerColoresMej;
-    public TipoMejora tipoColoresMej;
+    public bool mejoraColor;
+    public Colores mejoraColorColorAfectado;
+    public TipoMejora mejoraColorTipo;
+    public int mejoraColorIncremento;
+
+
+
     [Header("Mejora intercamvio de color")]
-    public bool ActivarMejoraIntercamvioColor;
-    public colores colorOriguinal;
-    public colores colorAcomvertir;
+    public bool mejoraIntcvColor;
+    public Colores mejoraIntcvColorColorAfectado;
+    public Colores mejoraIntcvColorColorNuevo;
 }

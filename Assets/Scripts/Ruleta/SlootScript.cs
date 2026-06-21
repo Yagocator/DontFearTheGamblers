@@ -1,14 +1,20 @@
 using UnityEngine;
 using TMPro; 
+
+public enum Colores
+{
+    VERDE, NEGRO, ROJO, 
+}
+
 public class SlootScript : MonoBehaviour
 {
     private int valor;
 
-    private int color; 
+    private Colores color; 
 
-    private int suma; 
+    private int suma = 0; 
 
-    private int factorEscala; 
+    private int factorEscala = 1; 
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,8 +24,6 @@ public class SlootScript : MonoBehaviour
 
     void Start()
     {   
-        factorEscala = 1; 
-        suma = 0; 
     }
 
     // Update is called once per frame
@@ -28,16 +32,33 @@ public class SlootScript : MonoBehaviour
         
     }
     
-    public void setValor(int v) { valor = v; }
-    public int getValor() { return (valor + suma) * factorEscala; }
-    public void setColor(int c) { color = c; }
-    public int getColor() { return color; }
+    public void setValor(int v) { 
+        valor = v; 
+        paintValorModified();
+    }
+    public int getValor() { return valor; }
+
+    public int getValorModifiedSloot() { return (valor + suma) * factorEscala;}
+    public void setColor(int c) { 
+        color = (Colores)c; 
+        paintSloot(); 
+    }
+    public void setColor(Colores c) {
+        color = c;   
+        paintSloot();  
+    }
+    public Colores getColor() { return color; }
 
     private void paintSloot()
     {
-        if (color == 0) spriteRenderer.color = Color.green; 
-        else if (color == 1) spriteRenderer.color = Color.black; 
-        else if (color == 2) spriteRenderer.color = Color.red; 
+        if (color == Colores.VERDE) spriteRenderer.color = Color.green; 
+        else if (color == Colores.NEGRO) spriteRenderer.color = Color.black; 
+        else if (color == Colores.ROJO) spriteRenderer.color = Color.red; 
+    }
+
+    private void paintValorModified()
+    {
+        text.text = ((valor + suma) * factorEscala).ToString(); 
     }
     public void initSloot()
     {
@@ -45,5 +66,16 @@ public class SlootScript : MonoBehaviour
         text.text = valor.ToString();
     }
 
-
+    public void increaseValor(int incremento)
+    {
+        suma += incremento; 
+        text.color = Color.yellow; 
+        paintValorModified(); 
+    }
+    public void multiplyValor(int mult)
+    {
+        factorEscala *= mult; 
+        text.color = Color.yellow; 
+        paintValorModified(); 
+    }
 }
