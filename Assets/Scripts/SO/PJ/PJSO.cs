@@ -7,7 +7,8 @@ public class PJSO : ScriptableObject
     public int vida;
     public int vidaMax;
     public int shild;
-    public int handSize; 
+    public int handSize;
     // TODO aqui una lista de  picos de la ruleta
-    public List<PinchoSO> baraja; 
+    public List<PinchoSO> baraja;
+    public List<ObjetoSo> objetos;
 }

@@ -17,3 +17,5 @@ MonoBehaviour:
   type: 2
   state: 0
   sprite: {fileID: 2903848411162822477, guid: d08dcf540ddb0b148b3268dc7c7f6fdb, type: 3}
+  nombre: Heal
+  desc: te cuar el valor que caiga

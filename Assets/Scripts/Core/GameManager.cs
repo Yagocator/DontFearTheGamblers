@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public PJSO playerSO;
 
-    public List<PinchoSO> posibles_pinchos = new List<PinchoSO>(); 
+    public List<PinchoSO> posibles_pinchos = new List<PinchoSO>();
 
     [SerializeField] private float duracionFeedback = 0.4f;
     [SerializeField] private float fuerzaShake = 5f;
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {   
+    {
         colorOriginalVida = pjVida.color;
         colorOriginalShild = pjShild.color;
         posOriginalVida = pjVida.transform.localPosition;
@@ -131,18 +131,18 @@ public class GameManager : MonoBehaviour
     }
 
     public void createHand()
-    {   
-        playerSO.baraja.Clear();  
-        List<PinchoSO> baraja = new List<PinchoSO>(); 
+    {
+        playerSO.baraja.Clear();
+        List<PinchoSO> baraja = new List<PinchoSO>();
         baraja.Add(Instantiate(posibles_pinchos[0]));
         baraja.Add(Instantiate(posibles_pinchos[1]));
         baraja.Add(Instantiate(posibles_pinchos[2]));
         for (int i = 0; i < 4; i++)
-        { 
-            int j = UnityEngine.Random.Range(0, posibles_pinchos.Count);    
+        {
+            int j = UnityEngine.Random.Range(0, posibles_pinchos.Count);
             baraja.Add(Instantiate(posibles_pinchos[j]));
         }
-        playerSO.baraja = baraja; 
+        playerSO.baraja = baraja;
     }
 }
 
