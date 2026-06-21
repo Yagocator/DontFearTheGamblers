@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae090d7bad86164daf023aa869787d5, type: 3}
+  m_Name: 3_Red_+5_10to15_x2
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
+  nombre: '+5 : Red & *2 : 10 to 15'
+  desc: All red numbers get +5 and the numbers between 10 to 15 get multiplied by
+    2
+  sprite: {fileID: 0}
+  mejoraNumero: 1
+  mejoraNumeroNumsAfectados: 0a0000000b0000000c0000000d0000000e0000000f000000
+  mejoraNumeroTipo: 0
+  mejoraNumeroIncremento: 2
+  mejoraColor: 1
+  mejoraColorColorAfectado: 2
+  mejoraColorTipo: 1
+  mejoraColorIncremento: 5
+  mejoraIntcvColor: 0
+  mejoraIntcvColorColorAfectado: 2
+  mejoraIntcvColorColorNuevo: 0
+  rareza: 0

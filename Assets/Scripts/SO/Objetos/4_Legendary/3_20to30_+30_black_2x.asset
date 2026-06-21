@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae090d7bad86164daf023aa869787d5, type: 3}
+  m_Name: 3_20to30_+30_black_2x
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
+  nombre: 'x2 : Black & +30 : 20 to 30'
+  desc: All black numbers get multiplied by 2 and all numbers betweeen 10 to 20 get
+    +30 - (Let it ride)
+  sprite: {fileID: 0}
+  mejoraNumero: 1
+  mejoraNumeroNumsAfectados: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000
+  mejoraNumeroTipo: 1
+  mejoraNumeroIncremento: 30
+  mejoraColor: 1
+  mejoraColorColorAfectado: 1
+  mejoraColorTipo: 0
+  mejoraColorIncremento: 2
+  mejoraIntcvColor: 0
+  mejoraIntcvColorColorAfectado: 2
+  mejoraIntcvColorColorNuevo: 0
+  rareza: 0

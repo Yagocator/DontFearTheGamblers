@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae090d7bad86164daf023aa869787d5, type: 3}
+  m_Name: 2_1to10_+30_red_2x
+  m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
+  nombre: 'x2 : Red & +30 : 1 to 10'
+  desc: All red numbers get multiplied by 2 and all numbers betweeen 1 to 10 get
+    +30
+  sprite: {fileID: 0}
+  mejoraNumero: 1
+  mejoraNumeroNumsAfectados: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+  mejoraNumeroTipo: 1
+  mejoraNumeroIncremento: 30
+  mejoraColor: 1
+  mejoraColorColorAfectado: 2
+  mejoraColorTipo: 0
+  mejoraColorIncremento: 2
+  mejoraIntcvColor: 0
+  mejoraIntcvColorColorAfectado: 2
+  mejoraIntcvColorColorNuevo: 0
+  rareza: 0
