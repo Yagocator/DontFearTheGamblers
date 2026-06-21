@@ -1,56 +1,50 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
-public enum PinchosType
-{
-    Attack,
-    Defense,
-    Heal
-}
+
 
 public class PinchosScript : MonoBehaviour
 {
-    public int suma;
-    public int factorEscala;
-    public PinchosType type;
-
+    public PinchoSO pinchoSO; 
     private int casilla = -1;
     private float rotation;
 
     public void init(int type, int suma, int factorEscala)
     {
-        this.type = (PinchosType)type;
-        this.suma = suma;
-        this.factorEscala = factorEscala;
+        pinchoSO.type = (PinchosType)type;
+        pinchoSO.suma = suma;
+        pinchoSO.factorEscala = factorEscala;
+        pinchoSO.state = (Estado)0; 
     }
 
     public void setPinchosType(int type)
     {
-        this.type = (PinchosType)type;
+        pinchoSO.type = (PinchosType)type;
     }
 
     public PinchosType getType()
     {
-        return type;
+        return pinchoSO.type;
     }
 
     public int getSuma()
     {
-        return suma;
+        return pinchoSO.suma;
     }
 
     public int getFactorEscala()
     {
-        return factorEscala;
+        return pinchoSO.factorEscala;
     }
 
     public void setSuma(int suma)
     {
-        this.suma = suma;
+        pinchoSO.suma = suma;
     }
 
     public void setFactorEscala(int factorEscala)
     {
-        this.factorEscala = factorEscala;
+        pinchoSO.factorEscala = factorEscala;
     }
 
     public void setCasilla(int casilla)

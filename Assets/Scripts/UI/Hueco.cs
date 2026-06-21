@@ -58,11 +58,9 @@ public class Hueco : MonoBehaviour, IDropHandler
     {
         for (int i = 0; i < todosLosHuecos.Count; i++)
         {
-            if (todosLosHuecos[i] != null)
-            {
-                todosLosHuecos[i].MostrarIndicador(mostrar);
-            }
-        }
+            if (mostrar && todosLosHuecos[i] != null && todosLosHuecos[i].pinchoActual == null) todosLosHuecos[i].MostrarIndicador(mostrar);                
+            else if (!mostrar && todosLosHuecos[i] != null) todosLosHuecos[i].MostrarIndicador(mostrar);
+          }
     }
 
     private void MostrarIndicador(bool mostrar)
@@ -100,12 +98,8 @@ public class Hueco : MonoBehaviour, IDropHandler
         DragDrop dragDrop = pinchoObject.GetComponent<DragDrop>();
         if (dragDrop == null) return;
 
-        if (pinchoActual != null && pinchoActual != dragDrop)
-        {
-            Debug.Log("Hueco ocupado: " + slotIndex);
-            return;
-        }
-
+        if (pinchoActual != null && pinchoActual != dragDrop) return;
+    
         Hueco huecoAnterior = dragDrop.GetHuecoActual();
 
         if (huecoAnterior != null && huecoAnterior != this)
@@ -158,7 +152,5 @@ public class Hueco : MonoBehaviour, IDropHandler
         dragDrop.ConfirmarPosicionamientoValida();
 
         MostrarIndicadores(false);
-
-        Debug.Log("Pincho colocado en hueco " + slotIndex);
     }
 }

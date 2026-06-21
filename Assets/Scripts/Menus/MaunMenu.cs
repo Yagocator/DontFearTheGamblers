@@ -42,6 +42,7 @@ public class MaunMenu : MonoBehaviour
 
     public void Play()
     {
+        GameManager.Instance.createHand(); 
         GameManager.Instance.LoadScene("Game");
     }
 

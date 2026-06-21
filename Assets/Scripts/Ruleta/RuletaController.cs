@@ -1,7 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI; 
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
+using UnityEditor.Rendering;
+using System.Linq;
+using UnityEngine.XR;
+using UnityEditor;
 
 public class RuletaController : MonoBehaviour
 {
@@ -17,17 +23,12 @@ public class RuletaController : MonoBehaviour
     [Header("Pinchos Mano")]
     public RectTransform pinchosParent;
     public Canvas canvas;
-
-    public int pinchosIniciales = 5;
-    public int maxPinchos = 8;
-
-    // Déjalo en 0,0 si quieres que el primer pincho aparezca EXACTAMENTE
-    // en el centro del objeto Pinchos Parent.
     public Vector2 primeraPosicionPincho = Vector2.zero;
 
-    // Separación hacia ARRIBA entre pinchos.
     public float separacionEntrePinchos = 90f;
 
+    public Transform zonaDeDescartes; 
+    public Transform zonaDeRobos; 
     private RuletaScript ruletaScript;
 
     private GameObject[] sloots;
@@ -49,6 +50,8 @@ public class RuletaController : MonoBehaviour
         createAllSloots();
         createAllHuecos();
         createAllPinchos();
+
+        drawHand(); 
     }
 
     private void createAllSloots()
@@ -132,8 +135,10 @@ public class RuletaController : MonoBehaviour
 
     private void createAllPinchos()
     {
-        int cantidad = Mathf.Clamp(pinchosIniciales, 0, maxPinchos);
+        GameManager.Instance.createHand(); 
+    
 
+        int cantidad = GameManager.Instance.playerSO.baraja.Count;
         pinchos = new GameObject[cantidad];
         pinchosScripts = new PinchosScript[cantidad];
 
@@ -141,39 +146,12 @@ public class RuletaController : MonoBehaviour
         {
             pinchos[i] = Instantiate(pinchosTemplate, pinchosParent);
             pinchos[i].name = "Pincho_" + i;
-            pinchos[i].SetActive(true);
+            pinchos[i].SetActive(false); 
 
-            RectTransform rect = pinchos[i].GetComponent<RectTransform>();
-
-            if (rect != null)
-            {
-                rect.anchorMin = new Vector2(0.5f, 0.5f);
-                rect.anchorMax = new Vector2(0.5f, 0.5f);
-                rect.pivot = new Vector2(0.5f, 0.5f);
-
-                rect.anchoredPosition = new Vector2(0f, separacionEntrePinchos * i);
-
-                rect.localRotation = Quaternion.AngleAxis(90, new Vector3(0f,0f,1f));
-            }
+            pinchos[i].GetComponent<UnityEngine.UI.Image>().sprite = GameManager.Instance.playerSO.baraja[i].sprite;  
 
             pinchosScripts[i] = pinchos[i].GetComponent<PinchosScript>();
-
-            if (pinchosScripts[i] != null)
-            {
-                int tipo = i % 3;
-                int suma = i + 1;
-                int factorEscala = 1;
-
-                pinchosScripts[i].init(tipo, suma, factorEscala);
-                pinchosScripts[i].ResetCasilla();
-            }
-
-            DragDrop dragDrop = pinchos[i].GetComponent<DragDrop>();
-
-            if (dragDrop != null)
-            {
-                dragDrop.InitDragDrop(canvas, ruleta.transform);
-            }
+            if (pinchosScripts[i] != null) pinchosScripts[i].pinchoSO = GameManager.Instance.playerSO.baraja[i];
         }
     }
     public void RuletaButtonPressed()
@@ -237,6 +215,128 @@ public class RuletaController : MonoBehaviour
             );
         }
 
+        drawHand(); 
         ResultRuleta?.Invoke(resultados);
     }
+
+    private void toDiscartActivePinchos()
+    {
+        
+    }
+
+    public void drawHand()
+    {
+
+        // Contiene en id del pinchosScript que cumple que esta ahi 
+        List<int> disponibles = new List<int>(); 
+        List<int> descartes = new List<int>();
+        List<int> mano = new List<int>();
+
+
+        for (int i = 0; i < pinchosScripts.Length; i++)
+        {
+            if (pinchosScripts[i].pinchoSO.state == Estado.Disponible_para_robar) disponibles.Add(i); 
+            if (pinchosScripts[i].pinchoSO.state == Estado.Descarte) descartes.Add(i); 
+            if (pinchosScripts[i].pinchoSO.state == Estado.Mano) mano.Add(i); 
+        }   
+
+        ////////////////////////////////////////////
+
+        // Pinchos a descarte previos 
+        for (int i = mano.Count - 1; i >= 0; i--)
+        {
+            pinchosScripts[mano[i]].pinchoSO.state = Estado.Descarte; 
+            descartes.Add(mano[i]); 
+            deactivatePincho(mano[i]); 
+            
+            mano.RemoveAt(i);             
+        } 
+
+        ////////////////////////////////////////////
+        
+
+        // Pinchos de baraja a mano  (Si baraja insuficiente entonces robas todos + descarte a baraja y ejecutas robar de baraja
+        int handSize = GameManager.Instance.playerSO.handSize; 
+        if (disponibles.Count < handSize)
+        {
+            // Robar todos disponibles 
+            int resto = handSize - disponibles.Count; 
+            for (int i = disponibles.Count - 1; i >= 0; i--)
+            {
+                int j = UnityEngine.Random.Range(0, disponibles.Count); 
+                pinchosScripts[disponibles[j]].pinchoSO.state = Estado.Mano; 
+                mano.Add(disponibles[j]);  
+
+                disponibles.RemoveAt(j); 
+            }
+
+            // Añadir descartes a la pila de robo
+            for (int i = descartes.Count - 1; i >= 0; i--)
+            {
+                disponibles.Add(descartes[i]); 
+                pinchosScripts[descartes[i]].pinchoSO.state = Estado.Disponible_para_robar; 
+                
+                descartes.RemoveAt(i); 
+            }
+
+            // Robar aleatorio  
+            int cantidadARobar = Mathf.Min(resto, disponibles.Count); 
+            for (int i = 0; i < cantidadARobar; i++)
+            {
+                int j = UnityEngine.Random.Range(0, disponibles.Count); 
+                pinchosScripts[disponibles[j]].pinchoSO.state = Estado.Mano; 
+                mano.Add(disponibles[j]); 
+
+                disponibles.RemoveAt(j); 
+            }
+        }
+        else
+        {
+            // Robar aleatorio  
+            for (int i = 0; i < handSize; i++)
+            {
+                int j = UnityEngine.Random.Range(0, disponibles.Count); 
+                pinchosScripts[disponibles[j]].pinchoSO.state = Estado.Mano; 
+                mano.Add(disponibles[j]); 
+
+                disponibles.RemoveAt(j); 
+            }
+        } 
+
+
+
+        ////////////////////////////////////////////
+        // Crear pinchos visuales   
+        for (int i = 0; i < mano.Count; i++) activatePincho(mano[i], separacionEntrePinchos * i); 
+    }
+
+    private void deactivatePincho(int id_pincho)
+    {
+        DragDrop dragDrop = pinchos[id_pincho].GetComponent<DragDrop>();
+        if (dragDrop != null) dragDrop.VolverAPosicionOriginal(); 
+
+        pinchos[id_pincho].SetActive(false);
+    }
+
+    private void activatePincho(int id_pincho, float posicion_relativa) 
+    {
+            RectTransform rect = pinchos[id_pincho].GetComponent<RectTransform>();
+            if (rect != null) 
+            {
+                rect.anchorMin = new Vector2(0.5f, 0.5f);
+                rect.anchorMax = new Vector2(0.5f, 0.5f);
+                rect.pivot = new Vector2(0.5f, 0.5f);
+
+                rect.anchoredPosition = new Vector2(0f, posicion_relativa);
+
+                rect.localRotation = Quaternion.AngleAxis(90, new Vector3(0f,0f,1f));
+            }
+            DragDrop dragDrop = pinchos[id_pincho].GetComponent<DragDrop>();
+            if (dragDrop != null) dragDrop.InitDragDrop(canvas, ruleta.transform);
+            pinchos[id_pincho].transform.SetParent(pinchosParent); 
+            pinchos[id_pincho].SetActive(true); 
+    }
 }
+
+
+

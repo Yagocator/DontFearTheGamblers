@@ -5,7 +5,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 {
     public Canvas canvas;
     public Transform centroRuleta;
-    public float offsetRotacion = 90f;
+    private float offsetRotacion = 90f;
     public bool droppedOnSlot = false;
 
     private RectTransform rectTransform;
@@ -157,7 +157,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform.rotation = Quaternion.Euler(0f, 0f, angulo + offsetRotacion);
     }
 
-    private void VolverAPosicionOriginal()
+    public void VolverAPosicionOriginal()
     {
         if (huecoActual != null)
         {
