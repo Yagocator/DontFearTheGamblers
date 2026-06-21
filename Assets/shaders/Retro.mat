@@ -50,13 +50,13 @@ Material:
     - RGB_STRIPES: 1
     - SCROLL_STATIC: 0
     - STATIC: 1
-    - Vector1_1BFF6B46: 1127.7
+    - Vector1_1BFF6B46: 1500
     - Vector1_5660967D: 0.8
     - Vector1_63AA1B2A: 0.2
     - Vector1_96113905: 100
     - Vector1_DF019693: 0.5
     - WOBBLE: 0
-    - _DistortionStrength: 0.04
+    - _DistortionStrength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScanlineHeight: 10

@@ -83,6 +83,22 @@ public class GameManager : MonoBehaviour
 
         UpdateUI();
     }
+    public void PJGetDefence(int cuant)
+    {
+        playerSO.shild += cuant;
+        StartCoroutine(FeedbackEscudo());
+        UpdateUI();
+    }
+    public void PJGetHeald(int cuant)
+    {
+        playerSO.vida += cuant;
+        if (playerSO.vidaMax <= playerSO.vida)
+        {
+            playerSO.vida = playerSO.vidaMax;
+        }
+        StartCoroutine(FeedbackVida());
+        UpdateUI();
+    }
 
     private IEnumerator FeedbackDaño()
     {
@@ -104,6 +120,40 @@ public class GameManager : MonoBehaviour
         pjShild.transform.localPosition = posOriginalShild;
         pjVida.color = colorOriginalVida;
         pjShild.color = colorOriginalShild;
+    }
+    private IEnumerator FeedbackEscudo()
+    {
+        pjShild.color = Color.blue;
+
+        float tiempoTranscurrido = 0f;
+        while (tiempoTranscurrido < duracionFeedback)
+        {
+            Vector3 shakeOffset = new Vector3(UnityEngine.Random.Range(-fuerzaShake, fuerzaShake), UnityEngine.Random.Range(-fuerzaShake, fuerzaShake), 0);
+            pjShild.transform.localPosition = posOriginalShild + shakeOffset;
+
+            tiempoTranscurrido += 0.05f;
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        pjShild.transform.localPosition = posOriginalShild;
+        pjShild.color = colorOriginalShild;
+    }
+    private IEnumerator FeedbackVida()
+    {
+        pjVida.color = Color.green;
+
+        float tiempoTranscurrido = 0f;
+        while (tiempoTranscurrido < duracionFeedback)
+        {
+            Vector3 shakeOffset = new Vector3(UnityEngine.Random.Range(-fuerzaShake, fuerzaShake), UnityEngine.Random.Range(-fuerzaShake, fuerzaShake), 0);
+            pjVida.transform.localPosition = posOriginalVida + shakeOffset;
+
+            tiempoTranscurrido += 0.05f;
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        pjVida.transform.localPosition = posOriginalVida;
+        pjVida.color = colorOriginalVida;
     }
 
     private void Morir()

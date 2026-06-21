@@ -67,7 +67,7 @@ public class TurnsManager : MonoBehaviour
     }
     void OnEnable()
     {
-        //RuletaController.ResultRuleta += ResultadoRuleta;
+        RuletaController.ResultRuleta += ResultadoRuleta;
         RuletaController.ButtonPressed += BotonPressed;
         EnemyUI.EnemyHovered += EnemyHovered_performed;
         EnemyUI.EnemyClicked += EnemyClicked_performed;
@@ -75,9 +75,10 @@ public class TurnsManager : MonoBehaviour
         navegation.performed += Navegation_performed;
         fixEnemy.performed += FixEnemy;
     }
+
     void OnDisable()
     {
-        //RuletaController.ResultRuleta -= ResultadoRuleta;
+        RuletaController.ResultRuleta -= ResultadoRuleta;
         RuletaController.ButtonPressed -= BotonPressed;
         EnemyUI.EnemyHovered -= EnemyHovered_performed;
         EnemyUI.EnemyClicked -= EnemyClicked_performed;
@@ -92,14 +93,28 @@ public class TurnsManager : MonoBehaviour
         fixEnemy.performed -= FixEnemy;
     }
 
-    private void ResultadoRuleta(int Res)
+    private void ResultadoRuleta(List<(int cantidad, PinchosType tipo)> list)
     {
-        if (enemigoSeleccionado.Damagear(Res))
+        foreach (var item in list)
         {
-            enemigoSeleccionado = null;
-            navegation.performed += Navegation_performed;
-            GuirarRuleta.interactable = false;
-            seleccionBloqueada = false;
+            switch (item.tipo)
+            {
+                case PinchosType.Attack:
+                    if (enemigoSeleccionado.Damagear(item.cantidad))
+                    {
+                        enemigoSeleccionado = null;
+                        navegation.performed += Navegation_performed;
+                        GuirarRuleta.interactable = false;
+                        seleccionBloqueada = false;
+                    }
+                    break;
+                case PinchosType.Defense:
+                    GameManager.Instance.PJGetDefence(item.cantidad);
+                    break;
+                case PinchosType.Heal:
+                    GameManager.Instance.PJGetHeald(item.cantidad);
+                    break;
+            }
         }
         jugadorListo = true;
 
@@ -156,8 +171,6 @@ public class TurnsManager : MonoBehaviour
 
     private void EnemyClicked_performed(EnemyUI enemy)
     {
-        // Solo fija si el clic ha sido encima del enemigo que ya está seleccionado
-        // (con el ratón, hover ya selecciona; con teclado/mando, debe coincidir con la selección actual)
         if (enemy != enemigoSeleccionado) return;
         ToggleFijarEnemigo();
     }
