@@ -42,6 +42,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     private bool estaSeleccionado;
     public bool EstaSeleccionado => estaSeleccionado;
 
+    public PJController PJController;
+
     [Header("Fijado")]
     public Color colorFijado = Color.red;
     public bool Fijado = false;
@@ -472,7 +474,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private void Atacar(int val)
     {
-        GameManager.Instance.AtacarPJ(val);
+        PJController.AtacarPJ(val);
     }
 
     public void EjecutarAccion()

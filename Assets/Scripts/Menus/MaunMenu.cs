@@ -42,8 +42,8 @@ public class MaunMenu : MonoBehaviour
 
     public void Play()
     {
-        GameManager.Instance.createHand(); 
-        GameManager.Instance.LoadScene("Game");
+        GameManager.Instance.createHand();
+        GameManager.Instance.LoadScene("CombateTurnos");
     }
 
     public void settingsEnter()

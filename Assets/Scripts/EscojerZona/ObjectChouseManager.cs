@@ -115,6 +115,7 @@ public class ObjectChouseManager : MonoBehaviour
         {
             Destroy(botonIzquierda.gameObject);
         }
+        GameManager.Instance.LoadScene("CombateTurnos");
     }
     public void PillarPincho(PinchoSO pincho, bool lado)
     {
@@ -129,6 +130,7 @@ public class ObjectChouseManager : MonoBehaviour
         {
             Destroy(botonIzquierda.gameObject);
         }
+        GameManager.Instance.LoadScene("CombateTurnos");
     }
 
     private void desbleButtons()
@@ -138,5 +140,5 @@ public class ObjectChouseManager : MonoBehaviour
     }
 
 
-    
+
 }

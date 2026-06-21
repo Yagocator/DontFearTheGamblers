@@ -9,7 +9,15 @@ public class ShakeCamera : MonoBehaviour
 
     void OnEnable()
     {
-        GameManager.Shakecamara += EmpezarShake;
+        PJController.Shakecamara += EmpezarShake;
+    }
+    void OnDisable()
+    {
+        PJController.Shakecamara -= EmpezarShake;
+    }
+    void OnDestroy()
+    {
+        PJController.Shakecamara -= EmpezarShake;
     }
 
     private void EmpezarShake(bool v)

@@ -14,5 +14,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Yago/CombateTurnos.unity
     guid: 35a5535b94ab09a41b8777b0b74353d6
+  - enabled: 1
+    path: Assets/Scenes/NextState.unity
+    guid: c290f21414d05ef42bc1104a1e2ffbe4
+  - enabled: 1
+    path: Assets/Scenes/Bar.unity
+    guid: dbfceb0bcaadd454eac5161513e11f0a
+  - enabled: 1
+    path: Assets/Scenes/Mafia.unity
+    guid: 22f885af6ae2fe244aec8a027e580398
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

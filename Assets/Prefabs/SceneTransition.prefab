@@ -112,6 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393319805206319336}
+  - component: {fileID: 5525067019510534398}
   m_Layer: 0
   m_Name: SceneTransition
   m_TagString: Untagged
@@ -135,6 +136,18 @@ Transform:
   - {fileID: 6500290704395126218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5525067019510534398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5495174452060471712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a101c276d2df4a881771e96f05b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &6819883792841309383
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +162,7 @@ GameObject:
   - component: {fileID: 6754273691373465602}
   - component: {fileID: 6274579451884548732}
   m_Layer: 0
-  m_Name: Image
+  m_Name: TransicionAnimatorObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

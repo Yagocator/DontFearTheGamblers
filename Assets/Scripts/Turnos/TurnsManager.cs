@@ -17,7 +17,7 @@ public class TurnsManager : MonoBehaviour
 
     public EnemyUI enemigoSeleccionado;
 
-    private bool seleccionBloqueada = false;
+    public bool seleccionBloqueada = false;
 
     public InputActionAsset inputActions;
 
@@ -25,10 +25,12 @@ public class TurnsManager : MonoBehaviour
     private InputAction fixEnemy;
 
     [SerializeField] private Button GuirarRuleta;
+    public PJController PJController;
     void Awake()
     {
         navegation = inputActions.FindActionMap("UI").FindAction("Navigate");
         fixEnemy = inputActions.FindActionMap("UI").FindAction("FixEnemy");
+
 
     }
 
@@ -38,11 +40,16 @@ public class TurnsManager : MonoBehaviour
         {
             if (isPlayerTurn)
             {
-
+                int countenmigos = 0;
                 foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
                 {
-                    print("Escogiendo intencion");
+                    countenmigos++;
                     enemigo.Intencion();
+                }
+                if (countenmigos == 0)// todos estan muertos
+                {
+                    win = true;
+                    break;
                 }
 
                 fixEnemy.performed += FixEnemy;
@@ -60,6 +67,8 @@ public class TurnsManager : MonoBehaviour
                 isPlayerTurn = true;
             }
         }
+        print("fin");
+        GameManager.Instance.LoadScene("NextState");
     }
     void Start()
     {
@@ -100,7 +109,12 @@ public class TurnsManager : MonoBehaviour
             switch (item.tipo)
             {
                 case PinchosType.Attack:
-                    if (enemigoSeleccionado.Damagear(item.cantidad))
+                    bool muere = false;
+                    if (enemigoSeleccionado != null)
+                    {
+                        muere = enemigoSeleccionado.Damagear(item.cantidad);
+                    }
+                    if (muere)
                     {
                         enemigoSeleccionado = null;
                         navegation.performed += Navegation_performed;
@@ -109,10 +123,10 @@ public class TurnsManager : MonoBehaviour
                     }
                     break;
                 case PinchosType.Defense:
-                    GameManager.Instance.PJGetDefence(item.cantidad);
+                    PJController.PJGetDefence(item.cantidad);
                     break;
                 case PinchosType.Heal:
-                    GameManager.Instance.PJGetHeald(item.cantidad);
+                    PJController.PJGetHeald(item.cantidad);
                     break;
             }
         }

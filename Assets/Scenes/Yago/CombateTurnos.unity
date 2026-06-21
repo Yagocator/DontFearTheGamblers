@@ -256,6 +256,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21861521}
   m_CullTransparentMesh: 1
+--- !u!1 &49389735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49389737}
+  - component: {fileID: 49389736}
+  m_Layer: 0
+  m_Name: PJController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &49389736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49389735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627fc29d1534c30419de6bb702c076c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PJController
+  pjVida: {fileID: 21861523}
+  pjShild: {fileID: 317975510}
+  duracionFeedback: 0.4
+  fuerzaShake: 5
+--- !u!4 &49389737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49389735}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.86008, y: 3.56696, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135417472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +2770,7 @@ MonoBehaviour:
   escalaNormal: {x: 1, y: 1, z: 1}
   escalaSeleccionado: {x: 1.08, y: 1.08, z: 1.08}
   duracionAnim: 0.18
+  PJController: {fileID: 49389736}
   colorFijado: {r: 1, g: 0, b: 0, a: 1}
   Fijado: 0
   IsAlive: 1
@@ -3251,6 +3300,7 @@ MonoBehaviour:
   escalaNormal: {x: 1, y: 1, z: 1}
   escalaSeleccionado: {x: 1.08, y: 1.08, z: 1.08}
   duracionAnim: 0.18
+  PJController: {fileID: 49389736}
   colorFijado: {r: 1, g: 0, b: 0, a: 1}
   Fijado: 0
   IsAlive: 1
@@ -4840,6 +4890,7 @@ MonoBehaviour:
   escalaNormal: {x: 1, y: 1, z: 1}
   escalaSeleccionado: {x: 1.08, y: 1.08, z: 1.08}
   duracionAnim: 0.18
+  PJController: {fileID: 49389736}
   colorFijado: {r: 1, g: 0, b: 0, a: 1}
   Fijado: 0
   IsAlive: 1
@@ -4928,8 +4979,10 @@ MonoBehaviour:
   enemigosUI: []
   enemigosSO: []
   enemigoSeleccionado: {fileID: 0}
+  seleccionBloqueada: 0
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   GuirarRuleta: {fileID: 1943777773}
+  PJController: {fileID: 49389736}
 --- !u!4 &1745443682
 Transform:
   m_ObjectHideFlags: 0
@@ -5511,7 +5564,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1943777774}
   m_OnClick:
     m_PersistentCalls:
@@ -6332,72 +6385,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
---- !u!1001 &4130569239258593393
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 393319805206319336, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5495174452060471712, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_Name
-      value: SceneTransition
-      objectReference: {fileID: 0}
-    - target: {fileID: 6754273691373465602, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
---- !u!95 &4130569239258593394 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6274579451884548732, guid: 68873cac1272b47448d7a49621dd7074, type: 3}
-  m_PrefabInstance: {fileID: 4130569239258593393}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5905462435109023166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6474,7 +6461,7 @@ PrefabInstance:
     - target: {fileID: 2161481325926559823, guid: 1d8c210ef26e63149a307785a035a82b, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 4130569239258593394}
+      objectReference: {fileID: 0}
     - target: {fileID: 2161481325926559823, guid: 1d8c210ef26e63149a307785a035a82b, type: 3}
       propertyPath: posibles_pinchos.Array.size
       value: 3
@@ -6544,7 +6531,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 4130569239258593393}
   - {fileID: 245136763}
   - {fileID: 1460036436}
   - {fileID: 443234976}
@@ -6556,3 +6542,4 @@ SceneRoots:
   - {fileID: 1764198240}
   - {fileID: 829836821}
   - {fileID: 591839857}
+  - {fileID: 49389737}
