@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static event Action<bool> Shakecamara;
 
     public static GameManager Instance;
+    public Animator transition;
 
     public PJSO playerSO;
 
@@ -112,6 +113,14 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string name)
     {
+        StartCoroutine(Transition(name));
+    }
+    IEnumerator Transition(string name)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1f);
+
         SceneManager.LoadScene(name);
     }
 
