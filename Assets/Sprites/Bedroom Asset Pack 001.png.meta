@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: 25e8baab24ebbfc4b8a3b12c6d928599
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8851325020017131420
+    second: Bedroom Asset Pack 001_0
+  - first:
+      213: 7344915684708356872
+    second: Bedroom Asset Pack 001_1
+  - first:
+      213: 2826375198340163489
+    second: Bedroom Asset Pack 001_2
+  - first:
+      213: 8844670444696952063
+    second: Bedroom Asset Pack 001_3
+  - first:
+      213: 5313918245053274685
+    second: Bedroom Asset Pack 001_4
+  - first:
+      213: 6040509716129853763
+    second: Bedroom Asset Pack 001_5
+  - first:
+      213: -689591199197123073
+    second: Bedroom Asset Pack 001_6
+  - first:
+      213: 8560377880043805566
+    second: Bedroom Asset Pack 001_7
+  - first:
+      213: 5730869177642071738
+    second: Bedroom Asset Pack 001_8
+  - first:
+      213: 1673781944496596955
+    second: Bedroom Asset Pack 001_9
+  - first:
+      213: -3627856055812674281
+    second: Bedroom Asset Pack 001_10
+  - first:
+      213: -1140957483149339286
+    second: Bedroom Asset Pack 001_11
+  - first:
+      213: 9044848469439476801
+    second: Bedroom Asset Pack 001_12
+  - first:
+      213: 2674036699512082261
+    second: Bedroom Asset Pack 001_13
+  - first:
+      213: 8670390525174581776
+    second: Bedroom Asset Pack 001_14
+  - first:
+      213: -6210650906293496722
+    second: Bedroom Asset Pack 001_15
+  - first:
+      213: -533094666990039417
+    second: Bedroom Asset Pack 001_16
+  - first:
+      213: -8809846218917802804
+    second: Bedroom Asset Pack 001_17
+  - first:
+      213: -5081438387691684232
+    second: Bedroom Asset Pack 001_18
+  - first:
+      213: -5782187735025902040
+    second: Bedroom Asset Pack 001_19
+  - first:
+      213: 1353074744336405767
+    second: Bedroom Asset Pack 001_20
+  - first:
+      213: -2192044390428628104
+    second: Bedroom Asset Pack 001_21
+  - first:
+      213: -6429747555875395231
+    second: Bedroom Asset Pack 001_22
+  - first:
+      213: -8781038109538615164
+    second: Bedroom Asset Pack 001_23
+  - first:
+      213: 9119257769807975919
+    second: Bedroom Asset Pack 001_24
+  - first:
+      213: -9062851087099071839
+    second: Bedroom Asset Pack 001_25
+  - first:
+      213: -3821761957541812224
+    second: Bedroom Asset Pack 001_26
+  - first:
+      213: 316263596727645901
+    second: Bedroom Asset Pack 001_27
+  - first:
+      213: -1561733729034042009
+    second: Bedroom Asset Pack 001_28
+  - first:
+      213: 2064715304930895542
+    second: Bedroom Asset Pack 001_29
+  - first:
+      213: 3343075008841125787
+    second: Bedroom Asset Pack 001_30
+  - first:
+      213: -4761727205916253319
+    second: Bedroom Asset Pack 001_31
+  - first:
+      213: -9157173883844690846
+    second: Bedroom Asset Pack 001_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 122
+        width: 268
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4600a566ac6c92580800000000000000
+      internalID: -8851325020017131420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 143
+        width: 32
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8039c3476e16ee560800000000000000
+      internalID: 7344915684708356872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 188
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a72a03a44d493720800000000000000
+      internalID: 2826375198340163489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 95
+        width: 16
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffcde8b88e49eba70800000000000000
+      internalID: 8844670444696952063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 124
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a1ed15d74deb940800000000000000
+      internalID: 5313918245053274685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 65
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3413734359334d350800000000000000
+      internalID: 6040509716129853763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 83
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffdae9b35741e66f0800000000000000
+      internalID: -689591199197123073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 79
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b5f1bb3529cc670800000000000000
+      internalID: 8560377880043805566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 79
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab637935723288f40800000000000000
+      internalID: 5730869177642071738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 63
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7ae297fc77a3710800000000000000
+      internalID: 1673781944496596955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 79
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d2901732447adc0800000000000000
+      internalID: -3627856055812674281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_11
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 55
+        width: 48
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a655f01d6318a20f0800000000000000
+      internalID: -1140957483149339286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144fc24e2c1c58d70800000000000000
+      internalID: 9044848469439476801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_13
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 31
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f86c6e5361c1520800000000000000
+      internalID: 2674036699512082261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 48
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a81f4be3a635870800000000000000
+      internalID: 8670390525174581776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 47
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e641b6af7e55fc9a0800000000000000
+      internalID: -6210650906293496722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_16
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 63
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e476e89311a98f0800000000000000
+      internalID: -533094666990039417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc069b5a832db580800000000000000
+      internalID: -8809846218917802804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_18
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 49
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e7a9185ba1b79b0800000000000000
+      internalID: -5081438387691684232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_19
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 63
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e192de3ea81cfa0800000000000000
+      internalID: -5782187735025902040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_20
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 50
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70559b2af4617c210800000000000000
+      internalID: 1353074744336405767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_21
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 32
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b2d98ad3b4491e0800000000000000
+      internalID: -2192044390428628104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_22
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 51
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1696c980aa2f4c6a0800000000000000
+      internalID: -6429747555875395231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_23
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 50
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48088c10d5c732680800000000000000
+      internalID: -8781038109538615164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe510a030ac1e8e70800000000000000
+      internalID: 9119257769807975919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2723d04f84a3280800000000000000
+      internalID: -9062851087099071839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_26
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0086e988fbf56fac0800000000000000
+      internalID: -3821761957541812224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6b65ac018936400800000000000000
+      internalID: 316263596727645901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_28
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7650e27a27b935ae0800000000000000
+      internalID: -1561733729034042009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_29
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6e7b861a757ac10800000000000000
+      internalID: 2064715304930895542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_30
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f0677120df46e20800000000000000
+      internalID: 3343075008841125787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_31
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2
+        width: 47
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9736c0eb552faedb0800000000000000
+      internalID: -4761727205916253319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bedroom Asset Pack 001_32
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26cf3f29ede2be080800000000000000
+      internalID: -9157173883844690846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bedroom Asset Pack 001_0: -8851325020017131420
+      Bedroom Asset Pack 001_1: 7344915684708356872
+      Bedroom Asset Pack 001_10: -3627856055812674281
+      Bedroom Asset Pack 001_11: -1140957483149339286
+      Bedroom Asset Pack 001_12: 9044848469439476801
+      Bedroom Asset Pack 001_13: 2674036699512082261
+      Bedroom Asset Pack 001_14: 8670390525174581776
+      Bedroom Asset Pack 001_15: -6210650906293496722
+      Bedroom Asset Pack 001_16: -533094666990039417
+      Bedroom Asset Pack 001_17: -8809846218917802804
+      Bedroom Asset Pack 001_18: -5081438387691684232
+      Bedroom Asset Pack 001_19: -5782187735025902040
+      Bedroom Asset Pack 001_2: 2826375198340163489
+      Bedroom Asset Pack 001_20: 1353074744336405767
+      Bedroom Asset Pack 001_21: -2192044390428628104
+      Bedroom Asset Pack 001_22: -6429747555875395231
+      Bedroom Asset Pack 001_23: -8781038109538615164
+      Bedroom Asset Pack 001_24: 9119257769807975919
+      Bedroom Asset Pack 001_25: -9062851087099071839
+      Bedroom Asset Pack 001_26: -3821761957541812224
+      Bedroom Asset Pack 001_27: 316263596727645901
+      Bedroom Asset Pack 001_28: -1561733729034042009
+      Bedroom Asset Pack 001_29: 2064715304930895542
+      Bedroom Asset Pack 001_3: 8844670444696952063
+      Bedroom Asset Pack 001_30: 3343075008841125787
+      Bedroom Asset Pack 001_31: -4761727205916253319
+      Bedroom Asset Pack 001_32: -9157173883844690846
+      Bedroom Asset Pack 001_4: 5313918245053274685
+      Bedroom Asset Pack 001_5: 6040509716129853763
+      Bedroom Asset Pack 001_6: -689591199197123073
+      Bedroom Asset Pack 001_7: 8560377880043805566
+      Bedroom Asset Pack 001_8: 5730869177642071738
+      Bedroom Asset Pack 001_9: 1673781944496596955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -2680,6 +2680,14 @@ MonoBehaviour:
   duracionTrail: 0.18
   alphaTrailInicial: 0.28
   escalaTrail: 0.95
+  efectoObjetoPrefab: {fileID: 0}
+  duracionAnimacionObjeto: 0.45
+  pausaEntreObjetos: 0.15
+  escalaPulsoSlot: 1.25
+  puedeGirarRuleta: 0
+  bloquearMovimientoTodosLosPinchos: 0
+  bloquearPinchosManoSiHayPinchoColocado: 1
+  ruletaGirando: 0
 --- !u!4 &829836821
 Transform:
   m_ObjectHideFlags: 0
@@ -4983,6 +4991,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   GuirarRuleta: {fileID: 1943777773}
   PJController: {fileID: 49389736}
+  RuletaController: {fileID: 829836820}
 --- !u!4 &1745443682
 Transform:
   m_ObjectHideFlags: 0

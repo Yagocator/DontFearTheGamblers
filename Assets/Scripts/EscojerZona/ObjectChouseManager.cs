@@ -12,6 +12,9 @@ public class ObjectChouseManager : MonoBehaviour
 {
 
     public GameObject[] botones;
+    public Sprite[] marcosRareza;// c 0,u 1,r 2,e 3,l 4,lrit 5
+    public Image MarcoIzquierda;
+    public Image MarcoDerecha;
     public Image fotoIzquierda;
     public Image fotoiDerecha;
     public TextMeshProUGUI TextoNombreIzquierda;
@@ -21,6 +24,8 @@ public class ObjectChouseManager : MonoBehaviour
     public TipoOnj TipoEscena;
     public List<ObjetoSo> ObjDisponibles;
     public List<PinchoSO> PosiblesPinchos;
+    [Header("Probabilidades por rareza (Common, Uncommon, Rare, Epic, Legendary, LetItRide)")]
+    public float[] probabilidadesRareza = new float[6] { 50.3f, 25f, 12f, 8f, 3f, 1.7f };
     private ObjetoSo[] ObjSelected = new ObjetoSo[2];
     private PinchoSO[] PinchoSelected = new PinchoSO[2];
 
@@ -79,7 +84,7 @@ public class ObjectChouseManager : MonoBehaviour
                 {
                     do
                     {
-                        indexEnemySO = UnityEngine.Random.Range(0, ObjDisponibles.Count);
+                        indexEnemySO = ElegirIndicePorRareza(ObjDisponibles);
                     } while (i == 1 && ObjDisponibles[indexEnemySO] == ObjSelected[0]);
                 }
                 ObjSelected[i] = ObjDisponibles[indexEnemySO];
@@ -90,7 +95,7 @@ public class ObjectChouseManager : MonoBehaviour
                     TextoNombreIzquierda.text = obj.nombre;
                     TextoBuffIzquierda.text = obj.desc;
                     botonIzquierda.onClick.AddListener(() => PillarObj(obj, false));
-
+                    AsignarMarcoPorRareza(obj.rareza, MarcoIzquierda);
                 }
                 else
                 {
@@ -98,6 +103,7 @@ public class ObjectChouseManager : MonoBehaviour
                     TextoNombreDerecha.text = obj.nombre;
                     TextoBuffDerecha.text = obj.desc;
                     botonDerecha.onClick.AddListener(() => PillarObj(obj, true));
+                    AsignarMarcoPorRareza(obj.rareza, MarcoDerecha);
                 }
             }
         }
@@ -133,12 +139,60 @@ public class ObjectChouseManager : MonoBehaviour
         GameManager.Instance.LoadScene("CombateTurnos");
     }
 
+    private int ElegirIndicePorRareza(List<ObjetoSo> lista)
+    {
+        var pesos = new List<float>(probabilidadesRareza.Length);
+        for (int i = 0; i < lista.Count; i++)
+        {
+            var rareza = lista[i].rareza;
+            pesos.Add(GetPesoPorRareza(rareza));
+        }
+
+        float total = 0f;
+        foreach (var peso in pesos)
+            total += peso;
+
+        if (total <= 0f)
+            return UnityEngine.Random.Range(0, lista.Count);
+
+        float valor = UnityEngine.Random.Range(0f, total);
+        float acumulado = 0f;
+
+        for (int i = 0; i < lista.Count; i++)
+        {
+            acumulado += pesos[i];
+            if (valor <= acumulado)
+                return i;
+        }
+
+        return lista.Count - 1;
+    }
+
+    private float GetPesoPorRareza(Rareza rareza)
+    {
+        switch (rareza)
+        {
+            case Rareza.Common: return probabilidadesRareza.Length > 0 ? probabilidadesRareza[0] : 50f;
+            case Rareza.Uncommon: return probabilidadesRareza.Length > 1 ? probabilidadesRareza[1] : 25f;
+            case Rareza.Rare: return probabilidadesRareza.Length > 2 ? probabilidadesRareza[2] : 12f;
+            case Rareza.Epic: return probabilidadesRareza.Length > 3 ? probabilidadesRareza[3] : 8f;
+            case Rareza.Legendary: return probabilidadesRareza.Length > 4 ? probabilidadesRareza[4] : 3f;
+            case Rareza.LetItRide: return probabilidadesRareza.Length > 5 ? probabilidadesRareza[5] : 2f;
+            default: return 1f;
+        }
+    }
+
+    private void AsignarMarcoPorRareza(Rareza rareza, Image marco)
+    {
+        int index = Mathf.Clamp((int)rareza, 0, marcosRareza.Length - 1);
+        if (marcosRareza != null && index < marcosRareza.Length)
+            marco.sprite = marcosRareza[index];
+    }
+
     private void desbleButtons()
     {
         botonIzquierda.interactable = false;
         botonDerecha.interactable = false;
     }
-
-
 
 }

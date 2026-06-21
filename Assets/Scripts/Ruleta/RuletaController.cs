@@ -51,7 +51,7 @@ public class RuletaController : MonoBehaviour
     public bool bloquearMovimientoTodosLosPinchos = false;
     public bool bloquearPinchosManoSiHayPinchoColocado = true;
     private bool aplicandoObjetos = false;
-    private bool ruletaGirando = false;
+    public bool ruletaGirando = false;
     private bool animandoMano = false;
 
     private RuletaScript ruletaScript;

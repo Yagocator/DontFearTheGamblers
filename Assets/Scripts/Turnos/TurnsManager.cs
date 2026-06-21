@@ -26,6 +26,7 @@ public class TurnsManager : MonoBehaviour
 
     [SerializeField] private Button GuirarRuleta;
     public PJController PJController;
+    public RuletaController RuletaController;
     void Awake()
     {
         navegation = inputActions.FindActionMap("UI").FindAction("Navigate");
@@ -40,6 +41,7 @@ public class TurnsManager : MonoBehaviour
         {
             if (isPlayerTurn)
             {
+                fixEnemy.performed += FixEnemy;
                 int countenmigos = 0;
                 foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
                 {
@@ -51,8 +53,6 @@ public class TurnsManager : MonoBehaviour
                     win = true;
                     break;
                 }
-
-                fixEnemy.performed += FixEnemy;
                 yield return new WaitUntil(() => jugadorListo);
                 jugadorListo = false;
                 isPlayerTurn = false;
@@ -136,6 +136,7 @@ public class TurnsManager : MonoBehaviour
 
     private void Navegation_performed(InputAction.CallbackContext context)
     {
+        if (RuletaController.ruletaGirando) return;
         float y = context.ReadValue<Vector2>().y;
         float x = context.ReadValue<Vector2>().x;
         changeEnemySelection(y > 0 ? -1 : (y < 0 ? 1 : 0));
@@ -144,6 +145,7 @@ public class TurnsManager : MonoBehaviour
     private void EnemyHovered_performed(EnemyUI enemy)
     {
         // Si hay un enemigo fijado, o la selección está bloqueada, el ratón no puede cambiarla
+        if (RuletaController.ruletaGirando) return;
         if (seleccionBloqueada) return;
         if (enemy == enemigoSeleccionado || !enemy.IsAlive) return;
 
@@ -180,11 +182,13 @@ public class TurnsManager : MonoBehaviour
 
     private void FixEnemy(InputAction.CallbackContext context)
     {
+        if (RuletaController.ruletaGirando) return;
         ToggleFijarEnemigo();
     }
 
     private void EnemyClicked_performed(EnemyUI enemy)
     {
+        if (RuletaController.ruletaGirando) return;
         if (enemy != enemigoSeleccionado) return;
         ToggleFijarEnemigo();
     }

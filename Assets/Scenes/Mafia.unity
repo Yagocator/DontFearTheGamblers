@@ -1034,6 +1034,15 @@ MonoBehaviour:
   botones:
   - {fileID: 1177742457}
   - {fileID: 911954204}
+  marcosRareza:
+  - {fileID: -2583733945269276685, guid: d31d7d746c633cc489a14eb03c59cab8, type: 3}
+  - {fileID: -6457173356982041635, guid: 6ab4b497ca3cbf244b2a97b46de5d663, type: 3}
+  - {fileID: -709106906698933982, guid: 496b31c94c8ef4f45b9aafbb23aad306, type: 3}
+  - {fileID: -1492113500657447558, guid: 79dff40df70a8b54ebf15842037b4f38, type: 3}
+  - {fileID: -4101179053711411086, guid: 201c43cb9bee56f4484c0a07997dd3fc, type: 3}
+  - {fileID: 8882013652015300996, guid: cc8507cc5d73bee49b069417fd1c93ee, type: 3}
+  MarcoIzquierda: {fileID: 1177742460}
+  MarcoDerecha: {fileID: 911954207}
   fotoIzquierda: {fileID: 1769045955}
   fotoiDerecha: {fileID: 1108391678}
   TextoNombreIzquierda: {fileID: 781290427}
@@ -1041,13 +1050,18 @@ MonoBehaviour:
   TextoBuffIzquierda: {fileID: 246646067}
   TextoBuffDerecha: {fileID: 625189478}
   TipoEscena: 1
-  ObjDisponibles:
-  - {fileID: 11400000, guid: 3b1e672db22a00c4683db9a9d0275b7d, type: 2}
-  - {fileID: 11400000, guid: 48222ffbf0d17d847abcb99e7f46b2b1, type: 2}
+  ObjDisponibles: []
   PosiblesPinchos:
   - {fileID: 11400000, guid: a5571a6bc43f813419d498f8dcc7fe92, type: 2}
   - {fileID: 11400000, guid: f11b638cb5168dd4ca15eb529a9287b0, type: 2}
   - {fileID: 11400000, guid: 56d8f2b5127328e4a99838c6536b3160, type: 2}
+  probabilidadesRareza:
+  - 50.3
+  - 25
+  - 12
+  - 8
+  - 3
+  - 1.7
   botonIzquierda: {fileID: 1177742459}
   botonDerecha: {fileID: 911954206}
 --- !u!1 &911954204
