@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +25,8 @@ public class RuletaController : MonoBehaviour
     public float separacionEntrePinchos = 90f;
 
     [Header("ZonasDondeMoverPinchos")]
-    public Transform zonaDeDescartes; 
-    public Transform zonaDeRobos; 
+    public Transform zonaDeDescartes;
+    public Transform zonaDeRobos;
 
     [Header("Animaciones Pinchos")]
     public float tiempoAnimacionDescarte = 0.35f;
@@ -67,7 +67,7 @@ public class RuletaController : MonoBehaviour
 
     public static event Action<List<(int cantidad, PinchosType tipo)>> ResultRuleta;
     public static event Action<bool> ButtonPressed;
-    
+
     public static RuletaController Instance { get; private set; }
 
     private void Start()
@@ -189,9 +189,6 @@ public class RuletaController : MonoBehaviour
 
     private void createAllPinchos()
     {
-        GameManager.Instance.createHand(); 
-    
-
         int cantidad = GameManager.Instance.playerSO.baraja.Count;
         pinchos = new GameObject[cantidad];
         pinchosScripts = new PinchosScript[cantidad];
@@ -200,9 +197,9 @@ public class RuletaController : MonoBehaviour
         {
             pinchos[i] = Instantiate(pinchosTemplate, pinchosParent);
             pinchos[i].name = "Pincho_" + i;
-            pinchos[i].SetActive(false); 
+            pinchos[i].SetActive(false);
 
-            pinchos[i].GetComponent<UnityEngine.UI.Image>().sprite = GameManager.Instance.playerSO.baraja[i].sprite;  
+            pinchos[i].GetComponent<UnityEngine.UI.Image>().sprite = GameManager.Instance.playerSO.baraja[i].sprite;
 
             pinchosScripts[i] = pinchos[i].GetComponent<PinchosScript>();
             if (pinchosScripts[i] != null) pinchosScripts[i].pinchoSO = GameManager.Instance.playerSO.baraja[i];
@@ -282,10 +279,10 @@ public class RuletaController : MonoBehaviour
             );
         }
 
-        drawHand(); 
+        drawHand();
         ResultRuleta?.Invoke(resultados);
     }
-   
+
     public void drawHand()
     {
         if (animandoMano) return;
@@ -296,20 +293,20 @@ public class RuletaController : MonoBehaviour
     {
         animandoMano = true;
 
-        List<int> disponibles = new List<int>(); 
+        List<int> disponibles = new List<int>();
         List<int> descartes = new List<int>();
         List<int> mano = new List<int>();
 
         for (int i = 0; i < pinchosScripts.Length; i++)
         {
             if (pinchosScripts[i].pinchoSO.state == Estado.Disponible_para_robar)
-                disponibles.Add(i); 
+                disponibles.Add(i);
 
             if (pinchosScripts[i].pinchoSO.state == Estado.Descarte)
-                descartes.Add(i); 
+                descartes.Add(i);
 
             if (pinchosScripts[i].pinchoSO.state == Estado.Mano)
-                mano.Add(i); 
+                mano.Add(i);
         }
 
         // Guardamos la mano anterior para animarla al descarte
@@ -381,28 +378,28 @@ public class RuletaController : MonoBehaviour
     private void deactivatePincho(int id_pincho)
     {
         DragDrop dragDrop = pinchos[id_pincho].GetComponent<DragDrop>();
-        if (dragDrop != null) dragDrop.VolverAPosicionOriginal(); 
+        if (dragDrop != null) dragDrop.VolverAPosicionOriginal();
 
         pinchos[id_pincho].SetActive(false);
     }
 
-    private void activatePincho(int id_pincho, float posicion_relativa) 
+    private void activatePincho(int id_pincho, float posicion_relativa)
     {
-            RectTransform rect = pinchos[id_pincho].GetComponent<RectTransform>();
-            if (rect != null) 
-            {
-                rect.anchorMin = new Vector2(0.5f, 0.5f);
-                rect.anchorMax = new Vector2(0.5f, 0.5f);
-                rect.pivot = new Vector2(0.5f, 0.5f);
+        RectTransform rect = pinchos[id_pincho].GetComponent<RectTransform>();
+        if (rect != null)
+        {
+            rect.anchorMin = new Vector2(0.5f, 0.5f);
+            rect.anchorMax = new Vector2(0.5f, 0.5f);
+            rect.pivot = new Vector2(0.5f, 0.5f);
 
-                rect.anchoredPosition = new Vector2(0f, posicion_relativa);
+            rect.anchoredPosition = new Vector2(0f, posicion_relativa);
 
-                rect.localRotation = Quaternion.AngleAxis(90, new Vector3(0f,0f,1f));
-            }
-            DragDrop dragDrop = pinchos[id_pincho].GetComponent<DragDrop>();
-            if (dragDrop != null) dragDrop.InitDragDrop(canvas, ruleta.transform);
-            pinchos[id_pincho].transform.SetParent(pinchosParent); 
-            pinchos[id_pincho].SetActive(true); 
+            rect.localRotation = Quaternion.AngleAxis(90, new Vector3(0f, 0f, 1f));
+        }
+        DragDrop dragDrop = pinchos[id_pincho].GetComponent<DragDrop>();
+        if (dragDrop != null) dragDrop.InitDragDrop(canvas, ruleta.transform);
+        pinchos[id_pincho].transform.SetParent(pinchosParent);
+        pinchos[id_pincho].SetActive(true);
     }
 
     private IEnumerator AnimarPinchosADescarte(List<int> ids)
@@ -696,7 +693,7 @@ public class RuletaController : MonoBehaviour
             Destroy(ghost);
         }
     }
-    
+
     private IEnumerator applyAllObjectsAnimado()
     {
         aplicandoObjetos = true;
@@ -852,7 +849,7 @@ public class RuletaController : MonoBehaviour
 
         Transform slotTransform = slootsScripts[slot].transform;
 
-   
+
         GameObject efecto = Instantiate(
             efectoObjetoPrefab,
             slotTransform.position,
@@ -861,7 +858,7 @@ public class RuletaController : MonoBehaviour
 
         ParticleSystem ps = efecto.GetComponent<ParticleSystem>();
         if (ps != null) Destroy(efecto, ps.main.duration + ps.main.startLifetime.constantMax + 0.2f);
-        else Destroy(efecto, duracionAnimacionObjeto + 0.2f);   
+        else Destroy(efecto, duracionAnimacionObjeto + 0.2f);
     }
     public bool maximoNumeroDePinchosColocados()
     {
@@ -872,8 +869,8 @@ public class RuletaController : MonoBehaviour
         {
             if (pinchosScripts[i] != null && pinchosScripts[i].EstaColocado())
             {
-                j++; 
-                if (j >= GameManager.Instance.playerSO.maximumPlayablePinchos) return true;  
+                j++;
+                if (j >= GameManager.Instance.playerSO.maximumPlayablePinchos) return true;
             }
         }
 

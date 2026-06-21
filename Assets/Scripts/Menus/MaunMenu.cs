@@ -43,6 +43,7 @@ public class MaunMenu : MonoBehaviour
     public void Play()
     {
         GameManager.Instance.createHand();
+        GameManager.Instance.playerSO.objetos.Clear();
         GameManager.Instance.LoadScene("CombateTurnos");
     }
 

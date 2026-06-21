@@ -54,9 +54,10 @@ public class GameManager : MonoBehaviour
         playerSO.baraja.Clear();
         List<PinchoSO> baraja = new List<PinchoSO>();
         baraja.Add(Instantiate(posibles_pinchos[0]));
+        baraja.Add(Instantiate(posibles_pinchos[0]));
         baraja.Add(Instantiate(posibles_pinchos[1]));
         baraja.Add(Instantiate(posibles_pinchos[2]));
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             int j = UnityEngine.Random.Range(0, posibles_pinchos.Count);
             baraja.Add(Instantiate(posibles_pinchos[j]));
