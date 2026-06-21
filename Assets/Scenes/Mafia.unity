@@ -1050,7 +1050,33 @@ MonoBehaviour:
   TextoBuffIzquierda: {fileID: 246646067}
   TextoBuffDerecha: {fileID: 625189478}
   TipoEscena: 1
-  ObjDisponibles: []
+  ObjDisponibles:
+  - {fileID: 11400000, guid: 0df82b1dcf84454449261cded9a7ff2e, type: 2}
+  - {fileID: 11400000, guid: 6da02cc39fa9ce549ac6455a75947f9f, type: 2}
+  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
+  - {fileID: 11400000, guid: 0e1b43299a42bec408ac19cb7be58668, type: 2}
+  - {fileID: 11400000, guid: 2bd7e90c6337dc540bab41be7db55d6b, type: 2}
+  - {fileID: 11400000, guid: 19fd50679c7d0e0429a94b4104cc2360, type: 2}
+  - {fileID: 11400000, guid: 6799799c0b6e4124392c7623b8771e94, type: 2}
+  - {fileID: 11400000, guid: 269d3e12f95559849b670450ede04cc2, type: 2}
+  - {fileID: 11400000, guid: f1db3aa0ac0b4804d958a9adb2ccb4ed, type: 2}
+  - {fileID: 11400000, guid: b68510bf8020a464b8187830b705efba, type: 2}
+  - {fileID: 11400000, guid: 09d971a08aff37143809bc2bb1fd951c, type: 2}
+  - {fileID: 11400000, guid: ecf6279ae876e384093a50b128c82723, type: 2}
+  - {fileID: 11400000, guid: fc26d3e391714164fadfc7db305073f3, type: 2}
+  - {fileID: 11400000, guid: 0d8d40092bb6cae4eac2c69c3357dec4, type: 2}
+  - {fileID: 11400000, guid: ab3298f2883e8fe4ab1f424222db7ff5, type: 2}
+  - {fileID: 11400000, guid: ae96a7f2863a6c242a6c0318fadad9ba, type: 2}
+  - {fileID: 11400000, guid: 95adab0278f164f4a9314c6d72395211, type: 2}
+  - {fileID: 11400000, guid: 8804648d2be60ad49a9a8023f9760224, type: 2}
+  - {fileID: 11400000, guid: 3ce10ab51ec41134091607c010136eb0, type: 2}
+  - {fileID: 11400000, guid: 163c8a4968d5c3b4c9bf669877175d59, type: 2}
+  - {fileID: 11400000, guid: c54499fa29b17834ba14f8c8227b5d2f, type: 2}
+  - {fileID: 11400000, guid: 7b9c2da5939e96545a5eeb37e8321d07, type: 2}
+  - {fileID: 11400000, guid: 10ee5927d7964de48a2c32d7b745f72b, type: 2}
+  - {fileID: 11400000, guid: f4d0ef03b4c960640809f1a9f844b87a, type: 2}
+  - {fileID: 11400000, guid: 06223a8324f93b84fb013a5734915e8d, type: 2}
+  - {fileID: 11400000, guid: 0e3244b726a0f7b429be511f9581a29f, type: 2}
   PosiblesPinchos:
   - {fileID: 11400000, guid: a5571a6bc43f813419d498f8dcc7fe92, type: 2}
   - {fileID: 11400000, guid: f11b638cb5168dd4ca15eb529a9287b0, type: 2}
@@ -1061,7 +1087,7 @@ MonoBehaviour:
   - 12
   - 8
   - 3
-  - 1.7
+  - 17171.7
   botonIzquierda: {fileID: 1177742459}
   botonDerecha: {fileID: 911954206}
 --- !u!1 &911954204

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5_Blac_+3
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: '+3 : Black'
-  desc: All black numbers get +3 - (Let it ride)
+  desc: All black numbers get +3- (Let it ride)
   sprite: {fileID: 0}
   mejoraNumero: 0
   mejoraNumeroNumsAfectados: 
@@ -26,3 +26,4 @@ MonoBehaviour:
   mejoraIntcvColor: 0
   mejoraIntcvColorColorAfectado: 0
   mejoraIntcvColorColorNuevo: 0
+  rareza: 1

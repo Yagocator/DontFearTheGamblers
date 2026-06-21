@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1_17_x3
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: 'x3 : 17'
-  desc: The number 17 gets multiplied by 3 - (Let ir ride)
+  desc: The number 17 gets multiplied by 3 - (Let it ride)
   sprite: {fileID: 0}
   mejoraNumero: 1
   mejoraNumeroNumsAfectados: 11000000
@@ -26,3 +26,4 @@ MonoBehaviour:
   mejoraIntcvColor: 0
   mejoraIntcvColorColorAfectado: 0
   mejoraIntcvColorColorNuevo: 0
+  rareza: 1

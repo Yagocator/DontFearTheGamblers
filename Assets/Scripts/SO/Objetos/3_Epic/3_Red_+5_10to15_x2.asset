@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae090d7bad86164daf023aa869787d5, type: 3}
   m_Name: 3_Red_+5_10to15_x2
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
-  nombre: '+5 : Red & *2 : 10 to 15'
+  nombre: '+5 : Red & x2 : 10 to 15'
   desc: All red numbers get +5 and the numbers between 10 to 15 get multiplied by
     2
   sprite: {fileID: 0}
@@ -27,4 +27,4 @@ MonoBehaviour:
   mejoraIntcvColor: 0
   mejoraIntcvColorColorAfectado: 2
   mejoraIntcvColorColorNuevo: 0
-  rareza: 0
+  rareza: 3

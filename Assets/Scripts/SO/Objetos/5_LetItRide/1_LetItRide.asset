@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: 1_LetItRide
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: LETITRIDE
-  desc: 'You '
+  desc: 'JUST PICK THE ITEM '
   sprite: {fileID: 0}
   mejoraNumero: 1
-  mejoraNumeroNumsAfectados: 0a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000
-  mejoraNumeroTipo: 1
-  mejoraNumeroIncremento: 30
-  mejoraColor: 1
+  mejoraNumeroNumsAfectados: 11000000
+  mejoraNumeroTipo: 0
+  mejoraNumeroIncremento: 1700
+  mejoraColor: 0
   mejoraColorColorAfectado: 1
   mejoraColorTipo: 0
   mejoraColorIncremento: 2
   mejoraIntcvColor: 0
   mejoraIntcvColorColorAfectado: 2
   mejoraIntcvColorColorNuevo: 0
-  rareza: 0
+  rareza: 5

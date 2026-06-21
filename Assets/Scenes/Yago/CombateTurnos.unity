@@ -2680,7 +2680,7 @@ MonoBehaviour:
   duracionTrail: 0.18
   alphaTrailInicial: 0.28
   escalaTrail: 0.95
-  efectoObjetoPrefab: {fileID: 0}
+  efectoObjetoPrefab: {fileID: 2989380997949452726, guid: 15fe91beebcee974f80824fb4bc878e8, type: 3}
   duracionAnimacionObjeto: 0.45
   pausaEntreObjetos: 0.15
   escalaPulsoSlot: 1.25
