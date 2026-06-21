@@ -15,3 +15,12 @@ MonoBehaviour:
   vida: 30
   vidaMax: 30
   shild: 5
+  handSize: 5
+  baraja:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

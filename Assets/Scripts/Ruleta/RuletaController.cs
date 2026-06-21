@@ -3,11 +3,8 @@ using UnityEngine;
 using UnityEngine.UI; 
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEditor.Rendering;
 using System.Linq;
-using UnityEngine.XR;
-using UnityEditor;
+
 
 public class RuletaController : MonoBehaviour
 {
@@ -29,6 +26,21 @@ public class RuletaController : MonoBehaviour
 
     public Transform zonaDeDescartes; 
     public Transform zonaDeRobos; 
+
+    [Header("Animaciones Pinchos")]
+    public float tiempoAnimacionDescarte = 0.35f;
+    public float tiempoAnimacionRobo = 0.35f;
+    public float offsetRotacionMovimiento = 90f;
+
+    [Header("Trail Pinchos")]
+    public bool activarTrailPinchos = true;
+    public float intervaloTrail = 0.035f;
+    public float duracionTrail = 0.18f;
+    public float alphaTrailInicial = 0.28f;
+    public float escalaTrail = 0.95f;
+
+    private bool animandoMano = false;
+
     private RuletaScript ruletaScript;
 
     private GameObject[] sloots;
@@ -224,90 +236,97 @@ public class RuletaController : MonoBehaviour
         
     }
 
+   
     public void drawHand()
     {
+        if (animandoMano) return;
+        StartCoroutine(DrawHandAnimada());
+    }
 
-        // Contiene en id del pinchosScript que cumple que esta ahi 
+    private IEnumerator DrawHandAnimada()
+    {
+        animandoMano = true;
+
         List<int> disponibles = new List<int>(); 
         List<int> descartes = new List<int>();
         List<int> mano = new List<int>();
 
-
         for (int i = 0; i < pinchosScripts.Length; i++)
         {
-            if (pinchosScripts[i].pinchoSO.state == Estado.Disponible_para_robar) disponibles.Add(i); 
-            if (pinchosScripts[i].pinchoSO.state == Estado.Descarte) descartes.Add(i); 
-            if (pinchosScripts[i].pinchoSO.state == Estado.Mano) mano.Add(i); 
-        }   
+            if (pinchosScripts[i].pinchoSO.state == Estado.Disponible_para_robar)
+                disponibles.Add(i); 
 
-        ////////////////////////////////////////////
+            if (pinchosScripts[i].pinchoSO.state == Estado.Descarte)
+                descartes.Add(i); 
 
-        // Pinchos a descarte previos 
+            if (pinchosScripts[i].pinchoSO.state == Estado.Mano)
+                mano.Add(i); 
+        }
+
+        // Guardamos la mano anterior para animarla al descarte
+        List<int> manoAnterior = new List<int>(mano);
+
         for (int i = mano.Count - 1; i >= 0; i--)
         {
-            pinchosScripts[mano[i]].pinchoSO.state = Estado.Descarte; 
-            descartes.Add(mano[i]); 
-            deactivatePincho(mano[i]); 
-            
-            mano.RemoveAt(i);             
-        } 
+            int id = mano[i];
+            pinchosScripts[id].pinchoSO.state = Estado.Descarte;
+            descartes.Add(id);
 
-        ////////////////////////////////////////////
-        
+            mano.RemoveAt(i);
+        }
 
-        // Pinchos de baraja a mano  (Si baraja insuficiente entonces robas todos + descarte a baraja y ejecutas robar de baraja
-        int handSize = GameManager.Instance.playerSO.handSize; 
+        // Animación de descarte. Aquí espera a que TODOS lleguen.
+        yield return StartCoroutine(AnimarPinchosADescarte(manoAnterior));
+
+        int handSize = GameManager.Instance.playerSO.handSize;
+
         if (disponibles.Count < handSize)
         {
-            // Robar todos disponibles 
-            int resto = handSize - disponibles.Count; 
-            for (int i = disponibles.Count - 1; i >= 0; i--)
-            {
-                int j = UnityEngine.Random.Range(0, disponibles.Count); 
-                pinchosScripts[disponibles[j]].pinchoSO.state = Estado.Mano; 
-                mano.Add(disponibles[j]);  
+            int resto = handSize - disponibles.Count;
 
-                disponibles.RemoveAt(j); 
+            // Robar todos los disponibles
+            while (disponibles.Count > 0)
+            {
+                RobarUno(disponibles, mano);
             }
 
-            // Añadir descartes a la pila de robo
+            // Pasar descartes a disponibles
             for (int i = descartes.Count - 1; i >= 0; i--)
             {
-                disponibles.Add(descartes[i]); 
-                pinchosScripts[descartes[i]].pinchoSO.state = Estado.Disponible_para_robar; 
-                
-                descartes.RemoveAt(i); 
+                int id = descartes[i];
+
+                disponibles.Add(id);
+                pinchosScripts[id].pinchoSO.state = Estado.Disponible_para_robar;
+
+                descartes.RemoveAt(i);
             }
 
-            // Robar aleatorio  
-            int cantidadARobar = Mathf.Min(resto, disponibles.Count); 
+            // Robar lo que falta
+            int cantidadARobar = Mathf.Min(resto, disponibles.Count);
+
             for (int i = 0; i < cantidadARobar; i++)
             {
-                int j = UnityEngine.Random.Range(0, disponibles.Count); 
-                pinchosScripts[disponibles[j]].pinchoSO.state = Estado.Mano; 
-                mano.Add(disponibles[j]); 
-
-                disponibles.RemoveAt(j); 
+                RobarUno(disponibles, mano);
             }
         }
-        else
-        {
-            // Robar aleatorio  
-            for (int i = 0; i < handSize; i++)
-            {
-                int j = UnityEngine.Random.Range(0, disponibles.Count); 
-                pinchosScripts[disponibles[j]].pinchoSO.state = Estado.Mano; 
-                mano.Add(disponibles[j]); 
 
-                disponibles.RemoveAt(j); 
-            }
-        } 
+        else for (int i = 0; i < handSize; i++) RobarUno(disponibles, mano);
 
+        // Animación de robo. Aquí salen desde ZonaDeRobos hacia su posición de mano.
+        yield return StartCoroutine(AnimarPinchosARobo(mano));
 
+        animandoMano = false;
+    }
 
-        ////////////////////////////////////////////
-        // Crear pinchos visuales   
-        for (int i = 0; i < mano.Count; i++) activatePincho(mano[i], separacionEntrePinchos * i); 
+    private void RobarUno(List<int> disponibles, List<int> mano)
+    {
+        int j = UnityEngine.Random.Range(0, disponibles.Count);
+        int id = disponibles[j];
+
+        pinchosScripts[id].pinchoSO.state = Estado.Mano;
+        mano.Add(id);
+
+        disponibles.RemoveAt(j);
     }
 
     private void deactivatePincho(int id_pincho)
@@ -336,6 +355,301 @@ public class RuletaController : MonoBehaviour
             pinchos[id_pincho].transform.SetParent(pinchosParent); 
             pinchos[id_pincho].SetActive(true); 
     }
+
+    private IEnumerator AnimarPinchosADescarte(List<int> ids)
+    {
+        if (ids == null || ids.Count == 0) yield break;
+
+        if (zonaDeDescartes == null)
+        {
+            Debug.LogError("Falta asignar ZonaDeDescartes en el inspector.");
+            yield break;
+        }
+
+        float duracion = Mathf.Max(0.01f, tiempoAnimacionDescarte);
+
+        List<RectTransform> rects = new List<RectTransform>();
+        List<CanvasGroup> canvasGroups = new List<CanvasGroup>();
+        List<Vector3> posicionesIniciales = new List<Vector3>();
+
+        Vector3 posicionFinal = zonaDeDescartes.position;
+
+        for (int i = 0; i < ids.Count; i++)
+        {
+            int id = ids[i];
+
+            GameObject pincho = pinchos[id];
+            pincho.SetActive(true);
+
+            DragDrop dragDrop = pincho.GetComponent<DragDrop>();
+            if (dragDrop != null)
+            {
+                dragDrop.LiberarHuecoYResetearSinMover();
+            }
+
+            RectTransform rect = pincho.GetComponent<RectTransform>();
+
+            if (rect == null) continue;
+
+            if (canvas != null)
+            {
+                rect.SetParent(canvas.transform, true);
+            }
+
+            CanvasGroup canvasGroup = GetOrAddCanvasGroup(pincho);
+            canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = false;
+
+            rects.Add(rect);
+            canvasGroups.Add(canvasGroup);
+            posicionesIniciales.Add(rect.position);
+        }
+
+        float tiempo = 0f;
+        float tiempoTrail = 0f;
+
+        while (tiempo < duracion)
+        {
+            float t = tiempo / duracion;
+            float suavizado = t * t * (3f - 2f * t);
+
+            for (int i = 0; i < rects.Count; i++)
+            {
+                Vector3 nuevaPosicion = Vector3.Lerp(
+                    posicionesIniciales[i],
+                    posicionFinal,
+                    suavizado
+                );
+
+                rects[i].position = nuevaPosicion;
+
+                RotarHaciaMovimientoWorld(rects[i], posicionFinal - nuevaPosicion);
+
+                canvasGroups[i].alpha = Mathf.Lerp(1f, 0f, suavizado);
+            }
+
+            tiempoTrail += Time.deltaTime;
+
+            if (tiempoTrail >= intervaloTrail)
+            {
+                tiempoTrail = 0f;
+
+                for (int i = 0; i < rects.Count; i++)
+                {
+                    CrearTrail(rects[i]);
+                }
+            }
+
+            tiempo += Time.deltaTime;
+            yield return null;
+        }
+
+        for (int i = 0; i < rects.Count; i++)
+        {
+            rects[i].position = posicionFinal;
+            canvasGroups[i].alpha = 1f;
+            canvasGroups[i].blocksRaycasts = true;
+
+            rects[i].SetParent(pinchosParent, false);
+
+            GameObject pincho = rects[i].gameObject;
+            pincho.SetActive(false);
+        }
+    }
+    private IEnumerator AnimarPinchosARobo(List<int> mano)
+    {
+        if (mano == null || mano.Count == 0) yield break;
+
+        if (zonaDeRobos == null)
+        {
+            Debug.LogError("Falta asignar ZonaDeRobos en el inspector.");
+            yield break;
+        }
+
+        float duracion = Mathf.Max(0.01f, tiempoAnimacionRobo);
+
+        List<RectTransform> rects = new List<RectTransform>();
+        List<CanvasGroup> canvasGroups = new List<CanvasGroup>();
+        List<Vector2> posicionesIniciales = new List<Vector2>();
+        List<Vector2> posicionesFinales = new List<Vector2>();
+
+        Vector2 posicionRoboLocal = pinchosParent.InverseTransformPoint(zonaDeRobos.position);
+
+        for (int i = 0; i < mano.Count; i++)
+        {
+            int id = mano[i];
+
+            GameObject pincho = pinchos[id];
+            pincho.SetActive(true);
+
+            RectTransform rect = pincho.GetComponent<RectTransform>();
+
+            if (rect == null) continue;
+
+            rect.SetParent(pinchosParent, false);
+
+            rect.anchorMin = new Vector2(0.5f, 0.5f);
+            rect.anchorMax = new Vector2(0.5f, 0.5f);
+            rect.pivot = new Vector2(0.5f, 0.5f);
+
+            Vector2 posicionFinal = new Vector2(0f, separacionEntrePinchos * i);
+
+            rect.anchoredPosition = posicionRoboLocal;
+
+            CanvasGroup canvasGroup = GetOrAddCanvasGroup(pincho);
+            canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = false;
+
+            rects.Add(rect);
+            canvasGroups.Add(canvasGroup);
+            posicionesIniciales.Add(posicionRoboLocal);
+            posicionesFinales.Add(posicionFinal);
+        }
+
+        float tiempo = 0f;
+        float tiempoTrail = 0f;
+
+        while (tiempo < duracion)
+        {
+            float t = tiempo / duracion;
+            float suavizado = t * t * (3f - 2f * t);
+
+            for (int i = 0; i < rects.Count; i++)
+            {
+                Vector2 nuevaPosicion = Vector2.Lerp(
+                    posicionesIniciales[i],
+                    posicionesFinales[i],
+                    suavizado
+                );
+
+                rects[i].anchoredPosition = nuevaPosicion;
+
+                RotarHaciaMovimientoLocal(rects[i], posicionesFinales[i] - nuevaPosicion);
+            }
+
+            tiempoTrail += Time.deltaTime;
+
+            if (tiempoTrail >= intervaloTrail)
+            {
+                tiempoTrail = 0f;
+
+                for (int i = 0; i < rects.Count; i++)
+                {
+                    CrearTrail(rects[i]);
+                }
+            }
+
+            tiempo += Time.deltaTime;
+            yield return null;
+        }
+
+        for (int i = 0; i < rects.Count; i++)
+        {
+            rects[i].anchoredPosition = posicionesFinales[i];
+
+            // Rotación final normal de la mano.
+            rects[i].localRotation = Quaternion.AngleAxis(90f, Vector3.forward);
+
+            canvasGroups[i].alpha = 1f;
+            canvasGroups[i].blocksRaycasts = true;
+
+            DragDrop dragDrop = rects[i].GetComponent<DragDrop>();
+
+            if (dragDrop != null)
+            {
+                dragDrop.InitDragDrop(canvas, ruleta.transform);
+            }
+        }
+    }
+    private CanvasGroup GetOrAddCanvasGroup(GameObject obj)
+    {
+        CanvasGroup canvasGroup = obj.GetComponent<CanvasGroup>();
+
+        if (canvasGroup == null)
+        {
+            canvasGroup = obj.AddComponent<CanvasGroup>();
+        }
+
+        return canvasGroup;
+    }
+
+    private void RotarHaciaMovimientoWorld(RectTransform rect, Vector3 direccion)
+    {
+        if (direccion.sqrMagnitude < 0.001f) return;
+
+        float angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
+        rect.rotation = Quaternion.Euler(0f, 0f, angulo + offsetRotacionMovimiento);
+    }
+
+    private void RotarHaciaMovimientoLocal(RectTransform rect, Vector2 direccion)
+    {
+        if (direccion.sqrMagnitude < 0.001f) return;
+
+        float angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
+        rect.localRotation = Quaternion.Euler(0f, 0f, angulo + offsetRotacionMovimiento);
+    }
+
+    private void CrearTrail(RectTransform original)
+    {
+        if (!activarTrailPinchos || original == null) return;
+
+        UnityEngine.UI.Image imageOriginal = original.GetComponent<UnityEngine.UI.Image>();
+        if (imageOriginal == null || imageOriginal.sprite == null) return;
+
+        GameObject ghost = new GameObject("Trail_" + original.name);
+
+        RectTransform ghostRect = ghost.AddComponent<RectTransform>();
+        UnityEngine.UI.Image ghostImage = ghost.AddComponent<UnityEngine.UI.Image>();
+        CanvasGroup ghostCanvasGroup = ghost.AddComponent<CanvasGroup>();
+
+        ghost.transform.SetParent(original.parent, false);
+
+        ghostRect.anchorMin = original.anchorMin;
+        ghostRect.anchorMax = original.anchorMax;
+        ghostRect.pivot = original.pivot;
+        ghostRect.sizeDelta = original.sizeDelta;
+        ghostRect.anchoredPosition = original.anchoredPosition;
+        ghostRect.position = original.position;
+        ghostRect.rotation = original.rotation;
+        ghostRect.localScale = original.localScale * escalaTrail;
+
+        ghostImage.sprite = imageOriginal.sprite;
+        ghostImage.color = imageOriginal.color;
+        ghostImage.raycastTarget = false;
+        ghostImage.preserveAspect = imageOriginal.preserveAspect;
+
+        ghostCanvasGroup.alpha = alphaTrailInicial;
+        ghostCanvasGroup.blocksRaycasts = false;
+        ghostCanvasGroup.interactable = false;
+
+        ghost.transform.SetSiblingIndex(Mathf.Max(0, original.GetSiblingIndex()));
+
+        StartCoroutine(FadeOutTrail(ghostCanvasGroup, ghost));
+    }
+
+    private IEnumerator FadeOutTrail(CanvasGroup canvasGroup, GameObject ghost)
+    {
+        float tiempo = 0f;
+
+        while (tiempo < duracionTrail)
+        {
+            float t = tiempo / duracionTrail;
+
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = Mathf.Lerp(alphaTrailInicial, 0f, t);
+            }
+
+            tiempo += Time.deltaTime;
+            yield return null;
+        }
+
+        if (ghost != null)
+        {
+            Destroy(ghost);
+        }
+    }
+
 }
 
 
