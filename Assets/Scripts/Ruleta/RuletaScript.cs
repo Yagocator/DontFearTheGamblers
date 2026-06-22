@@ -69,7 +69,7 @@ public class RuletaScript : MonoBehaviour
         float halfParte = parte / 2;
 
         float z = transform.localEulerAngles.z; 
-        int valor = (int) ((z + halfParte) / parte);
+        int valor = (int) (((z + halfParte) / parte) % 37);
         return valor; 
     }
 
