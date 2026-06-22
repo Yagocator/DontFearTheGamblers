@@ -136,7 +136,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         estaSeleccionado = false;
 
         if (animCoroutine != null) StopCoroutine(animCoroutine);
-        animCoroutine = StartCoroutine(AnimarSeleccion(false));
+        if (IsAlive)
+            animCoroutine = StartCoroutine(AnimarSeleccion(false));
     }
 
     private IEnumerator AnimarSeleccion(bool seleccionar)
@@ -150,7 +151,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         float t = 0f;
         while (t < duracionAnim)
         {
-            if (Fijado)
+            if (!IsAlive || Fijado)
             {
                 animCoroutine = null;
                 yield break;
@@ -171,7 +172,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         Padre.transform.localScale = escalaFin;
 
         if (panelHighlight != null)
-            panelHighlight.color = Fijado ? colorFijado : colorFin;
+            panelHighlight.color = Fijado ? colorFijado : (IsAlive ? colorFin : Color.black);
 
         animCoroutine = null;
     }
@@ -192,6 +193,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private Color ColorObjetivo()
     {
+        if (!IsAlive) return Color.black;
         if (Fijado) return colorFijado;
         if (estaSeleccionado) return colorSeleccionado;
         return colorNormal;
@@ -321,7 +323,6 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     private IEnumerator FeedbackDañoTextos()
     {
         vidaEnemy.color = Color.red;
-        ShildEnemy.color = Color.red;
 
         float tiempoTranscurrido = 0f;
         float duracionFeedback = 0.4f;
@@ -345,8 +346,12 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
         vidaRect.anchoredPosition = posOriginalVida;
         shildRect.anchoredPosition = posOriginalShild;
-        vidaEnemy.color = colorOriginalVida;
-        ShildEnemy.color = colorOriginalShild;
+
+        if (IsAlive)
+        {
+            vidaEnemy.color = colorOriginalVida;
+            ShildEnemy.color = colorOriginalShild;
+        }
     }
 
     public bool Damagear(int Damage)
@@ -369,7 +374,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             enemySO.vida -= dañoRestante;
             if (enemySO.vida <= 0)
             {
-                enemySO.vida = 0;
+                vidaEnemy.color = Color.red;
                 Morir();
                 return true;
             }
@@ -384,13 +389,16 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         IsAlive = false;
 
         if (shakeCoroutine != null) { StopCoroutine(shakeCoroutine); shakeCoroutine = null; }
+        if (feedbackCoroutine != null) { StopCoroutine(feedbackCoroutine); feedbackCoroutine = null; }
 
         ImageEnemy.sprite = enemySO.spriteMuerto;
         DeselectEnemy();
 
         if (animCoroutine != null) { StopCoroutine(animCoroutine); animCoroutine = null; }
 
-        panelHighlight.color = Color.black;
+        vidaEnemy.color = Color.red;
+        if (panelHighlight != null)
+            panelHighlight.color = Color.black;
         Fijado = false;
         UpdateUI();
     }
