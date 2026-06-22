@@ -134,9 +134,9 @@ public class RuletaController : MonoBehaviour
                 if (i == 0) slootsScripts[i].setValor(72);
                 else slootsScripts[i].setValor(i);
 
-                if (i == 0) slootsScripts[i].setColor(0);
-                else if (i % 2 == 0) slootsScripts[i].setColor(1);
-                else slootsScripts[i].setColor(2);
+                if (i == 0) slootsScripts[i].setColor(Colores.VERDE);
+                else if (i % 2 == 0) slootsScripts[i].setColor(Colores.ROJO);
+                else slootsScripts[i].setColor(Colores.NEGRO);
 
                 slootsScripts[i].initSloot();
             }

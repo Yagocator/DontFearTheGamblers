@@ -39,10 +39,6 @@ public class SlootScript : MonoBehaviour
     public int getValor() { return valor; }
 
     public int getValorModifiedSloot() { return (valor + suma) * factorEscala;}
-    public void setColor(int c) { 
-        color = (Colores)c; 
-        paintSloot(); 
-    }
     public void setColor(Colores c) {
         color = c;   
         paintSloot();  
