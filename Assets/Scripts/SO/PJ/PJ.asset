@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602e42fdd85a9224fa16e1e8d854cfa2, type: 3}
   m_Name: PJ
   m_EditorClassIdentifier: Assembly-CSharp::PJSO
-  vida: 30
-  vidaMax: 30
-  shild: 1306
+  vida: 100
+  vidaMax: 100
+  shild: 674
   handSize: 5
   maximumPlayablePinchos: 3
   baraja:
@@ -25,4 +25,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  objetos: []
+  - {fileID: 0}
+  objetos:
+  - {fileID: 11400000, guid: 0e1b43299a42bec408ac19cb7be58668, type: 2}
+  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
+  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
+  - {fileID: 11400000, guid: 269d3e12f95559849b670450ede04cc2, type: 2}
+  - {fileID: 11400000, guid: 269d3e12f95559849b670450ede04cc2, type: 2}
+  - {fileID: 11400000, guid: 0e1b43299a42bec408ac19cb7be58668, type: 2}
+  - {fileID: 11400000, guid: 95adab0278f164f4a9314c6d72395211, type: 2}
+  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
+  - {fileID: 11400000, guid: 10ee5927d7964de48a2c32d7b745f72b, type: 2}
+  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
+  - {fileID: 11400000, guid: 95adab0278f164f4a9314c6d72395211, type: 2}

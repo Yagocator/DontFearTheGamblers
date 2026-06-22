@@ -6,6 +6,9 @@ public class EscojerZona : MonoBehaviour
 {
     public TextMeshProUGUI HealText;
     public Button[] botones;
+    public TextMeshProUGUI nextLvL;
+    public Image Dificulty;
+    public Sprite[] DifficultySprite;
 
     private void Start()
     {
@@ -16,6 +19,22 @@ public class EscojerZona : MonoBehaviour
         else
         {
             HealText.text = "HEALTH 60";
+        }
+        currentNextLvl();
+        if (GameManager.Instance.nivelAct <= 5)
+        {
+            nextLvL.color = Color.green;
+            Dificulty.sprite = DifficultySprite[0];
+        }
+        else if (GameManager.Instance.nivelAct <= 12 && GameManager.Instance.nivelAct > 5)
+        {
+            nextLvL.color = Color.yellow;
+            Dificulty.sprite = DifficultySprite[1];
+        }
+        else
+        {
+            nextLvL.color = Color.red;
+            Dificulty.sprite = DifficultySprite[2];
         }
     }
     public void Bar()
@@ -47,6 +66,11 @@ public class EscojerZona : MonoBehaviour
             GameManager.Instance.playerSO.vida = GameManager.Instance.playerSO.vidaMax;
         }
         GameManager.Instance.LoadScene("CombateTurnos");
+    }
+
+    private void currentNextLvl()
+    {
+        nextLvL.text = "NEXT LVL " + GameManager.Instance.nivelAct.ToString();
     }
 
 }
