@@ -90,7 +90,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6029700813389800706}
+      - m_Target: {fileID: 3673117448879295033}
         m_TargetAssemblyTypeName: Audiochanger, Assembly-CSharp
         m_MethodName: OnchangeMasterVolumen
         m_Mode: 0
@@ -668,7 +668,6 @@ GameObject:
   - component: {fileID: 4079140681714507261}
   - component: {fileID: 3926601308281843532}
   - component: {fileID: 2475641111062659130}
-  - component: {fileID: 6029700813389800706}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -738,23 +737,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6029700813389800706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2755446379058179491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03e4f8f74a44993498beb26c8aa08925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Audiochanger
-  audioMixer: {fileID: 24100000, guid: c0dc18e46b5045746831686c49271337, type: 2}
-  sliders:
-  - {fileID: 1515176661842541595}
-  - {fileID: 7719792932322236810}
-  - {fileID: 6470207731145451131}
 --- !u!1 &3089135434716600296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,7 +1038,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6029700813389800706}
+      - m_Target: {fileID: 3673117448879295033}
         m_TargetAssemblyTypeName: Audiochanger, Assembly-CSharp
         m_MethodName: OnchangeMusicVolumen
         m_Mode: 0
@@ -2073,6 +2055,7 @@ GameObject:
   - component: {fileID: 6746857529451807330}
   - component: {fileID: 9121713501524503680}
   - component: {fileID: 1803940458354689307}
+  - component: {fileID: 3673117448879295033}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -2182,6 +2165,23 @@ MonoBehaviour:
   MenuPausa: {fileID: 4630259078577880125}
   TutorialMenu: {fileID: 7364941231734693643}
   opcionesMenu: {fileID: 2755446379058179491}
+--- !u!114 &3673117448879295033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577498502987981038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e4f8f74a44993498beb26c8aa08925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audiochanger
+  audioMixer: {fileID: 24100000, guid: c0dc18e46b5045746831686c49271337, type: 2}
+  sliders:
+  - {fileID: 1515176661842541595}
+  - {fileID: 6470207731145451131}
+  - {fileID: 7719792932322236810}
 --- !u!1 &6137996524740587244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,7 +2787,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6029700813389800706}
+      - m_Target: {fileID: 3673117448879295033}
         m_TargetAssemblyTypeName: Audiochanger, Assembly-CSharp
         m_MethodName: OnchangeSFXVolumen
         m_Mode: 0
