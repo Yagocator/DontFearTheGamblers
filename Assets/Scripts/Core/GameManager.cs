@@ -10,9 +10,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    
-
     public static GameManager Instance;
     public Animator transition;
 
@@ -20,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     public List<PinchoSO> posibles_pinchos = new List<PinchoSO>();
 
+    public float maseterVolumen;
+    public float musicVolumen;
+
+    public float SFXVolumen;
 
 
     private void Awake()
