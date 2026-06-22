@@ -16,6 +16,7 @@ public class MaunMenu : MonoBehaviour
     private bool InSettings;
     public Button[] botones;
 
+    public AudioClip gameMusic; 
 
     void OnEnable()
     {
@@ -48,6 +49,7 @@ public class MaunMenu : MonoBehaviour
         {
             item.interactable = false;
         }
+        GameManager.Instance.PlayMusic(gameMusic); 
         GameManager.Instance.nivelAct = 1;
         GameManager.Instance.playerSO.vida = 100;
         GameManager.Instance.playerSO.vidaMax = 100;

@@ -17,5 +17,5 @@ MonoBehaviour:
   type: 0
   state: 0
   sprite: {fileID: -7008412969330441016, guid: c3ff0b37377f1044ea9346c9ad30d988, type: 3}
-  nombre: AttackAttack
+  nombre: AttackX2
   desc: Deals the amount of ATTACK equal to TWO TIMES the sloot it landes on
