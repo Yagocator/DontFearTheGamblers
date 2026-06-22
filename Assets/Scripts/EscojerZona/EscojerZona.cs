@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EscojerZona : MonoBehaviour
 {
     public TextMeshProUGUI HealText;
+    public Button[] botones;
 
     private void Start()
     {
@@ -18,14 +20,26 @@ public class EscojerZona : MonoBehaviour
     }
     public void Bar()
     {
+        foreach (Button item in botones)
+        {
+            item.interactable = false;
+        }
         GameManager.Instance.LoadScene("Bar");
     }
     public void Mafia()
     {
+        foreach (Button item in botones)
+        {
+            item.interactable = false;
+        }
         GameManager.Instance.LoadScene("Mafia");
     }
     public void Heal()
     {
+        foreach (Button item in botones)
+        {
+            item.interactable = false;
+        }
         // TODO Sonido de dormir
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
         {

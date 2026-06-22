@@ -1102,6 +1102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EscojerZona
   HealText: {fileID: 607408795}
+  botones:
+  - {fileID: 1177742459}
+  - {fileID: 397152514}
+  - {fileID: 1715307562}
 --- !u!1 &1073215043
 GameObject:
   m_ObjectHideFlags: 0

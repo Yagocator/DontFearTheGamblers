@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MaunMenu : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class MaunMenu : MonoBehaviour
 
     private bool InTutorial;
     private bool InSettings;
+    public Button[] botones;
 
 
     void OnEnable()
@@ -42,6 +44,10 @@ public class MaunMenu : MonoBehaviour
 
     public void Play()
     {
+        foreach (Button item in botones)
+        {
+            item.interactable = false;
+        }
         GameManager.Instance.createHand();
         GameManager.Instance.playerSO.objetos.Clear();
         GameManager.Instance.LoadScene("CombateTurnos");
