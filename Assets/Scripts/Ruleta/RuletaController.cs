@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
+using Unity.Hierarchy.Editor;
 
 
 
@@ -69,6 +71,12 @@ public class RuletaController : MonoBehaviour
     public static event Action<bool> ButtonPressed;
 
     public static RuletaController Instance { get; private set; }
+
+    [Header("Audios")]
+
+    public AudioClip mejorarCasilla;
+
+    public AudioClip onHandDrawnSFX; 
 
     private void Start()
     {
@@ -227,7 +235,7 @@ public class RuletaController : MonoBehaviour
         bloquearMovimientoTodosLosPinchos = true;
 
         ruletaScript.RotateRuleta();
-
+        
         yield return new WaitUntil(() => ruletaScript.finishRotate);
 
         int temp = ruletaScript.casillaPrincipal();
@@ -291,6 +299,7 @@ public class RuletaController : MonoBehaviour
 
     private IEnumerator DrawHandAnimada()
     {
+        GameManager.Instance.PlaySFX(onHandDrawnSFX);
         animandoMano = true;
 
         List<int> disponibles = new List<int>();
@@ -699,30 +708,83 @@ public class RuletaController : MonoBehaviour
         aplicandoObjetos = true;
         puedeGirarRuleta = false;
 
+        // 1r Intercanvio de color
         for (int i = 0; i < GameManager.Instance.playerSO.objetos.Count; i++)
         {
             ObjetoSo objetoActual = GameManager.Instance.playerSO.objetos[i];
 
             if (objetoActual == null) continue;
 
-            Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+            if (objetoActual.mejoraIntcvColor)
+            {
+                Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+                yield return StartCoroutine(applyMejoraIntcvColorAnimada(objetoActual));
+                GameManager.Instance.PlaySFX(mejorarCasilla);
+                yield return new WaitForSeconds(pausaEntreObjetos);
+            }
+        }
+
+        // 2n Suma de valores
+        for (int i = 0; i < GameManager.Instance.playerSO.objetos.Count; i++)
+        {
+            ObjetoSo objetoActual = GameManager.Instance.playerSO.objetos[i];
+
+            if (objetoActual == null) continue;
+
+           
 
             if (objetoActual.mejoraNumero)
             {
-                yield return StartCoroutine(applyMejoraNumeroAnimada(objetoActual));
+                if (objetoActual.mejoraNumeroTipo == TipoMejora.SUMA) {
+                    Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+                    yield return StartCoroutine(applyMejoraNumeroAnimada(objetoActual));
+                    GameManager.Instance.PlaySFX(mejorarCasilla);
+                    yield return new WaitForSeconds(pausaEntreObjetos);    
+                }
+            }
+
+            if (objetoActual.mejoraColor)
+            {   
+                if (objetoActual.mejoraColorTipo == TipoMejora.SUMA)
+                {
+                    Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+                    yield return StartCoroutine(applyMejoraColorAnimada(objetoActual));
+                    GameManager.Instance.PlaySFX(mejorarCasilla);
+                    yield return new WaitForSeconds(pausaEntreObjetos);
+                }
+            }
+            
+        }
+
+        // 3r Multiplicaciones
+        for (int i = 0; i < GameManager.Instance.playerSO.objetos.Count; i++)
+        {
+            ObjetoSo objetoActual = GameManager.Instance.playerSO.objetos[i];
+
+            if (objetoActual == null) continue;
+
+            if (objetoActual.mejoraNumero)
+            {
+                if (objetoActual.mejoraNumeroTipo == TipoMejora.MULTI)
+                {
+                    Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+                    yield return StartCoroutine(applyMejoraNumeroAnimada(objetoActual));
+                    GameManager.Instance.PlaySFX(mejorarCasilla);
+                    yield return new WaitForSeconds(pausaEntreObjetos);
+                }    
             }
 
             if (objetoActual.mejoraColor)
             {
-                yield return StartCoroutine(applyMejoraColorAnimada(objetoActual));
+                if (objetoActual.mejoraColorTipo == TipoMejora.MULTI)
+                {
+                    Debug.Log("Aplicando objeto: " + objetoActual.nombre);
+                    yield return StartCoroutine(applyMejoraColorAnimada(objetoActual));
+                    GameManager.Instance.PlaySFX(mejorarCasilla);
+                    yield return new WaitForSeconds(pausaEntreObjetos);  
+                }   
             }
-
-            if (objetoActual.mejoraIntcvColor)
-            {
-                yield return StartCoroutine(applyMejoraIntcvColorAnimada(objetoActual));
-            }
-
-            yield return new WaitForSeconds(pausaEntreObjetos);
+        
         }
 
         aplicandoObjetos = false;

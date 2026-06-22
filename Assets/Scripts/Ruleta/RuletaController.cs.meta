@@ -1,2 +1,23 @@
 fileFormatVersion: 2
 guid: 488c7b6ede89e0d48901ffd951eef72e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ruleta: {instanceID: 0}
+  - slootTemplate: {instanceID: 0}
+  - pinchosTemplate: {instanceID: 0}
+  - huecoTemplate: {instanceID: 0}
+  - huecosParent: {instanceID: 0}
+  - pinchosParent: {instanceID: 0}
+  - canvas: {instanceID: 0}
+  - zonaDeDescartes: {instanceID: 0}
+  - zonaDeRobos: {instanceID: 0}
+  - efectoObjetoPrefab: {instanceID: 0}
+  - mejorarCasilla: {fileID: 8300000, guid: 002c7aa2cd1818d4b8489fdde8e10235, type: 3}
+  - onHandDrawnSFX: {fileID: 8300000, guid: c123e98ce94b10049be58e913743cda5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

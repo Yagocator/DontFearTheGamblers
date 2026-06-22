@@ -1661,8 +1661,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80cc7d47002fe4043ac3e3961f6f3b31, type: 2}
+  m_sharedMaterial: {fileID: -3515803805402308475, guid: 80cc7d47002fe4043ac3e3961f6f3b31, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2587,6 +2587,7 @@ MonoBehaviour:
   - {fileID: 96678066}
   - {fileID: 1371364161}
   gameMusic: {fileID: 8300000, guid: c144eccbabda4ac4a95e09d9aa7b9e82, type: 3}
+  buttonClic: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
 --- !u!1 &1243947460
 GameObject:
   m_ObjectHideFlags: 0

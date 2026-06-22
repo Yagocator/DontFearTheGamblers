@@ -1,2 +1,24 @@
 fileFormatVersion: 2
 guid: 2931def760cc45f40a5258da3ace744a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - nameEnemy: {instanceID: 0}
+  - vidaEnemy: {instanceID: 0}
+  - ShildEnemy: {instanceID: 0}
+  - ImageEnemy: {instanceID: 0}
+  - Padre: {instanceID: 0}
+  - Sangre: {instanceID: 0}
+  - Escudo: {instanceID: 0}
+  - IntencionSprite: {instanceID: 0}
+  - IntencionText: {instanceID: 0}
+  - panelHighlight: {instanceID: 0}
+  - PJController: {instanceID: 0}
+  - onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
+  - onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

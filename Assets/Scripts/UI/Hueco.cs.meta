@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: b00d77b9c76765747ab48d08fd729b34
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - circuloIndicador: {instanceID: 0}
+  - pinchoConfirmedSFX: {fileID: 8300000, guid: 51634c0ea3b4c7f45b33bf0baa14e10d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

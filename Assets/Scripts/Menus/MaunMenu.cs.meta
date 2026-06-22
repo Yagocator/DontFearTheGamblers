@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: 8577e56b62514fa40b2d21c0b8403d2f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - inputActions: {instanceID: 0}
+  - settings: {instanceID: 0}
+  - Tutorial: {instanceID: 0}
+  - gameMusic: {fileID: 8300000, guid: c144eccbabda4ac4a95e09d9aa7b9e82, type: 3}
+  - buttonClic: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

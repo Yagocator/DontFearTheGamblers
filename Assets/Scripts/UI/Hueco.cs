@@ -15,6 +15,8 @@ public class Hueco : MonoBehaviour, IDropHandler
 
     private static readonly List<Hueco> todosLosHuecos = new List<Hueco>();
 
+    [Header("Audio")]
+    public AudioClip pinchoConfirmedSFX; 
     private void Awake()
     {
         if (circuloIndicador != null)
@@ -159,7 +161,9 @@ public class Hueco : MonoBehaviour, IDropHandler
 
         dragDrop.SetHuecoActual(this);
         dragDrop.ConfirmarPosicionamientoValida();
-
+        GameManager.Instance.PlaySFX(pinchoConfirmedSFX);
         MostrarIndicadores(false);
     }
+
+    public void setPinchoConfirmedSFX(AudioClip sound) {pinchoConfirmedSFX = sound; }
 }

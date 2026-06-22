@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class EscojerZona : MonoBehaviour
@@ -10,6 +11,7 @@ public class EscojerZona : MonoBehaviour
     public Image Dificulty;
     public Sprite[] DifficultySprite;
 
+    public AudioClip selectOptions; 
     private void Start()
     {
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
@@ -43,6 +45,7 @@ public class EscojerZona : MonoBehaviour
         {
             item.interactable = false;
         }
+        GameManager.Instance.PlaySFX(selectOptions);
         GameManager.Instance.LoadScene("Bar");
     }
     public void Mafia()
@@ -51,6 +54,7 @@ public class EscojerZona : MonoBehaviour
         {
             item.interactable = false;
         }
+        GameManager.Instance.PlaySFX(selectOptions);
         GameManager.Instance.LoadScene("Mafia");
     }
     public void Heal()
@@ -60,6 +64,7 @@ public class EscojerZona : MonoBehaviour
             item.interactable = false;
         }
         // TODO Sonido de dormir
+        GameManager.Instance.PlaySFX(selectOptions);
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
         {
             GameManager.Instance.playerSO.vidaMax += 20;

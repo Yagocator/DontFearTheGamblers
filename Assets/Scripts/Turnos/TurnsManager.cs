@@ -27,6 +27,10 @@ public class TurnsManager : MonoBehaviour
     [SerializeField] private Button GuirarRuleta;
     public PJController PJController;
     public RuletaController RuletaController;
+
+    [Header("Audio")]
+    public AudioClip enemyConfirmed; 
+
     void Awake()
     {
         navegation = inputActions.FindActionMap("UI").FindAction("Navigate");
@@ -191,6 +195,7 @@ public class TurnsManager : MonoBehaviour
     {
         if (RuletaController.ruletaGirando) return;
         if (enemy != enemigoSeleccionado) return;
+        GameManager.Instance.PlaySFX(enemyConfirmed);
         ToggleFijarEnemigo();
     }
 

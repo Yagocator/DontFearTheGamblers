@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: c3fc8a9895151f04e8769c30e8728038
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - HealText: {instanceID: 0}
+  - nextLvL: {instanceID: 0}
+  - Dificulty: {instanceID: 0}
+  - selectOptions: {fileID: 8300000, guid: 96ab25e19a0e63b4cb2e633e88e2df55, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

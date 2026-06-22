@@ -1,2 +1,17 @@
 fileFormatVersion: 2
 guid: 0edc2ae95a6135d4ba870b4312b60ab8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemigoSeleccionado: {instanceID: 0}
+  - inputActions: {instanceID: 0}
+  - GuirarRuleta: {instanceID: 0}
+  - PJController: {instanceID: 0}
+  - RuletaController: {instanceID: 0}
+  - enemyConfirmed: {fileID: 8300000, guid: 02297278aeed3cf4c8c761d8e26f9438, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,6 +6,8 @@ using UnityEngine;
 public class RuletaScript : MonoBehaviour
 {
     public bool finishRotate;
+
+    public AudioClip girarRuletaSFX; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +22,7 @@ public class RuletaScript : MonoBehaviour
 
     public void RotateRuleta()
     {
+        GameManager.Instance.PlaySFX(girarRuletaSFX);
         finishRotate = false; 
         DateTime d = DateTime.UtcNow; 
         int seed = (d.Second + 213) * (d.Hour + 43) * (d.Day + 6456);

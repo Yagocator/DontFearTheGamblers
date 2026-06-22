@@ -18,6 +18,8 @@ public class MaunMenu : MonoBehaviour
 
     public AudioClip gameMusic; 
 
+    public AudioClip buttonClic; 
+
     void OnEnable()
     {
         inputActions.Enable();
@@ -50,6 +52,7 @@ public class MaunMenu : MonoBehaviour
             item.interactable = false;
         }
         GameManager.Instance.PlayMusic(gameMusic); 
+        GameManager.Instance.PlaySFX(buttonClic);
         GameManager.Instance.nivelAct = 1;
         GameManager.Instance.playerSO.vida = 100;
         GameManager.Instance.playerSO.vidaMax = 100;
@@ -63,22 +66,26 @@ public class MaunMenu : MonoBehaviour
 
     public void settingsEnter()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         settings.SetActive(true);
         InSettings = true;
     }
     public void exitSettings()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         settings.SetActive(false);
         InSettings = false;
     }
 
     public void enterTutorial()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         Tutorial.SetActive(true);
         InTutorial = true;
     }
     public void exitTutorial()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         Tutorial.SetActive(false);
         InTutorial = false;
     }
