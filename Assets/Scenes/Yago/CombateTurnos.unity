@@ -1504,7 +1504,7 @@ MonoBehaviour:
   pjVida: {fileID: 21861523}
   pjShild: {fileID: 317975510}
   TurnsManager: {fileID: 1745443681}
-  baseExtraEnemyChance: 0.5
+  baseExtraEnemyChance: 0.65
 --- !u!4 &443234976
 Transform:
   m_ObjectHideFlags: 0

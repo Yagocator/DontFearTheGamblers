@@ -117,6 +117,24 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public void InitializeEnemy(EnemySO enemy)
     {
         enemySO = enemy;
+
+        switch (enemy.tierEnemy)
+        {
+            case TierEnmey.TIER1:
+                nameEnemy.color = Color.darkSlateGray;
+                break;
+            case TierEnmey.TIER2:
+                nameEnemy.color = Color.darkGreen;
+                break;
+            case TierEnmey.TIER3:
+                nameEnemy.color = Color.purple;
+                break;
+            case TierEnmey.TIER4:
+                nameEnemy.color = Color.yellow;
+                break;
+        }
+
+
         nameEnemy.text = enemySO.name;
         vidaEnemy.text = enemySO.vida.ToString();
         ShildEnemy.text = enemySO.currentShild.ToString();
