@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: f387454b786a4b247a7346601dd50183
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - girarRuletaSFX: {fileID: 8300000, guid: 33d017115ef92ae438016b356e417372, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

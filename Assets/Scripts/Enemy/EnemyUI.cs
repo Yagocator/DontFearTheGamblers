@@ -77,6 +77,9 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public AccionEnemy accionEnemy;
     public int potencia;
 
+    public AudioClip onDamageSFX; 
+
+    public AudioClip onDeathSFX; 
     void Start()
     {
         if (panelHighlight == null)
@@ -232,6 +235,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             shakeCoroutine = null;
             if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
         }
+        GameManager.Instance.PlaySFX(onDamageSFX);
         shakeCoroutine = StartCoroutine(AnimarShake());
     }
 
@@ -436,6 +440,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         if (panelHighlight != null)
             panelHighlight.color = Color.black;
         Fijado = false;
+        GameManager.Instance.PlaySFX(onDeathSFX);
         UpdateUI();
     }
 

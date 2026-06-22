@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject opcionesMenu;
     private bool MenuOpciones = false;
 
+    public AudioClip buttonClic; 
     void OnEnable()
     {
         Pause = inputActions.FindActionMap("UI").FindAction("Pause");
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeMenu()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         MenuPausa.SetActive(false);
         MenuOpciones = false;
         opcionesMenu.SetActive(false);
@@ -57,12 +59,14 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         Time.timeScale = 1;
         GameManager.Instance.LoadScene("Menu");
     }
 
     public void EnterOpciones()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         MenuOpciones = true;
         opcionesMenu.SetActive(true);
         MenuPausa.SetActive(false);
@@ -70,6 +74,7 @@ public class PauseMenu : MonoBehaviour
 
     public void SalirOpciones()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         MenuOpciones = false;
         opcionesMenu.SetActive(false);
         MenuPausa.SetActive(true);
@@ -77,6 +82,7 @@ public class PauseMenu : MonoBehaviour
 
     public void EnterTutorialMenu()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         Pause.performed -= MenuPerformed;
         MenuPausa.SetActive(false);
         TutorialMenu.SetActive(true);
@@ -84,6 +90,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitTutorialMenu()
     {
+        GameManager.Instance.PlaySFX(buttonClic);
         Pause.performed += MenuPerformed;
         MenuPausa.SetActive(true);
         TutorialMenu.SetActive(false);

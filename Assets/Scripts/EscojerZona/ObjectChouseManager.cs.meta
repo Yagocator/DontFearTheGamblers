@@ -1,2 +1,22 @@
 fileFormatVersion: 2
 guid: 340879ed3b681f947963053514191528
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MarcoIzquierda: {instanceID: 0}
+  - MarcoDerecha: {instanceID: 0}
+  - fotoIzquierda: {instanceID: 0}
+  - fotoiDerecha: {instanceID: 0}
+  - TextoNombreIzquierda: {instanceID: 0}
+  - TextoNombreDerecha: {instanceID: 0}
+  - TextoBuffIzquierda: {instanceID: 0}
+  - TextoBuffDerecha: {instanceID: 0}
+  - botonIzquierda: {instanceID: 0}
+  - botonDerecha: {instanceID: 0}
+  - selectOptions: {fileID: 8300000, guid: 96ab25e19a0e63b4cb2e633e88e2df55, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

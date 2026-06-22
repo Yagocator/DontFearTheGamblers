@@ -167,3 +167,4 @@ MonoBehaviour:
   slotIndex: 0
   rotationOffset: 0
   circuloIndicador: {fileID: 4924278296922221240}
+  pinchoConfirmedSFX: {fileID: 8300000, guid: 51634c0ea3b4c7f45b33bf0baa14e10d, type: 3}

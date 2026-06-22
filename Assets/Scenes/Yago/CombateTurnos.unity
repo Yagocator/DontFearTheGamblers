@@ -289,6 +289,7 @@ MonoBehaviour:
   pjShild: {fileID: 317975510}
   duracionFeedback: 0.4
   fuerzaShake: 5
+  playerDeathSFX: {fileID: 8300000, guid: 7c133b371a7b3f34680617b47c8c8e87, type: 3}
 --- !u!4 &49389737
 Transform:
   m_ObjectHideFlags: 0
@@ -1948,6 +1949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ruleta
       objectReference: {fileID: 0}
+    - target: {fileID: 7513630271206914631, guid: 0f39703246411244b8913f2df8a2db8c, type: 3}
+      propertyPath: girarRuletaSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 33d017115ef92ae438016b356e417372, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2703,6 +2708,8 @@ MonoBehaviour:
   bloquearMovimientoTodosLosPinchos: 0
   bloquearPinchosManoSiHayPinchoColocado: 1
   ruletaGirando: 0
+  mejorarCasilla: {fileID: 8300000, guid: 002c7aa2cd1818d4b8489fdde8e10235, type: 3}
+  onHandDrawnSFX: {fileID: 8300000, guid: c123e98ce94b10049be58e913743cda5, type: 3}
 --- !u!4 &829836821
 Transform:
   m_ObjectHideFlags: 0
@@ -2810,6 +2817,8 @@ MonoBehaviour:
   tiempoVisibleAccion: 0.5
   accionEnemy: 0
   potencia: 0
+  onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
+  onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
 --- !u!114 &837626548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3340,6 +3349,8 @@ MonoBehaviour:
   tiempoVisibleAccion: 0.5
   accionEnemy: 0
   potencia: 0
+  onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
+  onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
 --- !u!1 &1236552383
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,6 +4941,8 @@ MonoBehaviour:
   tiempoVisibleAccion: 0.5
   accionEnemy: 0
   potencia: 0
+  onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
+  onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
 --- !u!114 &1720451772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5007,6 +5020,7 @@ MonoBehaviour:
   GuirarRuleta: {fileID: 1943777773}
   PJController: {fileID: 49389736}
   RuletaController: {fileID: 829836820}
+  enemyConfirmed: {fileID: 8300000, guid: 02297278aeed3cf4c8c761d8e26f9438, type: 3}
 --- !u!4 &1745443682
 Transform:
   m_ObjectHideFlags: 0
@@ -6316,6 +6330,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1803940458354689307, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
+      propertyPath: buttonClic
+      value: 
+      objectReference: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
     - target: {fileID: 2038837571299572943, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
       propertyPath: m_Camera
       value: 

@@ -16,7 +16,7 @@ public class PJController : MonoBehaviour
     [SerializeField] private float duracionFeedback = 0.4f;
     [SerializeField] private float fuerzaShake = 5f;
 
-
+    public AudioClip playerDeathSFX;
     public static event Action<bool> Shakecamara;
 
 
@@ -135,6 +135,9 @@ public class PJController : MonoBehaviour
     private void Morir()
     {
         // TODO hacer una panatalla de muerta si me da tiempo
+        GameManager.Instance.StopAllSFX();
+        GameManager.Instance.StopMusic();
+        GameManager.Instance.PlaySFX(playerDeathSFX);
         GameManager.Instance.LoadScene("Menu");
     }
 

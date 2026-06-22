@@ -32,6 +32,8 @@ public class ObjectChouseManager : MonoBehaviour
     public Button botonIzquierda;
     public Button botonDerecha;
 
+    public AudioClip selectOptions;
+
 
     void Start()
     {
@@ -111,6 +113,7 @@ public class ObjectChouseManager : MonoBehaviour
     }
     public void PillarObj(ObjetoSo obj, bool lado)// izquierda 0 derecha 1
     {
+        GameManager.Instance.PlaySFX(selectOptions);
         desbleButtons();
         GameManager.Instance.playerSO.objetos.Add(obj);
         if (lado)
@@ -125,6 +128,7 @@ public class ObjectChouseManager : MonoBehaviour
     }
     public void PillarPincho(PinchoSO pincho, bool lado)
     {
+        GameManager.Instance.PlaySFX(selectOptions);
         desbleButtons();
         var copia = UnityEngine.Object.Instantiate(pincho);
         GameManager.Instance.playerSO.baraja.Add(copia);

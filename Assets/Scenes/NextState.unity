@@ -1189,6 +1189,7 @@ MonoBehaviour:
   - {fileID: 6288725054739916980, guid: 3f41c8a8a8090d346a2598ab1f98c0c1, type: 3}
   - {fileID: 4752167511786876721, guid: 5324eba012389944ca732545079108db, type: 3}
   - {fileID: 629107629557665647, guid: 86dca93ed6d17cc4e9a9bd1b6c4a36bd, type: 3}
+  selectOptions: {fileID: 8300000, guid: 96ab25e19a0e63b4cb2e633e88e2df55, type: 3}
 --- !u!1 &1073215043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,6 +1605,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1803940458354689307, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
+      propertyPath: buttonClic
+      value: 
+      objectReference: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
     - target: {fileID: 2038837571299572943, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
       propertyPath: m_Camera
       value: 
