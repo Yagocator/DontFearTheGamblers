@@ -561,10 +561,43 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             ? enemySO.dmg * 3
             : enemySO.dmg * 5;
 
-        int val = UnityEngine.Random.Range(dmgMin, dmgMax);
+
+
+        int val = RandomTriangularBajo(dmgMin, dmgMax);
+
+
         potencia = val;
         IntencionText.text = val.ToString();
     }
+
+    private int RandomTriangularBajo(int minInclusive, int maxExclusive)
+    {
+        if (maxExclusive <= minInclusive)
+            return minInclusive;
+
+        int cantidadValores = maxExclusive - minInclusive;
+
+        // 1 + 2 + 3 + ... + cantidadValores
+        int totalPeso = cantidadValores * (cantidadValores + 1) / 2;
+
+        int tirada = UnityEngine.Random.Range(1, totalPeso + 1);
+
+        int acumulado = 0;
+
+        for (int valor = minInclusive; valor < maxExclusive; valor++)
+        {
+            // El mínimo tiene más peso, el máximo tiene menos peso
+            int peso = maxExclusive - valor;
+
+            acumulado += peso;
+
+            if (tirada <= acumulado)
+                return valor;
+        }
+
+        return maxExclusive - 1;
+    }
+
 
     private void Curar(int val)
     {
@@ -577,7 +610,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     private void escudo(int cuant)
     {
         RecibirCuracion();
-        enemySO.currentShild += cuant;
+        enemySO.currentShild += (cuant / 2);
         UpdateUI();
     }
 

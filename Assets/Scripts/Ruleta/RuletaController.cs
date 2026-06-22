@@ -290,13 +290,23 @@ public class RuletaController : MonoBehaviour
     public void drawHand()
     {
         if (animandoMano) return;
-        StartCoroutine(DrawHandAnimada());
+
+        StartCoroutine(DrawHandCuandoPueda());
     }
 
+    private IEnumerator DrawHandCuandoPueda()
+    {
+        animandoMano = true;
+
+        yield return new WaitUntil(() => !aplicandoObjetos);
+
+        yield return StartCoroutine(DrawHandAnimada());
+
+        animandoMano = false;
+    }
     private IEnumerator DrawHandAnimada()
     {
         GameManager.Instance.PlaySFX(onHandDrawnSFX);
-        animandoMano = true;
 
         List<int> disponibles = new List<int>();
         List<int> descartes = new List<int>();
@@ -365,8 +375,6 @@ public class RuletaController : MonoBehaviour
 
         // Animación de robo. Aquí salen desde ZonaDeRobos hacia su posición de mano.
         yield return StartCoroutine(AnimarPinchosARobo(mano));
-
-        animandoMano = false;
     }
 
     private void RobarUno(List<int> disponibles, List<int> mano)
