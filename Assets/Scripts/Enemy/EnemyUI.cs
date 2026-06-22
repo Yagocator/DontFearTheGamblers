@@ -68,6 +68,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private RectTransform padreRect;
     private Coroutine shakeCoroutine;
+    private Vector2 padrePosOriginal;
     private RectTransform vidaRect;
     private RectTransform shildRect;
     private Color colorOriginalVida;
@@ -82,6 +83,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             panelHighlight = Padre.GetComponentInChildren<Image>();
 
         padreRect = Padre.GetComponent<RectTransform>();
+        StartCoroutine(CaptureOriginalPosition());
         vidaRect = vidaEnemy.GetComponent<RectTransform>();
         shildRect = ShildEnemy.GetComponent<RectTransform>();
 
@@ -91,6 +93,25 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         Padre.transform.localScale = escalaNormal;
         if (panelHighlight != null)
             panelHighlight.color = colorNormal;
+    }
+
+    private IEnumerator CaptureOriginalPosition()
+    {
+        // Esperar al final del frame para que LayoutGroups y anchoring se apliquen
+        yield return new WaitForEndOfFrame();
+        if (padreRect != null) padrePosOriginal = padreRect.anchoredPosition;
+    }
+
+    private void OnDisable()
+    {
+        if (padreRect != null)
+            padreRect.anchoredPosition = padrePosOriginal;
+    }
+
+    private void OnDestroy()
+    {
+        if (padreRect != null)
+            padreRect.anchoredPosition = padrePosOriginal;
     }
 
     public void InitializeEnemy(EnemySO enemy)
@@ -205,7 +226,12 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         if (feedbackCoroutine != null) StopCoroutine(feedbackCoroutine);
         feedbackCoroutine = StartCoroutine(AnimarDamage());
 
-        if (shakeCoroutine != null) StopCoroutine(shakeCoroutine);
+        if (shakeCoroutine != null)
+        {
+            StopCoroutine(shakeCoroutine);
+            shakeCoroutine = null;
+            if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
+        }
         shakeCoroutine = StartCoroutine(AnimarShake());
     }
 
@@ -214,7 +240,12 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         if (feedbackCoroutine != null) StopCoroutine(feedbackCoroutine);
         feedbackCoroutine = StartCoroutine(AnimarCuracion());
 
-        if (shakeCoroutine != null) StopCoroutine(shakeCoroutine);
+        if (shakeCoroutine != null)
+        {
+            StopCoroutine(shakeCoroutine);
+            shakeCoroutine = null;
+            if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
+        }
         shakeCoroutine = StartCoroutine(AnimarShakePositivo());
     }
 
@@ -246,7 +277,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         if (panelHighlight != null)
             panelHighlight.color = colorBase;
 
-        animCoroutine = null;
+        feedbackCoroutine = null;
     }
 
     private IEnumerator AnimarCuracion()
@@ -277,7 +308,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         if (panelHighlight != null)
             panelHighlight.color = colorBase;
 
-        animCoroutine = null;
+        feedbackCoroutine = null;
     }
 
     private IEnumerator AnimarShake()
@@ -295,6 +326,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         }
 
         padreRect.anchoredPosition = posOriginal;
+        // Asegurar restauración a la posición original registrada
+        if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
         shakeCoroutine = null;
     }
 
@@ -317,6 +350,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         }
 
         padreRect.anchoredPosition = posOriginal;
+        // Asegurar restauración a la posición original registrada
+        if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
         shakeCoroutine = null;
     }
 
@@ -389,6 +424,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         IsAlive = false;
 
         if (shakeCoroutine != null) { StopCoroutine(shakeCoroutine); shakeCoroutine = null; }
+        if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
         if (feedbackCoroutine != null) { StopCoroutine(feedbackCoroutine); feedbackCoroutine = null; }
 
         ImageEnemy.sprite = enemySO.spriteMuerto;
@@ -443,24 +479,66 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     public void Intencion()
     {
-        int numRandom = UnityEngine.Random.Range(0, 3);
-        if (numRandom == 0)
+        float porcentajeVida = (float)enemySO.vida / enemySO.vidaMax;
+
+        float probAtacar, probDefender, probCurar;
+
+        if (porcentajeVida >= 1f)
         {
-            IntencionSprite.sprite = IntencionSprites[0];
-            accionEnemy = AccionEnemy.ATACAR;
+            // VIDA COMPLETA: no puede curarse
+            probAtacar = 0.70f;
+            probDefender = 0.30f;
+            probCurar = 0f;
         }
-        else if (numRandom == 1)
+        else if (porcentajeVida > 0.90f)
         {
-            IntencionSprite.sprite = IntencionSprites[1];
-            accionEnemy = AccionEnemy.DEFENDER;
+            probAtacar = 0.80f;
+            probDefender = 0.20f;
+            probCurar = 0f;
+        }
+        else if (porcentajeVida > 0.70f)
+        {
+            probAtacar = 0.60f;
+            probDefender = 0.20f;
+            probCurar = 0.20f;
+        }
+        else if (porcentajeVida > 0.30f)
+        {
+            probAtacar = 0.35f;
+            probDefender = 0.35f;
+            probCurar = 0.30f;
         }
         else
         {
-            IntencionSprite.sprite = IntencionSprites[2];
-            accionEnemy = AccionEnemy.CURAR;
+            probAtacar = 0.15f;
+            probDefender = 0.25f;
+            probCurar = 0.60f;
         }
 
-        int val = UnityEngine.Random.Range(enemySO.dmg, enemySO.dmg * 3);
+        float roll = UnityEngine.Random.value;
+
+        if (roll < probAtacar)
+        {
+            accionEnemy = AccionEnemy.ATACAR;
+            IntencionSprite.sprite = IntencionSprites[0];
+        }
+        else if (roll < probAtacar + probDefender)
+        {
+            accionEnemy = AccionEnemy.DEFENDER;
+            IntencionSprite.sprite = IntencionSprites[1];
+        }
+        else
+        {
+            accionEnemy = AccionEnemy.CURAR;
+            IntencionSprite.sprite = IntencionSprites[2];
+        }
+
+        int dmgMin = enemySO.dmg;
+        int dmgMax = (accionEnemy == AccionEnemy.ATACAR && porcentajeVida > 0.70f)
+            ? enemySO.dmg * 3
+            : enemySO.dmg * 5;
+
+        int val = UnityEngine.Random.Range(dmgMin, dmgMax);
         potencia = val;
         IntencionText.text = val.ToString();
     }

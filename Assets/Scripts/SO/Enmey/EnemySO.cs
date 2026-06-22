@@ -10,7 +10,6 @@ public class EnemySO : ScriptableObject
     public Sprite spriteEnemy;
     public Sprite spriteMuerto;
     public int dmg;
-    // TODO Debuff probablemente con una lista de otro so Debuff o algo asi
 }
 public enum TierEnmey
 {

@@ -1,1 +1,21 @@
 https://spicygame.itch.io/cards
+
+https://lazy-art-studio.itch.io/bedroom-forniture-game-asset
+
+https://bdragon1727.itch.io/custom-border-and-panels-menu-all-part
+
+
+// sonidos necesrios
+
+sonido cundo se mejora una casilla
+sonido cuando se fija un enemigo
+sonido cuando se fija un pincho en la ruleta
+sonido cuando gira la ruleta
+sonido cuando se escoge una carta/pincho/objeto
+sopnido cuando un enemigo recive daño
+sonido cuando un enemigo murere
+sonido cuando se van los pinchos y cundo recoges unos nuevos
+sonido cuando haces cliac a un boton
+
+// musica
+la musica xq

@@ -48,6 +48,12 @@ public class MaunMenu : MonoBehaviour
         {
             item.interactable = false;
         }
+        GameManager.Instance.nivelAct = 1;
+        GameManager.Instance.playerSO.vida = 100;
+        GameManager.Instance.playerSO.vidaMax = 100;
+        GameManager.Instance.playerSO.shild = 0;
+        GameManager.Instance.playerSO.handSize = 5;
+
         GameManager.Instance.createHand();
         GameManager.Instance.playerSO.objetos.Clear();
         GameManager.Instance.LoadScene("CombateTurnos");

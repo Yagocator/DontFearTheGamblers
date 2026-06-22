@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public float musicVolumen;
 
     public float SFXVolumen;
+    public int nivelAct;
 
 
     private void Awake()

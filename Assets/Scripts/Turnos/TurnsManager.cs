@@ -63,11 +63,12 @@ public class TurnsManager : MonoBehaviour
                 {
                     yield return enemigo.EjecutarAccionResaltada();
                 }
-                yield return new WaitForSeconds(1f); // Simulación de tiempo de acción del enemigo
+                yield return new WaitForSeconds(0.2f); // Simulación de tiempo de acción del enemigo
                 isPlayerTurn = true;
             }
         }
         print("fin");
+        GameManager.Instance.nivelAct++;
         GameManager.Instance.LoadScene("NextState");
     }
     void Start()

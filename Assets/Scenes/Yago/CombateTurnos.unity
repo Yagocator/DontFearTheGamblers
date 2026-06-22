@@ -1476,17 +1476,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aca1e983555f6468a8a6ba9d323415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InitCombat
-  DificultadDelNivel: 0
-  nivel: 0
   Enemys:
   - {fileID: 1226645008}
   - {fileID: 1720451769}
   - {fileID: 837626545}
   posibleEnemySos:
-  - {fileID: 11400000, guid: 69a4fbbf2d2f00147be4412e22fbad39, type: 2}
-  - {fileID: 11400000, guid: 4bd70f2f3aba5164c9d67357348fdcf0, type: 2}
-  - {fileID: 11400000, guid: e0d67d914ef9b9b4d927fce9f9ff8942, type: 2}
-  - {fileID: 11400000, guid: 996e0b49ec38ae4409b5abf8e712d4de, type: 2}
+  - {fileID: 11400000, guid: feb62073b03fe2f469bd50df56461d0a, type: 2}
+  - {fileID: 11400000, guid: c3c7ae5dab2894f4099fe6257d0b81cb, type: 2}
+  - {fileID: 11400000, guid: 415ab3bda25a4154ea9955d92738caf8, type: 2}
+  - {fileID: 11400000, guid: d81a82dec291cd449ac597437bc54f7b, type: 2}
+  - {fileID: 11400000, guid: 09ec7236dcb052949b46bda105b5b616, type: 2}
+  - {fileID: 11400000, guid: ab91d0929ec93a7459e9e3d12dbf8b00, type: 2}
+  - {fileID: 11400000, guid: 4c56b1a63aeae0c4e8a66469182717e7, type: 2}
+  - {fileID: 11400000, guid: ef423d2adef805f4dab75261c27f17e3, type: 2}
+  - {fileID: 11400000, guid: 599a22a06e92857459919671f9809b59, type: 2}
+  - {fileID: 11400000, guid: 9074d9218c2b0b141be8d36d0fde062a, type: 2}
+  - {fileID: 11400000, guid: 47b21fdeac45f3f44a7568a955ff7ab1, type: 2}
+  - {fileID: 11400000, guid: 0b96b2870356c6b4fa938fb8c4bbbab5, type: 2}
+  - {fileID: 11400000, guid: 0eb14859cd3e113468fcb60d3a15aa6c, type: 2}
+  - {fileID: 11400000, guid: 570d1d9d8637d434fb1a6e91df97cda8, type: 2}
+  - {fileID: 11400000, guid: fb2c46eaa3d97f146b4d417729a798b3, type: 2}
+  - {fileID: 11400000, guid: 9215233247d580e40b2fffb4b1308716, type: 2}
+  - {fileID: 11400000, guid: 7cf05fc21511c8d44ad07b53e143237a, type: 2}
+  - {fileID: 11400000, guid: 8f931554d187a294985628b89608bda1, type: 2}
+  - {fileID: 11400000, guid: 41f6372d40b136242a0d06f1d2fd5aff, type: 2}
+  - {fileID: 11400000, guid: 91290962876b178438d80bf6132a8a36, type: 2}
   pjVida: {fileID: 21861523}
   pjShild: {fileID: 317975510}
   TurnsManager: {fileID: 1745443681}
