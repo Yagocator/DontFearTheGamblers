@@ -17,5 +17,5 @@ MonoBehaviour:
   type: 1
   state: 0
   sprite: {fileID: -6717884257390833292, guid: 060e24c7c11ef8e459483181d25fb16c, type: 3}
-  nombre: defensa
-  desc: "a\xF1ade defensa del valor que caiga"
+  nombre: Defense
+  desc: Deals the amount of DEFENSE equal to the sloot it landes on
