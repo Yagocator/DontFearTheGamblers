@@ -29,7 +29,7 @@ public class TurnsManager : MonoBehaviour
     public RuletaController RuletaController;
 
     [Header("Audio")]
-    public AudioClip enemyConfirmed; 
+    public AudioClip enemyConfirmed;
 
     void Awake()
     {
@@ -45,6 +45,7 @@ public class TurnsManager : MonoBehaviour
         {
             if (isPlayerTurn)
             {
+                RuletaController.drawHand();
                 fixEnemy.performed += FixEnemy;
                 int countenmigos = 0;
                 foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
@@ -67,7 +68,7 @@ public class TurnsManager : MonoBehaviour
                 {
                     yield return enemigo.EjecutarAccionResaltada();
                 }
-                yield return new WaitForSeconds(0.2f); // Simulación de tiempo de acción del enemigo
+                yield return new WaitForSeconds(0.5f); // Simulación de tiempo de acción del enemigo
                 isPlayerTurn = true;
             }
         }

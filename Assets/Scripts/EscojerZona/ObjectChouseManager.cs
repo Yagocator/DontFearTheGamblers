@@ -174,16 +174,30 @@ public class ObjectChouseManager : MonoBehaviour
 
     private float GetPesoPorRareza(Rareza rareza)
     {
+        int nivel = GameManager.Instance.nivelAct;
+        float[] valores = GetTierWeightsParaNivel(nivel);
         switch (rareza)
         {
-            case Rareza.Common: return probabilidadesRareza.Length > 0 ? probabilidadesRareza[0] : 50f;
-            case Rareza.Uncommon: return probabilidadesRareza.Length > 1 ? probabilidadesRareza[1] : 25f;
-            case Rareza.Rare: return probabilidadesRareza.Length > 2 ? probabilidadesRareza[2] : 12f;
-            case Rareza.Epic: return probabilidadesRareza.Length > 3 ? probabilidadesRareza[3] : 8f;
-            case Rareza.Legendary: return probabilidadesRareza.Length > 4 ? probabilidadesRareza[4] : 3f;
-            case Rareza.LetItRide: return probabilidadesRareza.Length > 5 ? probabilidadesRareza[5] : 2f;
+            case Rareza.Common: return probabilidadesRareza.Length > 0 ? valores[0] : 50f;
+            case Rareza.Uncommon: return probabilidadesRareza.Length > 1 ? valores[1] : 25f;
+            case Rareza.Rare: return probabilidadesRareza.Length > 2 ? valores[2] : 12f;
+            case Rareza.Epic: return probabilidadesRareza.Length > 3 ? valores[3] : 8f;
+            case Rareza.Legendary: return probabilidadesRareza.Length > 4 ? valores[4] : 3f;
+            case Rareza.LetItRide: return probabilidadesRareza.Length > 5 ? valores[5] : 2f;
             default: return 1f;
         }
+    }
+    private float[] GetTierWeightsParaNivel(int nivel)
+    {
+        if (nivel <= 4)
+            return new float[] { 50.3f, 25f, 12f, 8f, 3f, 1.7f };
+        if (nivel <= 9)
+            return new float[] { 40f, 35f, 12f, 8f, 3f, 2f };
+        if (nivel <= 12)
+            return new float[] { 30f, 35f, 17f, 13f, 3f, 2f };
+        if (nivel <= 18)
+            return new float[] { 20f, 30f, 27f, 15f, 6f, 2f };
+        return new float[] { 10f, 20f, 37f, 15f, 18f, 12f };
     }
 
     private void AsignarMarcoPorRareza(Rareza rareza, Image marco)

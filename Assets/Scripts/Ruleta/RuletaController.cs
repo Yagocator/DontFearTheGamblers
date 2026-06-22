@@ -76,7 +76,7 @@ public class RuletaController : MonoBehaviour
 
     public AudioClip mejorarCasilla;
 
-    public AudioClip onHandDrawnSFX; 
+    public AudioClip onHandDrawnSFX;
 
     private void Start()
     {
@@ -98,8 +98,6 @@ public class RuletaController : MonoBehaviour
 
         puedeGirarRuleta = true;
         bloquearMovimientoTodosLosPinchos = false;
-
-        yield return StartCoroutine(DrawHandAnimada());
     }
 
     private void Awake()
@@ -235,7 +233,7 @@ public class RuletaController : MonoBehaviour
         bloquearMovimientoTodosLosPinchos = true;
 
         ruletaScript.RotateRuleta();
-        
+
         yield return new WaitUntil(() => ruletaScript.finishRotate);
 
         int temp = ruletaScript.casillaPrincipal();
@@ -286,8 +284,6 @@ public class RuletaController : MonoBehaviour
                 " | tipo = " + tipo
             );
         }
-
-        drawHand();
         ResultRuleta?.Invoke(resultados);
     }
 
@@ -731,20 +727,21 @@ public class RuletaController : MonoBehaviour
 
             if (objetoActual == null) continue;
 
-           
+
 
             if (objetoActual.mejoraNumero)
             {
-                if (objetoActual.mejoraNumeroTipo == TipoMejora.SUMA) {
+                if (objetoActual.mejoraNumeroTipo == TipoMejora.SUMA)
+                {
                     Debug.Log("Aplicando objeto: " + objetoActual.nombre);
                     yield return StartCoroutine(applyMejoraNumeroAnimada(objetoActual));
                     GameManager.Instance.PlaySFX(mejorarCasilla);
-                    yield return new WaitForSeconds(pausaEntreObjetos);    
+                    yield return new WaitForSeconds(pausaEntreObjetos);
                 }
             }
 
             if (objetoActual.mejoraColor)
-            {   
+            {
                 if (objetoActual.mejoraColorTipo == TipoMejora.SUMA)
                 {
                     Debug.Log("Aplicando objeto: " + objetoActual.nombre);
@@ -753,7 +750,7 @@ public class RuletaController : MonoBehaviour
                     yield return new WaitForSeconds(pausaEntreObjetos);
                 }
             }
-            
+
         }
 
         // 3r Multiplicaciones
@@ -771,7 +768,7 @@ public class RuletaController : MonoBehaviour
                     yield return StartCoroutine(applyMejoraNumeroAnimada(objetoActual));
                     GameManager.Instance.PlaySFX(mejorarCasilla);
                     yield return new WaitForSeconds(pausaEntreObjetos);
-                }    
+                }
             }
 
             if (objetoActual.mejoraColor)
@@ -781,10 +778,10 @@ public class RuletaController : MonoBehaviour
                     Debug.Log("Aplicando objeto: " + objetoActual.nombre);
                     yield return StartCoroutine(applyMejoraColorAnimada(objetoActual));
                     GameManager.Instance.PlaySFX(mejorarCasilla);
-                    yield return new WaitForSeconds(pausaEntreObjetos);  
-                }   
+                    yield return new WaitForSeconds(pausaEntreObjetos);
+                }
             }
-        
+
         }
 
         aplicandoObjetos = false;
