@@ -28,6 +28,8 @@ public class TurnsManager : MonoBehaviour
     public PJController PJController;
     public RuletaController RuletaController;
 
+    public int cadaXRondas;
+
     [Header("Audio")]
     public AudioClip enemyConfirmed;
 
@@ -73,8 +75,18 @@ public class TurnsManager : MonoBehaviour
             }
         }
         print("fin");
-        GameManager.Instance.nivelAct++;
-        GameManager.Instance.LoadScene("NextState");
+
+        if (GameManager.Instance.nivelAct % cadaXRondas == 0)
+        {
+            GameManager.Instance.nivelAct++;
+            GameManager.Instance.LoadScene("ChouseMana");
+
+        }
+        else
+        {
+            GameManager.Instance.nivelAct++;
+            GameManager.Instance.LoadScene("NextState");
+        }
     }
     void Start()
     {
@@ -122,7 +134,7 @@ public class TurnsManager : MonoBehaviour
                     }
                     if (muere)
                     {
-                        enemigoSeleccionado = null;
+                        //enemigoSeleccionado = null;
                         navegation.performed += Navegation_performed;
                         GuirarRuleta.interactable = false;
                         seleccionBloqueada = false;
