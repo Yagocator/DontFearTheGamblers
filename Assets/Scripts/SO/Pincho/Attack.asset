@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 1
   type: 0
   state: 0
-  sprite: {fileID: -7008412969330441016, guid: c3ff0b37377f1044ea9346c9ad30d988, type: 3}
+  sprite: {fileID: -6329420634031446844, guid: 46a490cdf5cb4b04fab61953e2cd4cc7, type: 3}
   nombre: Attack
   desc: Deals the amount of ATTACK equal to the sloot it landes on

@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 3
   type: 0
   state: 0
-  sprite: {fileID: -7008412969330441016, guid: c3ff0b37377f1044ea9346c9ad30d988, type: 3}
+  sprite: {fileID: -1734311443576482371, guid: c48feaf7aeecb0240a4f8ea9c154913e, type: 3}
   nombre: AttackX3
   desc: Deals the amount of ATTACK equal to THREE TIMES the sloot it landes on

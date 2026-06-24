@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 1
   type: 1
   state: 0
-  sprite: {fileID: -6717884257390833292, guid: 060e24c7c11ef8e459483181d25fb16c, type: 3}
+  sprite: {fileID: -407368442477547055, guid: e53babe37d30e0d4cb59b4ab0c68dc10, type: 3}
   nombre: Defense
   desc: Deals the amount of DEFENSE equal to the sloot it landes on

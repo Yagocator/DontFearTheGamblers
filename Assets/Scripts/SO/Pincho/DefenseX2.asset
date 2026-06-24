@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 2
   type: 1
   state: 0
-  sprite: {fileID: -6717884257390833292, guid: 060e24c7c11ef8e459483181d25fb16c, type: 3}
+  sprite: {fileID: -2942316156961302898, guid: e25601283e1e85243ae47b06e7c200e3, type: 3}
   nombre: DefenseX2
   desc: Deals the amount of DEFENSE equal to TWO TIMES the sloot it landes on

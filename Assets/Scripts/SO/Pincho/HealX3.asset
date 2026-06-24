@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 3
   type: 2
   state: 0
-  sprite: {fileID: 2903848411162822477, guid: d08dcf540ddb0b148b3268dc7c7f6fdb, type: 3}
+  sprite: {fileID: -6019257835708450254, guid: a1f4591f2d89f8c449dd3569313d4d21, type: 3}
   nombre: HealX3
   desc: Deals the amount of HEAL equal to THREE TIMES the sloot it landes on

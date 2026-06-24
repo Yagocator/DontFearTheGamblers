@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 2
   type: 2
   state: 0
-  sprite: {fileID: 2903848411162822477, guid: d08dcf540ddb0b148b3268dc7c7f6fdb, type: 3}
+  sprite: {fileID: 4617387706879384579, guid: 7d66b6b36ed242649b40d174acd5d5a5, type: 3}
   nombre: HealX2
   desc: Deals the amount of HEAL equal to TWO TIMES the sloot it landes on

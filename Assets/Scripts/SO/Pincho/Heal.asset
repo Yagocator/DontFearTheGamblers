@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 1
   type: 2
   state: 0
-  sprite: {fileID: 2903848411162822477, guid: d08dcf540ddb0b148b3268dc7c7f6fdb, type: 3}
+  sprite: {fileID: -1398132742003509683, guid: 2779f82b2ac52b94fa2358c148888947, type: 3}
   nombre: Heal
   desc: Deals the amount of HEAL equal to the sloot it landes on

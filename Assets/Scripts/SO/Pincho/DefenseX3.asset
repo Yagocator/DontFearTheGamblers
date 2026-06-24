@@ -16,6 +16,6 @@ MonoBehaviour:
   factorEscala: 3
   type: 1
   state: 0
-  sprite: {fileID: -6717884257390833292, guid: 060e24c7c11ef8e459483181d25fb16c, type: 3}
+  sprite: {fileID: 4650278239834142691, guid: ba9f29358774f9c458ce4fda9a2dedf2, type: 3}
   nombre: DefenseX3
   desc: Deals the amount of DEFENSE equal to THREE TIMES the sloot it landes on
