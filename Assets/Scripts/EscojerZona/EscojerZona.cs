@@ -11,16 +11,16 @@ public class EscojerZona : MonoBehaviour
     public Image Dificulty;
     public Sprite[] DifficultySprite;
 
-    public AudioClip selectOptions; 
+    public AudioClip selectOptions;
     private void Start()
     {
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
         {
-            HealText.text = "+20 MAX HEALTH";
+            HealText.text = "+60 MAX HEALTH";
         }
         else
         {
-            HealText.text = "HEALTH 60";
+            HealText.text = "HEALTH 80";
         }
         currentNextLvl();
         if (GameManager.Instance.nivelAct <= 5)
@@ -67,8 +67,16 @@ public class EscojerZona : MonoBehaviour
         GameManager.Instance.PlaySFX(selectOptions);
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
         {
-            GameManager.Instance.playerSO.vidaMax += 20;
+            GameManager.Instance.playerSO.vidaMax += 60;
             GameManager.Instance.playerSO.vida = GameManager.Instance.playerSO.vidaMax;
+        }
+        else
+        {
+            GameManager.Instance.playerSO.vida += 80;
+            if (GameManager.Instance.playerSO.vida >= GameManager.Instance.playerSO.vidaMax)
+            {
+                GameManager.Instance.playerSO.vida = GameManager.Instance.playerSO.vidaMax;
+            }
         }
         GameManager.Instance.LoadScene("CombateTurnos");
     }

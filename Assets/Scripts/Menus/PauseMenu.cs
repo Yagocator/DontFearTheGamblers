@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
 
     public AudioClip abrirMaletin;
 
-    public AudioClip cerrarMaletin; 
+    public AudioClip cerrarMaletin;
 
 
     public GameObject Maletin;
@@ -120,12 +120,14 @@ public class PauseMenu : MonoBehaviour
     {
         GameManager.Instance.PlaySFX(abrirMaletin);
         Inventario.SetActive(true);
+        Time.timeScale = 0;
         InMaletin = true;
     }
     public void ExitInventario()
     {
         GameManager.Instance.PlaySFX(cerrarMaletin);
         Inventario.SetActive(false);
+        Time.timeScale = 1;
         InMaletin = false;
     }
 }

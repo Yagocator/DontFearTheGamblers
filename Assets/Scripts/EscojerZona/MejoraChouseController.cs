@@ -9,7 +9,7 @@ public class MejoraChouseController : MonoBehaviour
     public GameObject DescarteOpt;
     public Button[] botones;
     public AudioClip abrirMaletin;
-  
+
     public void MasPinchos()
     {
         GameManager.Instance.PlaySFX(selectOptions);

@@ -21,7 +21,7 @@ public class TurnsManager : MonoBehaviour
 
     public InputActionAsset inputActions;
 
-    
+
     private InputAction navegation;
     private InputAction fixEnemy;
 
@@ -76,7 +76,7 @@ public class TurnsManager : MonoBehaviour
             }
         }
         print("fin");
-
+        GameManager.Instance.playerSO.shild = 0;
         if (GameManager.Instance.nivelAct % cadaXRondas == 0)
         {
             GameManager.Instance.nivelAct++;

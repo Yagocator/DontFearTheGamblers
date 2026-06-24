@@ -14,14 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PJSO
   vida: 100
   vidaMax: 100
-  shild: 0
-  handSize: 5
+  shild: 25
+  handSize: 4
   maximumPlayablePinchos: 3
-  baraja:
-  - {fileID: 11400000, guid: a5571a6bc43f813419d498f8dcc7fe92, type: 2}
-  - {fileID: 11400000, guid: ffe58f3152b162940a01830c11cbb299, type: 2}
-  - {fileID: 11400000, guid: 56d8f2b5127328e4a99838c6536b3160, type: 2}
-  - {fileID: 11400000, guid: 56d8f2b5127328e4a99838c6536b3160, type: 2}
-  - {fileID: 11400000, guid: 14ca76f081192274da4a72ceece79497, type: 2}
-  - {fileID: 11400000, guid: a5571a6bc43f813419d498f8dcc7fe92, type: 2}
+  baraja: []
   objetos: []

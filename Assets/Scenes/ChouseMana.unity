@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d6b2a8216cada4fbe7329ae7ba1913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MejoraChouseController
-  selectOptions: {fileID: 0}
+  selectOptions: {fileID: 8300000, guid: 96ab25e19a0e63b4cb2e633e88e2df55, type: 3}
   DescarteOpt: {fileID: 1404424662}
   botones:
   - {fileID: 1978237777}
@@ -1593,7 +1593,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140052755}
         m_TargetAssemblyTypeName: MejoraChouseController, Assembly-CSharp
-        m_MethodName: MasMano
+        m_MethodName: MasPinchos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

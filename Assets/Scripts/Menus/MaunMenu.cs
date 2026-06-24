@@ -16,9 +16,9 @@ public class MaunMenu : MonoBehaviour
     private bool InSettings;
     public Button[] botones;
 
-    public AudioClip gameMusic; 
+    public AudioClip gameMusic;
 
-    public AudioClip buttonClic; 
+    public AudioClip buttonClic;
 
     void OnEnable()
     {
@@ -51,13 +51,13 @@ public class MaunMenu : MonoBehaviour
         {
             item.interactable = false;
         }
-        GameManager.Instance.PlayMusic(gameMusic); 
+        GameManager.Instance.PlayMusic(gameMusic);
         GameManager.Instance.PlaySFX(buttonClic);
         GameManager.Instance.nivelAct = 1;
         GameManager.Instance.playerSO.vida = 100;
         GameManager.Instance.playerSO.vidaMax = 100;
         GameManager.Instance.playerSO.shild = 0;
-        GameManager.Instance.playerSO.handSize = 5;
+        GameManager.Instance.playerSO.handSize = 4;
 
         GameManager.Instance.createHand();
         GameManager.Instance.playerSO.objetos.Clear();
