@@ -428,8 +428,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75dad69e45700454f8764e3060a10a4a, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 455776987952ba24c98a89805dc01c6e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 57.65576, y: 49.79361, z: 73.38014, w: 26.20716}
+  m_margin: {x: 57.65576, y: 49.79361, z: 109.91849, w: 26.20716}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2192044390428628104, guid: 25e8baab24ebbfc4b8a3b12c6d928599, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b98557161d8e3ee4ab653e7626a1cc63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
