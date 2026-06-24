@@ -12,8 +12,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject TutorialMenu;
     public GameObject opcionesMenu;
     private bool MenuOpciones = false;
+    public GameObject Inventario;
 
-    public AudioClip buttonClic; 
+    public AudioClip buttonClic;
     void OnEnable()
     {
         Pause = inputActions.FindActionMap("UI").FindAction("Pause");
@@ -94,5 +95,14 @@ public class PauseMenu : MonoBehaviour
         Pause.performed += MenuPerformed;
         MenuPausa.SetActive(true);
         TutorialMenu.SetActive(false);
+    }
+
+    public void EnterInventario()
+    {
+        Inventario.SetActive(true);
+    }
+    public void ExitInventario()
+    {
+        Inventario.SetActive(false);
     }
 }

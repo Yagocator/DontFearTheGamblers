@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class RomperPincho : MonoBehaviour
     public PinchoSO PinchoSO;
     public Animator animator;
     public Button boton;
+
+    public static event Action<bool> EliminadoPincho;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -28,6 +31,7 @@ public class RomperPincho : MonoBehaviour
 
     public void RomperPinchoFunc()
     {
+        EliminadoPincho?.Invoke(true);
         GameManager.Instance.playerSO.baraja.Remove(PinchoSO);
         StartCoroutine(esperarAnim());
     }

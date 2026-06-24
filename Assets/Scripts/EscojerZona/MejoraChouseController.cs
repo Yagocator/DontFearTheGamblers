@@ -14,7 +14,7 @@ public class MejoraChouseController : MonoBehaviour
     public void MasMano()
     {
         desableButtons();
-        GameManager.Instance.playerSO.handSize++;
+        GameManager.Instance.playerSO.handSize += 2;
         GameManager.Instance.LoadScene("NextState");
     }
     public void descarte()
