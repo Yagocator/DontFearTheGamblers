@@ -1499,7 +1499,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1140052755}
         m_TargetAssemblyTypeName: MejoraChouseController, Assembly-CSharp
-        m_MethodName: MasPinchos
+        m_MethodName: MasMano
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

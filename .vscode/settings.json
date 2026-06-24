@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "DontFearTheGamblers.slnx"
+    "dotnet.defaultSolution": "_DontFearTheGamblers.slnx"
 }
