@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject Inventario;
 
     public AudioClip buttonClic;
+    public GameObject Maletin;
+    public bool InMaletin = false;
     void OnEnable()
     {
         Pause = inputActions.FindActionMap("UI").FindAction("Pause");
@@ -28,6 +30,13 @@ public class PauseMenu : MonoBehaviour
 
     private void MenuPerformed(InputAction.CallbackContext context)
     {
+        if (InMaletin)
+        {
+            Inventario.SetActive(false);
+            InMaletin = false;
+            return;
+        }
+
         if (MenuOpciones)
         {
             SalirOpciones();
@@ -40,6 +49,7 @@ public class PauseMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             MenuPausa.SetActive(true);
+            Maletin.SetActive(false);
         }
         else
         {
@@ -50,6 +60,8 @@ public class PauseMenu : MonoBehaviour
     public void ResumeMenu()
     {
         GameManager.Instance.PlaySFX(buttonClic);
+
+        Maletin.SetActive(true);
         MenuPausa.SetActive(false);
         MenuOpciones = false;
         opcionesMenu.SetActive(false);
@@ -100,9 +112,11 @@ public class PauseMenu : MonoBehaviour
     public void EnterInventario()
     {
         Inventario.SetActive(true);
+        InMaletin = true;
     }
     public void ExitInventario()
     {
         Inventario.SetActive(false);
+        InMaletin = false;
     }
 }

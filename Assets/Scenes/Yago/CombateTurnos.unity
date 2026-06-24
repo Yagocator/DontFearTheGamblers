@@ -12206,6 +12206,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1803940458354689307, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
+      propertyPath: Maletin
+      value: 
+      objectReference: {fileID: 1233017995}
+    - target: {fileID: 1803940458354689307, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
       propertyPath: Inventario
       value: 
       objectReference: {fileID: 1964608058}
