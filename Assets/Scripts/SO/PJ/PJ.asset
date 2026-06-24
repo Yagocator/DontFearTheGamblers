@@ -18,23 +18,8 @@ MonoBehaviour:
   handSize: 5
   maximumPlayablePinchos: 3
   baraja:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  objetos:
-  - {fileID: 11400000, guid: 0e1b43299a42bec408ac19cb7be58668, type: 2}
-  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
-  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
-  - {fileID: 11400000, guid: 269d3e12f95559849b670450ede04cc2, type: 2}
-  - {fileID: 11400000, guid: 269d3e12f95559849b670450ede04cc2, type: 2}
-  - {fileID: 11400000, guid: 0e1b43299a42bec408ac19cb7be58668, type: 2}
-  - {fileID: 11400000, guid: 95adab0278f164f4a9314c6d72395211, type: 2}
-  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
-  - {fileID: 11400000, guid: 10ee5927d7964de48a2c32d7b745f72b, type: 2}
-  - {fileID: 11400000, guid: 530f90df3655d05469e72fef0a16c156, type: 2}
-  - {fileID: 11400000, guid: 95adab0278f164f4a9314c6d72395211, type: 2}
+  - {fileID: 11400000, guid: a5571a6bc43f813419d498f8dcc7fe92, type: 2}
+  - {fileID: 11400000, guid: ffe58f3152b162940a01830c11cbb299, type: 2}
+  - {fileID: 11400000, guid: 0cc1209ed6bb7ba41a6520f939f2fb9a, type: 2}
+  - {fileID: 11400000, guid: 0cc1209ed6bb7ba41a6520f939f2fb9a, type: 2}
+  objetos: []
