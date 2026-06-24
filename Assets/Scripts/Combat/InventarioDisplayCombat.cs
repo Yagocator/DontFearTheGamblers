@@ -26,7 +26,8 @@ public class InventarioDisplayCombat : MonoBehaviour
             {
                 pincho = Instantiate(PrefabIstanciar, PadreRobar.transform);
             }
-            else
+            else if (Pinch.state == Estado.Mano) continue; 
+            else 
             {
                 pincho = Instantiate(PrefabIstanciar, PadreDescarte.transform);
             }
