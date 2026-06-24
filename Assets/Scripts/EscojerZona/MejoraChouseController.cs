@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class MejoraChouseController : MonoBehaviour
     public AudioClip selectOptions;
     public GameObject DescarteOpt;
     public Button[] botones;
+    public AudioClip abrirMaletin;
+  
     public void MasPinchos()
     {
         GameManager.Instance.PlaySFX(selectOptions);
@@ -24,6 +27,7 @@ public class MejoraChouseController : MonoBehaviour
     public void descarte()
     {
         desableButtons();
+        GameManager.Instance.PlaySFX(abrirMaletin);
         DescarteOpt.SetActive(true);
     }
 

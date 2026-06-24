@@ -10,6 +10,8 @@ public class RomperPincho : MonoBehaviour
     public Animator animator;
     public Button boton;
 
+    public AudioClip pinchoDestroy; 
+
     public static event Action<bool> EliminadoPincho;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -33,6 +35,7 @@ public class RomperPincho : MonoBehaviour
     {
         EliminadoPincho?.Invoke(true);
         GameManager.Instance.playerSO.baraja.Remove(PinchoSO);
+        GameManager.Instance.PlaySFX(pinchoDestroy);
         StartCoroutine(esperarAnim());
     }
 

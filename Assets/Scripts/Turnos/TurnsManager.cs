@@ -21,6 +21,7 @@ public class TurnsManager : MonoBehaviour
 
     public InputActionAsset inputActions;
 
+    
     private InputAction navegation;
     private InputAction fixEnemy;
 
@@ -32,7 +33,7 @@ public class TurnsManager : MonoBehaviour
 
     [Header("Audio")]
     public AudioClip enemyConfirmed;
-
+    public AudioClip enemyActionSFX;
     void Awake()
     {
         navegation = inputActions.FindActionMap("UI").FindAction("Navigate");
@@ -232,8 +233,4 @@ public class TurnsManager : MonoBehaviour
             seleccionBloqueada = true;
         }
     }
-
-
-
-
 }

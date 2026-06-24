@@ -78,6 +78,7 @@ public class RuletaController : MonoBehaviour
 
     public AudioClip onHandDrawnSFX;
 
+    public AudioClip quitarPinchoSFX; 
     private void Start()
     {
         ruletaScript = ruleta.GetComponent<RuletaScript>();
@@ -209,6 +210,7 @@ public class RuletaController : MonoBehaviour
 
             pinchosScripts[i] = pinchos[i].GetComponent<PinchosScript>();
             if (pinchosScripts[i] != null) pinchosScripts[i].pinchoSO = GameManager.Instance.playerSO.baraja[i];
+            pinchos[i].GetComponent<DragDrop>().quitarPinchoSFX = quitarPinchoSFX;
         }
     }
     public void RuletaButtonPressed()

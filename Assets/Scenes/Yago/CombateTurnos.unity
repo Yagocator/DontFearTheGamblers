@@ -7956,6 +7956,7 @@ MonoBehaviour:
   ruletaGirando: 0
   mejorarCasilla: {fileID: 8300000, guid: 002c7aa2cd1818d4b8489fdde8e10235, type: 3}
   onHandDrawnSFX: {fileID: 8300000, guid: c123e98ce94b10049be58e913743cda5, type: 3}
+  quitarPinchoSFX: {fileID: 8300000, guid: e6f649f1381750e4c868199fb554f7e6, type: 3}
 --- !u!4 &829836821
 Transform:
   m_ObjectHideFlags: 0
@@ -8065,6 +8066,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
+  enemyActionSFX: {fileID: 8300000, guid: 914ff2cfa27bcf54d90c9802906c4030, type: 3}
   animator: {fileID: 624383065}
 --- !u!114 &837626548
 MonoBehaviour:
@@ -8735,6 +8737,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
+  enemyActionSFX: {fileID: 8300000, guid: 914ff2cfa27bcf54d90c9802906c4030, type: 3}
   animator: {fileID: 1964548535}
 --- !u!1 &1233017995
 GameObject:
@@ -10594,6 +10597,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
+  enemyActionSFX: {fileID: 8300000, guid: 914ff2cfa27bcf54d90c9802906c4030, type: 3}
   animator: {fileID: 772523155}
 --- !u!114 &1720451772
 MonoBehaviour:
@@ -10674,6 +10678,7 @@ MonoBehaviour:
   RuletaController: {fileID: 829836820}
   cadaXRondas: 3
   enemyConfirmed: {fileID: 8300000, guid: 02297278aeed3cf4c8c761d8e26f9438, type: 3}
+  enemyActionSFX: {fileID: 8300000, guid: 914ff2cfa27bcf54d90c9802906c4030, type: 3}
 --- !u!4 &1745443682
 Transform:
   m_ObjectHideFlags: 0
@@ -12217,6 +12222,14 @@ PrefabInstance:
       propertyPath: buttonClic
       value: 
       objectReference: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
+    - target: {fileID: 1803940458354689307, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
+      propertyPath: abrirMaletin
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cd3c318af1ad75438dcf1090e509b2a, type: 3}
+    - target: {fileID: 1803940458354689307, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
+      propertyPath: cerrarMaletin
+      value: 
+      objectReference: {fileID: 8300000, guid: 6fec97dfc9212b04f827ee0d450c1ca8, type: 3}
     - target: {fileID: 2038837571299572943, guid: 5bd777b8d0be0fb4a9dfd0fb353e0f7f, type: 3}
       propertyPath: m_Camera
       value: 

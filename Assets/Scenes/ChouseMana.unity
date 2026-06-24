@@ -1021,6 +1021,7 @@ MonoBehaviour:
   - {fileID: 1978237777}
   - {fileID: 1534986207}
   - {fileID: 18308109}
+  abrirMaletin: {fileID: 8300000, guid: 5cd3c318af1ad75438dcf1090e509b2a, type: 3}
 --- !u!1001 &1149663575
 PrefabInstance:
   m_ObjectHideFlags: 0
