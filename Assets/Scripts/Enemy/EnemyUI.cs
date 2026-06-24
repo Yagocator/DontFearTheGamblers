@@ -36,9 +36,10 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public Vector3 escalaSeleccionado = Vector3.one * 1.08f;
     public float duracionAnim = 0.18f;
 
-    private Coroutine animCoroutine;     // selección y fijado
-    private Coroutine feedbackCoroutine; // daño y curación (flash visual)
-    private Coroutine accionCoroutine;   // resaltado de turno / ejecución de acción
+    private Coroutine animCoroutine;               // selección y fijado
+    private Coroutine feedbackCoroutine;           // daño y curación (flash visual)
+    private Coroutine accionCoroutine;             // resaltado de turno / ejecución de acción
+    private Coroutine feedbackTextosCoroutine;     // Hit animator + shake de textos
     private bool estaSeleccionado;
     public bool EstaSeleccionado => estaSeleccionado;
 
@@ -53,7 +54,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public Color colorDamage = Color.white;
     public float duracionDamage = 0.08f;
     public float shakeFuerza = 12f;
-    public float shakeDuracion = 1f;
+    public float shakeDuracion = 1.2f;
 
     [Header("Animación de curación")]
     public Color colorCuracion = Color.green;
@@ -64,7 +65,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     [Header("Resaltado de turno (ejecutando acción)")]
     public Color colorAccion = Color.green;
     public float duracionResaltadoAccion = 0.3f;
-    public float tiempoVisibleAccion = 1f; // cuánto se queda en verde antes de volver a su color normal
+    public float tiempoVisibleAccion = 1.2f; // cuánto se queda en verde antes de volver a su color normal
 
     private RectTransform padreRect;
     private Coroutine shakeCoroutine;
@@ -387,7 +388,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         vidaEnemy.color = Color.red;
 
         float tiempoTranscurrido = 0f;
-        float duracionFeedback = 0.4f;
+        float duracionFeedback = 1.5f;
         float fuerzaShakeTextos = 5f;
 
         Vector2 posOriginalVida = vidaRect.anchoredPosition;
@@ -415,6 +416,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             ShildEnemy.color = colorOriginalShild;
         }
         animator.SetBool("Hit", false);
+        feedbackTextosCoroutine = null;
     }
 
     public bool Damagear(int Damage)
@@ -422,7 +424,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         int dañoRestante = Damage;
 
         RecibirDamage();
-        StartCoroutine(FeedbackDañoTextos());
+        if (feedbackTextosCoroutine != null) StopCoroutine(feedbackTextosCoroutine);
+        feedbackTextosCoroutine = StartCoroutine(FeedbackDañoTextos());
 
         if (enemySO.currentShild > 0)
         {
@@ -477,10 +480,18 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private IEnumerator EjecutarAccionRoutine()
     {
+        // Esperar a que termine el Hit antes de arrancar la animación de acción
+        if (feedbackTextosCoroutine != null)
+            yield return feedbackTextosCoroutine;
+
         animator.SetBool("Action", true);
         yield return AnimarColorResaltado(colorAccion, duracionResaltadoAccion);
         EjecutarAccion();
         yield return new WaitForSeconds(tiempoVisibleAccion);
+
+        // Esperar a que la animación de daño/curación termine antes de volver al estado normal
+        if (feedbackCoroutine != null)
+            yield return feedbackCoroutine;
 
         if (IsAlive)
             yield return AnimarColorResaltado(ColorObjetivo(), duracionResaltadoAccion);
