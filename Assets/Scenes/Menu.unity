@@ -2663,6 +2663,7 @@ MonoBehaviour:
   - {fileID: 1371364161}
   gameMusic: {fileID: 8300000, guid: c144eccbabda4ac4a95e09d9aa7b9e82, type: 3}
   buttonClic: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: c144eccbabda4ac4a95e09d9aa7b9e82, type: 3}
 --- !u!114 &1223673819
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,9 +20,11 @@ public class MaunMenu : MonoBehaviour
 
     public AudioClip buttonClic;
 
+    public AudioClip mainMenuMusic; 
     void OnEnable()
     {
         inputActions.Enable();
+        GameManager.Instance.PlayMusic(mainMenuMusic);
         Pause = inputActions.FindActionMap("UI").FindAction("Pause");
         Pause.performed += EscPerformed;
     }
