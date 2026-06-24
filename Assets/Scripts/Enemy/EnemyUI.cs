@@ -53,7 +53,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public Color colorDamage = Color.white;
     public float duracionDamage = 0.08f;
     public float shakeFuerza = 12f;
-    public float shakeDuracion = 0.2f;
+    public float shakeDuracion = 1f;
 
     [Header("Animación de curación")]
     public Color colorCuracion = Color.green;
@@ -63,8 +63,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     [Header("Resaltado de turno (ejecutando acción)")]
     public Color colorAccion = Color.green;
-    public float duracionResaltadoAccion = 0.15f;
-    public float tiempoVisibleAccion = 0.5f; // cuánto se queda en verde antes de volver a su color normal
+    public float duracionResaltadoAccion = 0.3f;
+    public float tiempoVisibleAccion = 1f; // cuánto se queda en verde antes de volver a su color normal
 
     private RectTransform padreRect;
     private Coroutine shakeCoroutine;
@@ -77,9 +77,12 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public AccionEnemy accionEnemy;
     public int potencia;
 
-    public AudioClip onDamageSFX; 
+    public AudioClip onDamageSFX;
 
-    public AudioClip onDeathSFX; 
+    public AudioClip onDeathSFX;
+
+
+    public Animator Animator;
     void Start()
     {
         if (panelHighlight == null)
@@ -141,7 +144,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         nameEnemy.text = enemySO.name;
         vidaEnemy.text = enemySO.vida.ToString();
         ShildEnemy.text = enemySO.currentShild.ToString();
-        ImageEnemy.sprite = enemySO.spriteEnemy;
+        Animator = enemySO.AnimatorEnemy;
     }
 
     private void UpdateUI()
@@ -379,6 +382,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private IEnumerator FeedbackDañoTextos()
     {
+        Animator.SetBool("Hit", true);
         vidaEnemy.color = Color.red;
 
         float tiempoTranscurrido = 0f;
@@ -409,6 +413,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             vidaEnemy.color = colorOriginalVida;
             ShildEnemy.color = colorOriginalShild;
         }
+        Animator.SetBool("Hit", false);
     }
 
     public bool Damagear(int Damage)
@@ -471,6 +476,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private IEnumerator EjecutarAccionRoutine()
     {
+        Animator.SetBool("Action", true);
         yield return AnimarColorResaltado(colorAccion, duracionResaltadoAccion);
         EjecutarAccion();
         yield return new WaitForSeconds(tiempoVisibleAccion);
@@ -479,6 +485,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             yield return AnimarColorResaltado(ColorObjetivo(), duracionResaltadoAccion);
 
         accionCoroutine = null;
+
+        Animator.SetBool("Action", false);
     }
 
     private IEnumerator AnimarColorResaltado(Color colorFin, float duracion)
