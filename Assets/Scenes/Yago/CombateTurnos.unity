@@ -8065,7 +8065,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
-  Animator: {fileID: 624383065}
+  animator: {fileID: 624383065}
 --- !u!114 &837626548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8735,7 +8735,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
-  Animator: {fileID: 1964548535}
+  animator: {fileID: 1964548535}
 --- !u!1 &1233017995
 GameObject:
   m_ObjectHideFlags: 0
@@ -10594,7 +10594,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
-  Animator: {fileID: 772523155}
+  animator: {fileID: 772523155}
 --- !u!114 &1720451772
 MonoBehaviour:
   m_ObjectHideFlags: 0

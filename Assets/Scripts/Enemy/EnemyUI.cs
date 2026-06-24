@@ -145,8 +145,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         nameEnemy.text = enemySO.name;
         vidaEnemy.text = enemySO.vida.ToString();
         ShildEnemy.text = enemySO.currentShild.ToString();
-        AnimController = enemySO.AnimatorEnemy;
-        animator.runtimeAnimatorController = AnimController;
+        animator.runtimeAnimatorController = enemySO.AnimatorEnemy;
     }
 
     private void UpdateUI()
