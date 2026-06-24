@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PinchosScript : MonoBehaviour
 {
-    public PinchoSO pinchoSO; 
+    public PinchoSO pinchoSO;
     private int casilla = -1;
     private float rotation;
 
@@ -14,7 +14,7 @@ public class PinchosScript : MonoBehaviour
         pinchoSO.type = (PinchosType)type;
         pinchoSO.suma = suma;
         pinchoSO.factorEscala = factorEscala;
-        pinchoSO.state = (Estado)0; 
+        pinchoSO.state = (Estado)0;
     }
 
     public void setPinchosType(int type)

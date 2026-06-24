@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c6510910d376f4abf0b3e103f75020, type: 3}
   m_Name: Luprecia
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
-  name: Luprecia
+  name: Lupercia
   vida: 40
   vidaMax: 40
   tierEnemy: 0
