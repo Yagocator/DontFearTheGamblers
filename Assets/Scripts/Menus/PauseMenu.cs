@@ -14,7 +14,14 @@ public class PauseMenu : MonoBehaviour
     private bool MenuOpciones = false;
     public GameObject Inventario;
 
+    [Header("Audios")]
     public AudioClip buttonClic;
+
+    public AudioClip abrirMaletin;
+
+    public AudioClip cerrarMaletin; 
+
+
     public GameObject Maletin;
     public bool InMaletin = false;
     void OnEnable()
@@ -111,11 +118,13 @@ public class PauseMenu : MonoBehaviour
 
     public void EnterInventario()
     {
+        GameManager.Instance.PlaySFX(abrirMaletin);
         Inventario.SetActive(true);
         InMaletin = true;
     }
     public void ExitInventario()
     {
+        GameManager.Instance.PlaySFX(cerrarMaletin);
         Inventario.SetActive(false);
         InMaletin = false;
     }

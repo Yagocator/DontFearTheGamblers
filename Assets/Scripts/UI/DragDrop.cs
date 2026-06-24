@@ -5,6 +5,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 {
     public Canvas canvas;
     public Transform centroRuleta;
+
+    public AudioClip quitarPinchoSFX; 
     private float offsetRotacion = 90f;
     public bool droppedOnSlot = false;
 
@@ -217,6 +219,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (pinchosScript != null)
         {
             pinchosScript.ResetCasilla();
+            GameManager.Instance.PlaySFX(quitarPinchoSFX);        
         }
     }
     public void LiberarHuecoYResetearSinMover()
@@ -253,7 +256,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             {
                 return;
             }
-
             VolverAPosicionOriginal();
         }
     }

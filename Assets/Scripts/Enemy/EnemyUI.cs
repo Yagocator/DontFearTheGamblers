@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using Unity.VisualScripting;
 
 public enum AccionEnemy
 {
@@ -78,11 +79,12 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public AccionEnemy accionEnemy;
     public int potencia;
 
+    [Header ("Audios")]
     public AudioClip onDamageSFX;
 
     public AudioClip onDeathSFX;
 
-
+    public AudioClip enemyActionSFX;
     public Animator animator;
 
     void Start()
@@ -258,7 +260,6 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             shakeCoroutine = null;
             if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
         }
-        GameManager.Instance.PlaySFX(onDamageSFX);
         shakeCoroutine = StartCoroutine(AnimarShake());
     }
 
@@ -280,7 +281,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     {
         Color colorInicio = panelHighlight != null ? panelHighlight.color : Color.white;
         Color colorBase = ColorObjetivo();
-
+        
         float t = 0f;
         while (t < duracionDamage)
         {
@@ -385,6 +386,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     private IEnumerator FeedbackDañoTextos()
     {
         animator.SetBool("Hit", true);
+        GameManager.Instance.PlaySFX(onDamageSFX);
         vidaEnemy.color = Color.red;
 
         float tiempoTranscurrido = 0f;
@@ -480,11 +482,13 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private IEnumerator EjecutarAccionRoutine()
     {
+
         // Esperar a que termine el Hit antes de arrancar la animación de acción
         if (feedbackTextosCoroutine != null)
             yield return feedbackTextosCoroutine;
 
         animator.SetBool("Action", true);
+        GameManager.Instance.PlaySFX(enemyActionSFX);
         yield return AnimarColorResaltado(colorAccion, duracionResaltadoAccion);
         EjecutarAccion();
         yield return new WaitForSeconds(tiempoVisibleAccion);

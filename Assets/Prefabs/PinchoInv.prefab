@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PinchosScript
   pinchoSO: {fileID: 0}
+  quitarPinchoSFX: {fileID: 0}
 --- !u!222 &3517367123652800301
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -218,3 +219,4 @@ MonoBehaviour:
   PinchoSO: {fileID: 0}
   animator: {fileID: 4839559849203763850}
   boton: {fileID: 2276784105104144752}
+  pinchoDestroy: {fileID: 8300000, guid: 7c0f6ce7c1abc21468bcad83d9c02b73, type: 3}
