@@ -82,7 +82,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public AudioClip onDeathSFX;
 
 
-    public Animator Animator;
+    public Animator animator;
+
     void Start()
     {
         if (panelHighlight == null)
@@ -144,7 +145,8 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
         nameEnemy.text = enemySO.name;
         vidaEnemy.text = enemySO.vida.ToString();
         ShildEnemy.text = enemySO.currentShild.ToString();
-        Animator = enemySO.AnimatorEnemy;
+        AnimController = enemySO.AnimatorEnemy;
+        animator.runtimeAnimatorController = AnimController;
     }
 
     private void UpdateUI()
@@ -382,7 +384,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private IEnumerator FeedbackDañoTextos()
     {
-        Animator.SetBool("Hit", true);
+        animator.SetBool("Hit", true);
         vidaEnemy.color = Color.red;
 
         float tiempoTranscurrido = 0f;
@@ -413,7 +415,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
             vidaEnemy.color = colorOriginalVida;
             ShildEnemy.color = colorOriginalShild;
         }
-        Animator.SetBool("Hit", false);
+        animator.SetBool("Hit", false);
     }
 
     public bool Damagear(int Damage)
@@ -476,7 +478,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
     private IEnumerator EjecutarAccionRoutine()
     {
-        Animator.SetBool("Action", true);
+        animator.SetBool("Action", true);
         yield return AnimarColorResaltado(colorAccion, duracionResaltadoAccion);
         EjecutarAccion();
         yield return new WaitForSeconds(tiempoVisibleAccion);
@@ -486,7 +488,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
         accionCoroutine = null;
 
-        Animator.SetBool("Action", false);
+        animator.SetBool("Action", false);
     }
 
     private IEnumerator AnimarColorResaltado(Color colorFin, float duracion)

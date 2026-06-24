@@ -7052,6 +7052,7 @@ GameObject:
   - component: {fileID: 624383062}
   - component: {fileID: 624383064}
   - component: {fileID: 624383063}
+  - component: {fileID: 624383065}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -7116,6 +7117,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624383061}
   m_CullTransparentMesh: 1
+--- !u!95 &624383065
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624383061}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &680205376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,6 +7673,7 @@ GameObject:
   - component: {fileID: 772523152}
   - component: {fileID: 772523154}
   - component: {fileID: 772523153}
+  - component: {fileID: 772523155}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -7714,6 +7738,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772523151}
   m_CullTransparentMesh: 1
+--- !u!95 &772523155
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772523151}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &783869500
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,7 +8065,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
-  Animator: {fileID: 0}
+  Animator: {fileID: 624383065}
 --- !u!114 &837626548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10548,7 +10594,7 @@ MonoBehaviour:
   potencia: 0
   onDamageSFX: {fileID: 8300000, guid: dc0689165f131f24fb3da0afd7eb38b5, type: 3}
   onDeathSFX: {fileID: 8300000, guid: e7ae042480eb1154794ca20e45ab8b3f, type: 3}
-  Animator: {fileID: 0}
+  Animator: {fileID: 772523155}
 --- !u!114 &1720451772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11472,8 +11518,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcc5f7d94bd725b4bb53c28762cf1dfb, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -11500,7 +11546,7 @@ Animator:
   m_GameObject: {fileID: 1964548531}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c4cd81d99bd17c47b0c298f5f2f9f9d, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

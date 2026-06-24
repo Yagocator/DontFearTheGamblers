@@ -7,7 +7,7 @@ public class EnemySO : ScriptableObject
     public int vidaMax;
     public TierEnmey tierEnemy;
     public int currentShild;
-    public Animator AnimatorEnemy;
+    public RuntimeAnimatorController AnimatorEnemy;
     public Sprite spriteMuerto;
     public int dmg;
 }
