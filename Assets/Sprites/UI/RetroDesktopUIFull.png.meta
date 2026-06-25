@@ -1,0 +1,5187 @@
+fileFormatVersion: 2
+guid: 453428b0a8d4db24592f6f1e2d804127
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -559458507337292170
+    second: RetroDesktopUIFull_0
+  - first:
+      213: -9103654218516918850
+    second: RetroDesktopUIFull_1
+  - first:
+      213: -3819026054275037945
+    second: RetroDesktopUIFull_2
+  - first:
+      213: 7842098332830452982
+    second: RetroDesktopUIFull_3
+  - first:
+      213: 3787743515480269624
+    second: RetroDesktopUIFull_4
+  - first:
+      213: -8204412328327904095
+    second: RetroDesktopUIFull_5
+  - first:
+      213: 4795499378602967553
+    second: RetroDesktopUIFull_6
+  - first:
+      213: -5850118757822517175
+    second: RetroDesktopUIFull_7
+  - first:
+      213: 4210739596395075183
+    second: RetroDesktopUIFull_8
+  - first:
+      213: 6821723159139470333
+    second: RetroDesktopUIFull_9
+  - first:
+      213: 7641493597947936507
+    second: RetroDesktopUIFull_10
+  - first:
+      213: 1790563164685287638
+    second: RetroDesktopUIFull_11
+  - first:
+      213: -3447384629578658991
+    second: RetroDesktopUIFull_12
+  - first:
+      213: -2123348734205188440
+    second: RetroDesktopUIFull_13
+  - first:
+      213: 7080954518714376746
+    second: RetroDesktopUIFull_14
+  - first:
+      213: 8932297725851368349
+    second: RetroDesktopUIFull_15
+  - first:
+      213: -3310606906741218035
+    second: RetroDesktopUIFull_16
+  - first:
+      213: 7383675502122839731
+    second: RetroDesktopUIFull_17
+  - first:
+      213: -5095017657840831254
+    second: RetroDesktopUIFull_18
+  - first:
+      213: -4369406813102706475
+    second: RetroDesktopUIFull_19
+  - first:
+      213: -4385619257369217136
+    second: RetroDesktopUIFull_20
+  - first:
+      213: 304851261027315498
+    second: RetroDesktopUIFull_21
+  - first:
+      213: -5599035295958799035
+    second: RetroDesktopUIFull_22
+  - first:
+      213: -3176390795498639023
+    second: RetroDesktopUIFull_23
+  - first:
+      213: 7596830577329757561
+    second: RetroDesktopUIFull_24
+  - first:
+      213: -1478438309595240451
+    second: RetroDesktopUIFull_25
+  - first:
+      213: 7182662851105666079
+    second: RetroDesktopUIFull_26
+  - first:
+      213: 7848632414641009119
+    second: RetroDesktopUIFull_27
+  - first:
+      213: -410190533657833286
+    second: RetroDesktopUIFull_28
+  - first:
+      213: -6352838907549493789
+    second: RetroDesktopUIFull_29
+  - first:
+      213: 8174500487479477160
+    second: RetroDesktopUIFull_30
+  - first:
+      213: 7520542033994876309
+    second: RetroDesktopUIFull_31
+  - first:
+      213: 6037566441911886687
+    second: RetroDesktopUIFull_32
+  - first:
+      213: -8682656113284550829
+    second: RetroDesktopUIFull_33
+  - first:
+      213: 8711397346859660519
+    second: RetroDesktopUIFull_34
+  - first:
+      213: -313231550317345069
+    second: RetroDesktopUIFull_35
+  - first:
+      213: 1163761316445199411
+    second: RetroDesktopUIFull_36
+  - first:
+      213: 5313804568738421121
+    second: RetroDesktopUIFull_37
+  - first:
+      213: 6373829746921516849
+    second: RetroDesktopUIFull_38
+  - first:
+      213: 8843475050755346734
+    second: RetroDesktopUIFull_39
+  - first:
+      213: 7354109890887394635
+    second: RetroDesktopUIFull_40
+  - first:
+      213: 8832895651684158506
+    second: RetroDesktopUIFull_41
+  - first:
+      213: -5978732984089369525
+    second: RetroDesktopUIFull_42
+  - first:
+      213: -6961231482680918070
+    second: RetroDesktopUIFull_43
+  - first:
+      213: -7413842481853849237
+    second: RetroDesktopUIFull_44
+  - first:
+      213: 6593468175913602939
+    second: RetroDesktopUIFull_45
+  - first:
+      213: -8008376496641243855
+    second: RetroDesktopUIFull_46
+  - first:
+      213: 3810248166198364071
+    second: RetroDesktopUIFull_47
+  - first:
+      213: -1065125212918933936
+    second: RetroDesktopUIFull_48
+  - first:
+      213: 332350575934777966
+    second: RetroDesktopUIFull_49
+  - first:
+      213: 3995241142808413947
+    second: RetroDesktopUIFull_50
+  - first:
+      213: -8399324545714068722
+    second: RetroDesktopUIFull_51
+  - first:
+      213: 8999228362294857087
+    second: RetroDesktopUIFull_52
+  - first:
+      213: -7897655713480997905
+    second: RetroDesktopUIFull_53
+  - first:
+      213: -4787439136388105550
+    second: RetroDesktopUIFull_54
+  - first:
+      213: 4744967728898792877
+    second: RetroDesktopUIFull_55
+  - first:
+      213: -8661424126707551478
+    second: RetroDesktopUIFull_56
+  - first:
+      213: 4772246949183189615
+    second: RetroDesktopUIFull_57
+  - first:
+      213: 716645140665842472
+    second: RetroDesktopUIFull_58
+  - first:
+      213: 3937701479595609663
+    second: RetroDesktopUIFull_59
+  - first:
+      213: -7994720564122794224
+    second: RetroDesktopUIFull_60
+  - first:
+      213: -6758890936020723494
+    second: RetroDesktopUIFull_61
+  - first:
+      213: -3863047675163336874
+    second: RetroDesktopUIFull_62
+  - first:
+      213: 9037291952739723402
+    second: RetroDesktopUIFull_63
+  - first:
+      213: 4463441731400098176
+    second: RetroDesktopUIFull_64
+  - first:
+      213: -6484613560060732876
+    second: RetroDesktopUIFull_65
+  - first:
+      213: 3424269198065903073
+    second: RetroDesktopUIFull_66
+  - first:
+      213: -4010910047746102138
+    second: RetroDesktopUIFull_67
+  - first:
+      213: 3389845076788288995
+    second: RetroDesktopUIFull_68
+  - first:
+      213: -8616338279531878327
+    second: RetroDesktopUIFull_69
+  - first:
+      213: -7047337231696410456
+    second: RetroDesktopUIFull_70
+  - first:
+      213: 4181471289185688300
+    second: RetroDesktopUIFull_71
+  - first:
+      213: 3073838152751876295
+    second: RetroDesktopUIFull_72
+  - first:
+      213: 4916494062834152482
+    second: RetroDesktopUIFull_73
+  - first:
+      213: 9108541643550714386
+    second: RetroDesktopUIFull_74
+  - first:
+      213: -5504516412168201469
+    second: RetroDesktopUIFull_75
+  - first:
+      213: 5975808873016233993
+    second: RetroDesktopUIFull_76
+  - first:
+      213: -1370458087450118348
+    second: RetroDesktopUIFull_77
+  - first:
+      213: -6551268030396909963
+    second: RetroDesktopUIFull_78
+  - first:
+      213: 7282788226742527406
+    second: RetroDesktopUIFull_79
+  - first:
+      213: -6089995508954719100
+    second: RetroDesktopUIFull_80
+  - first:
+      213: -4428511705706851178
+    second: RetroDesktopUIFull_81
+  - first:
+      213: -8546287203469102565
+    second: RetroDesktopUIFull_82
+  - first:
+      213: -2457820867986142118
+    second: RetroDesktopUIFull_83
+  - first:
+      213: -5867556187219350917
+    second: RetroDesktopUIFull_84
+  - first:
+      213: 6347028819890329446
+    second: RetroDesktopUIFull_85
+  - first:
+      213: 6836955042144783413
+    second: RetroDesktopUIFull_86
+  - first:
+      213: -123208703216100666
+    second: RetroDesktopUIFull_87
+  - first:
+      213: 4938361078533207227
+    second: RetroDesktopUIFull_88
+  - first:
+      213: -2220785142739462603
+    second: RetroDesktopUIFull_89
+  - first:
+      213: -1637126346621171436
+    second: RetroDesktopUIFull_90
+  - first:
+      213: -392508372750690947
+    second: RetroDesktopUIFull_91
+  - first:
+      213: 2503501213759068357
+    second: RetroDesktopUIFull_92
+  - first:
+      213: -3580516065873277977
+    second: RetroDesktopUIFull_93
+  - first:
+      213: 5301780780775749201
+    second: RetroDesktopUIFull_94
+  - first:
+      213: 3526304815366074072
+    second: RetroDesktopUIFull_95
+  - first:
+      213: -2214880862154505370
+    second: RetroDesktopUIFull_96
+  - first:
+      213: 1546671070534309339
+    second: RetroDesktopUIFull_97
+  - first:
+      213: -8656556422441472777
+    second: RetroDesktopUIFull_98
+  - first:
+      213: -2964313469367862970
+    second: RetroDesktopUIFull_99
+  - first:
+      213: -1273038439245101749
+    second: RetroDesktopUIFull_100
+  - first:
+      213: 4380360200809474888
+    second: RetroDesktopUIFull_101
+  - first:
+      213: 5391658677515279685
+    second: RetroDesktopUIFull_102
+  - first:
+      213: -166401164603428722
+    second: RetroDesktopUIFull_103
+  - first:
+      213: -8761211722894607442
+    second: RetroDesktopUIFull_104
+  - first:
+      213: -1080283096315484705
+    second: RetroDesktopUIFull_105
+  - first:
+      213: -5501047719979850082
+    second: RetroDesktopUIFull_106
+  - first:
+      213: 4892411795477467720
+    second: RetroDesktopUIFull_107
+  - first:
+      213: 7793490738067511008
+    second: RetroDesktopUIFull_108
+  - first:
+      213: 1904610284990662911
+    second: RetroDesktopUIFull_109
+  - first:
+      213: 5946892427647825812
+    second: RetroDesktopUIFull_110
+  - first:
+      213: -5780230710764756020
+    second: RetroDesktopUIFull_111
+  - first:
+      213: -2890547365014136519
+    second: RetroDesktopUIFull_112
+  - first:
+      213: -3386825824255837794
+    second: RetroDesktopUIFull_113
+  - first:
+      213: -4600683888122048635
+    second: RetroDesktopUIFull_114
+  - first:
+      213: -4855668893635951779
+    second: RetroDesktopUIFull_115
+  - first:
+      213: 3322592795642768349
+    second: RetroDesktopUIFull_116
+  - first:
+      213: 1200981407344517388
+    second: RetroDesktopUIFull_117
+  - first:
+      213: 1044227434195479085
+    second: RetroDesktopUIFull_118
+  - first:
+      213: -2704133672164668726
+    second: RetroDesktopUIFull_119
+  - first:
+      213: -5512522652614968367
+    second: RetroDesktopUIFull_120
+  - first:
+      213: -117761977012841186
+    second: RetroDesktopUIFull_121
+  - first:
+      213: -6168314221716893431
+    second: RetroDesktopUIFull_122
+  - first:
+      213: -5048827902239126447
+    second: RetroDesktopUIFull_123
+  - first:
+      213: -3883021864102035264
+    second: RetroDesktopUIFull_124
+  - first:
+      213: 1250962205733590682
+    second: RetroDesktopUIFull_125
+  - first:
+      213: 7751523879961318283
+    second: RetroDesktopUIFull_126
+  - first:
+      213: -7266282464218332863
+    second: RetroDesktopUIFull_127
+  - first:
+      213: 8115501936935664231
+    second: RetroDesktopUIFull_128
+  - first:
+      213: 4201100955111141919
+    second: RetroDesktopUIFull_129
+  - first:
+      213: -8708782264808613867
+    second: RetroDesktopUIFull_130
+  - first:
+      213: -4755972356241681764
+    second: RetroDesktopUIFull_131
+  - first:
+      213: 8814287974282117524
+    second: RetroDesktopUIFull_132
+  - first:
+      213: -6931822778233985211
+    second: RetroDesktopUIFull_133
+  - first:
+      213: -8061970445706928264
+    second: RetroDesktopUIFull_134
+  - first:
+      213: -5550597705249576496
+    second: RetroDesktopUIFull_135
+  - first:
+      213: 4198296622294896979
+    second: RetroDesktopUIFull_136
+  - first:
+      213: -5273652444001109435
+    second: RetroDesktopUIFull_137
+  - first:
+      213: 586402637228375448
+    second: RetroDesktopUIFull_138
+  - first:
+      213: -6131338545416280378
+    second: RetroDesktopUIFull_139
+  - first:
+      213: 8953372486298879586
+    second: RetroDesktopUIFull_140
+  - first:
+      213: 2459596665461007197
+    second: RetroDesktopUIFull_141
+  - first:
+      213: 2765780609804792789
+    second: RetroDesktopUIFull_142
+  - first:
+      213: 6178039254841477072
+    second: RetroDesktopUIFull_143
+  - first:
+      213: 5955959913022241423
+    second: RetroDesktopUIFull_144
+  - first:
+      213: -5599718689475030120
+    second: RetroDesktopUIFull_145
+  - first:
+      213: 7893899661654618014
+    second: RetroDesktopUIFull_146
+  - first:
+      213: -320760388912077545
+    second: RetroDesktopUIFull_147
+  - first:
+      213: -4635558797901506260
+    second: RetroDesktopUIFull_148
+  - first:
+      213: 5607337249132392162
+    second: RetroDesktopUIFull_149
+  - first:
+      213: -4847967476577918751
+    second: RetroDesktopUIFull_150
+  - first:
+      213: -6503420625428725862
+    second: RetroDesktopUIFull_151
+  - first:
+      213: 5827358369087427662
+    second: RetroDesktopUIFull_152
+  - first:
+      213: -3424510554877491295
+    second: RetroDesktopUIFull_153
+  - first:
+      213: -5962906711540184290
+    second: RetroDesktopUIFull_154
+  - first:
+      213: -8610016636861258252
+    second: RetroDesktopUIFull_155
+  - first:
+      213: 562479329143185368
+    second: RetroDesktopUIFull_156
+  - first:
+      213: 206016002551395539
+    second: RetroDesktopUIFull_157
+  - first:
+      213: -2853323362670097558
+    second: RetroDesktopUIFull_158
+  - first:
+      213: -2643789896777523633
+    second: RetroDesktopUIFull_159
+  - first:
+      213: -2087732172168416520
+    second: RetroDesktopUIFull_160
+  - first:
+      213: 6782988159744493060
+    second: RetroDesktopUIFull_161
+  - first:
+      213: -941850944187736710
+    second: RetroDesktopUIFull_162
+  - first:
+      213: 7089523783807346309
+    second: RetroDesktopUIFull_163
+  - first:
+      213: -940227867350913326
+    second: RetroDesktopUIFull_164
+  - first:
+      213: -3302914761483529447
+    second: RetroDesktopUIFull_165
+  - first:
+      213: -953220760025773564
+    second: RetroDesktopUIFull_166
+  - first:
+      213: -256874223987220620
+    second: RetroDesktopUIFull_167
+  - first:
+      213: -2485099916699342676
+    second: RetroDesktopUIFull_168
+  - first:
+      213: -2798415373749290956
+    second: RetroDesktopUIFull_169
+  - first:
+      213: -7922164163193903446
+    second: RetroDesktopUIFull_170
+  - first:
+      213: 2099558858440463548
+    second: RetroDesktopUIFull_171
+  - first:
+      213: -3064265476932664443
+    second: RetroDesktopUIFull_172
+  - first:
+      213: -8597191729917387907
+    second: RetroDesktopUIFull_173
+  - first:
+      213: 3145471231464787673
+    second: RetroDesktopUIFull_174
+  - first:
+      213: -4983484927388496444
+    second: RetroDesktopUIFull_175
+  - first:
+      213: 2661439912801274020
+    second: RetroDesktopUIFull_176
+  - first:
+      213: -3162737386692142203
+    second: RetroDesktopUIFull_177
+  - first:
+      213: 8488249939268396823
+    second: RetroDesktopUIFull_178
+  - first:
+      213: -1006453727965906178
+    second: RetroDesktopUIFull_179
+  - first:
+      213: 5156564855113638811
+    second: RetroDesktopUIFull_180
+  - first:
+      213: 7833624744209557679
+    second: RetroDesktopUIFull_181
+  - first:
+      213: 226686088952068869
+    second: RetroDesktopUIFull_182
+  - first:
+      213: 6268809696403688363
+    second: RetroDesktopUIFull_183
+  - first:
+      213: -7952616417199287396
+    second: RetroDesktopUIFull_184
+  - first:
+      213: 3273589130143923553
+    second: RetroDesktopUIFull_185
+  - first:
+      213: -908394333361548809
+    second: RetroDesktopUIFull_186
+  - first:
+      213: 3528939747639512543
+    second: RetroDesktopUIFull_187
+  - first:
+      213: 3304908452314044476
+    second: RetroDesktopUIFull_188
+  - first:
+      213: -4784830655042691365
+    second: RetroDesktopUIFull_189
+  - first:
+      213: 2627029207614692925
+    second: RetroDesktopUIFull_190
+  - first:
+      213: 4148671716340805799
+    second: RetroDesktopUIFull_191
+  - first:
+      213: -3252370989055853978
+    second: RetroDesktopUIFull_192
+  - first:
+      213: -1424654569726499357
+    second: RetroDesktopUIFull_193
+  - first:
+      213: 483654923381956130
+    second: RetroDesktopUIFull_194
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 655
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6762793a3776c38f0800000000000000
+      internalID: -559458507337292170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 767
+        width: 177
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 20}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd0053b8b259a180800000000000000
+      internalID: -9103654218516918850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_2
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 863
+        width: 98
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 5, z: 30, w: 20}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70589f6a908100bc0800000000000000
+      internalID: -3819026054275037945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_3
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 931
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcca0e62eab4dc60800000000000000
+      internalID: 7842098332830452982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_4
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 931
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833ad74b8a4c09430800000000000000
+      internalID: 3787743515480269624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 895
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a40e2bc472142e80800000000000000
+      internalID: -8204412328327904095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_6
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 929
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1028c36f6490d8240800000000000000
+      internalID: 4795499378602967553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_7
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 931
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940b32a2cf330dea0800000000000000
+      internalID: -5850118757822517175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_8
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 895
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66dccc7a5d8f6a30800000000000000
+      internalID: 4210739596395075183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_9
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 929
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb4098f111abae50800000000000000
+      internalID: 6821723159139470333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_10
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 931
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfebb13e0f90c0a60800000000000000
+      internalID: 7641493597947936507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_11
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 896
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d047f226bb59d810800000000000000
+      internalID: 1790563164685287638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_12
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 896
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b82d5c1fd6820d0800000000000000
+      internalID: -3447384629578658991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_13
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 928
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6ac6383995882e0800000000000000
+      internalID: -2123348734205188440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_14
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 928
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22eaa64e9a944260800000000000000
+      internalID: 7080954518714376746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_15
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 928
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b7661d475e5fb70800000000000000
+      internalID: 8932297725851368349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_16
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 928
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d052cb40f8c5e02d0800000000000000
+      internalID: -3310606906741218035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_17
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 928
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be29c0bfb5187660800000000000000
+      internalID: 7383675502122839731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_18
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 928
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4fd0c4f6cda49b0800000000000000
+      internalID: -5095017657840831254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_19
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 911
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 3, z: 3, w: 3}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d077d157afbc53c0800000000000000
+      internalID: -4369406813102706475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 911
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097356c75862323c0800000000000000
+      internalID: -4385619257369217136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_21
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 913
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fecd25b9c0b3400800000000000000
+      internalID: 304851261027315498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_22
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 915
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d6083301b3c42b0800000000000000
+      internalID: -5599035295958799035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_23
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 913
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151bb7696613be3d0800000000000000
+      internalID: -3176390795498639023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_24
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 915
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dd09c092d5d6960800000000000000
+      internalID: 7596830577329757561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_25
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 896
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df72f36c0388b7be0800000000000000
+      internalID: -1478438309595240451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_26
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 896
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f143c85cec1fda360800000000000000
+      internalID: 7182662851105666079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_27
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 896
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd13b47e891fbec60800000000000000
+      internalID: 7848632414641009119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_28
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 896
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0d81702e5be4af0800000000000000
+      internalID: -410190533657833286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_29
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 896
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e55b302cae26d7a0800000000000000
+      internalID: -6352838907549493789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_30
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 896
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3c87c02e8a17170800000000000000
+      internalID: 8174500487479477160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_31
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 899
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59588a662255e5860800000000000000
+      internalID: 7520542033994876309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_32
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 897
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f532af5c0beb9c350800000000000000
+      internalID: 6037566441911886687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_33
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 899
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fecc48442018780800000000000000
+      internalID: -8682656113284550829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_34
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 897
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4b9d46bb915e870800000000000000
+      internalID: 8711397346859660519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_35
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 899
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6c3e6809d27abf0800000000000000
+      internalID: -313231550317345069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_36
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 884
+        width: 33
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c9e0e50c2862010800000000000000
+      internalID: 1163761316445199411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_37
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 848
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189508df91d6eb940800000000000000
+      internalID: 5313804568738421121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_38
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 848
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f23148264647850800000000000000
+      internalID: 6373829746921516849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_39
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 848
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e215d4434b55aba70800000000000000
+      internalID: 8843475050755346734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_40
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 848
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45a7856bfb0f0660800000000000000
+      internalID: 7354109890887394635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_41
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 848
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c0ab8ebcfb49a70800000000000000
+      internalID: 8832895651684158506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_42
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 848
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4421741706470da0800000000000000
+      internalID: -5978732984089369525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_43
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 848
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acfb98349dcb46f90800000000000000
+      internalID: -6961231482680918070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_44
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 848
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b61a6600b8dbc1990800000000000000
+      internalID: -7413842481853849237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_45
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 868
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f4c2f4f54b08b50800000000000000
+      internalID: 6593468175913602939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_46
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 868
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1358c1aa1088cd090800000000000000
+      internalID: -8008376496641243855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_47
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 863
+        width: 98
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a746540588b0e430800000000000000
+      internalID: 3810248166198364071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_48
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 850
+        width: 62
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05697aa134ae731f0800000000000000
+      internalID: -1065125212918933936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_49
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 831
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a2d73861fbc9400800000000000000
+      internalID: 332350575934777966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_50
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 831
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf60f15d6a2f17730800000000000000
+      internalID: 3995241142808413947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_51
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 831
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e036e73c3da9f6b80800000000000000
+      internalID: -8399324545714068722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_52
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 836
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d843bf38ea3ec70800000000000000
+      internalID: 8999228362294857087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_53
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 834
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe381afd8f3e56290800000000000000
+      internalID: -7897655713480997905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_54
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 834
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bab8cb68799f8db0800000000000000
+      internalID: -4787439136388105550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_55
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 834
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad54bf620389d140800000000000000
+      internalID: 4744967728898792877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_56
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 834
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03399e95a07cc780800000000000000
+      internalID: -8661424126707551478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_57
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 834
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62718ad05d6a3240800000000000000
+      internalID: 4772246949183189615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_58
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 834
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82bb56f55f802f900800000000000000
+      internalID: 716645140665842472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_59
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 819
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e83d202a685a630800000000000000
+      internalID: 3937701479595609663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_60
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 819
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01743f8310c0d0190800000000000000
+      internalID: -7994720564122794224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_61
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 819
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad890eaf0889332a0800000000000000
+      internalID: -6758890936020723494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_62
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 819
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f9d735b92b36ac0800000000000000
+      internalID: -3863047675163336874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_63
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 819
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a882c8e3629ea6d70800000000000000
+      internalID: 9037291952739723402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_64
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 817
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081e1cb3b9451fd30800000000000000
+      internalID: 4463441731400098176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_65
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 817
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a16e6f2560206a0800000000000000
+      internalID: -6484613560060732876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_66
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 817
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5a70e61b2758f20800000000000000
+      internalID: 3424269198065903073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_67
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 817
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c6c02ff826658c0800000000000000
+      internalID: -4010910047746102138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_68
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 817
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed929d13262b0f20800000000000000
+      internalID: 3389845076788288995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_69
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 817
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948e6ef6cfd9c6880800000000000000
+      internalID: -8616338279531878327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_70
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 799
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8c95c4024d23e90800000000000000
+      internalID: -7047337231696410456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_71
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 799
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cea586eabf1970a30800000000000000
+      internalID: 4181471289185688300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_72
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 799
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c881d7938778aa20800000000000000
+      internalID: 3073838152751876295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_73
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 784
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224fb8b2d45ea3440800000000000000
+      internalID: 4916494062834152482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_74
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 801
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a61bd9d5a086e70800000000000000
+      internalID: 9108541643550714386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_75
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 801
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b1860cc770c93b0800000000000000
+      internalID: -5504516412168201469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_76
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 801
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90092c142865ee250800000000000000
+      internalID: 5975808873016233993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_77
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 801
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43779f561a72bfce0800000000000000
+      internalID: -1370458087450118348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_78
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 801
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576b1dbbf683515a0800000000000000
+      internalID: -6551268030396909963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_79
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 801
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5a26d6e49a11560800000000000000
+      internalID: 7282788226742527406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_80
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 786
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c970dc95dfb7ba0800000000000000
+      internalID: -6089995508954719100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_81
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 786
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6941fa12114ca82c0800000000000000
+      internalID: -4428511705706851178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_82
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 786
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12f1c0911d756980800000000000000
+      internalID: -8546287203469102565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_83
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 786
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cc42251f014edd0800000000000000
+      internalID: -2457820867986142118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_84
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 789
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a25214cb0429ea0800000000000000
+      internalID: -5867556187219350917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_85
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 789
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667dabc651d251850800000000000000
+      internalID: 6347028819890329446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_86
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 767
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c0b58136eb1ee50800000000000000
+      internalID: 6836955042144783413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_87
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 767
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca519356564a4ef0800000000000000
+      internalID: -123208703216100666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_88
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 767
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb436928c35988440800000000000000
+      internalID: 4938361078533207227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_89
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 768
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5369c8ccdaf2e21e0800000000000000
+      internalID: -2220785142739462603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_90
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 770
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4194639f242c749e0800000000000000
+      internalID: -1637126346621171436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_91
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 770
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7514dee6b78d8af0800000000000000
+      internalID: -392508372750690947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_92
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 770
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c85edcf6193eb220800000000000000
+      internalID: 2503501213759068357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_93
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 770
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb4b05cb937f4ec0800000000000000
+      internalID: -3580516065873277977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_94
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 773
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156b123b785b39940800000000000000
+      internalID: 5301780780775749201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_95
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 773
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dee4a1eb83ffe030800000000000000
+      internalID: 3526304815366074072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_96
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 754
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663487f37992341e0800000000000000
+      internalID: -2214880862154505370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_97
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 754
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd5129fd421e67510800000000000000
+      internalID: 1546671070534309339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_98
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 754
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fcef365ccbbdd780800000000000000
+      internalID: -8656556422441472777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_99
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 754
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6493c6fea94acd6d0800000000000000
+      internalID: -2964313469367862970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_100
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 757
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45c06bc842455ee0800000000000000
+      internalID: -1273038439245101749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_101
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 757
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84be18df46a2acc30800000000000000
+      internalID: 4380360200809474888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_102
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 735
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d537f300503da40800000000000000
+      internalID: 5391658677515279685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_103
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 735
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80f99db503d0bdf0800000000000000
+      internalID: -166401164603428722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_104
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 735
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eabf0ee5b5ce96680800000000000000
+      internalID: -8761211722894607442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_105
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 736
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5a14b5f301201f0800000000000000
+      internalID: -1080283096315484705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_106
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 738
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96e0269e3a58a3b0800000000000000
+      internalID: -5501047719979850082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_107
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 738
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8429d5c5b9655e340800000000000000
+      internalID: 4892411795477467720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_108
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 738
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e69fcad88a082c60800000000000000
+      internalID: 7793490738067511008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_109
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 738
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff88c6096f88e6a10800000000000000
+      internalID: 1904610284990662911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_110
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 741
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497b86ba72b978250800000000000000
+      internalID: 5946892427647825812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_111
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 741
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc320152bce78cfa0800000000000000
+      internalID: -5780230710764756020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_112
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 720
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93914ed7c76b2e7d0800000000000000
+      internalID: -2890547365014136519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_113
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 722
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e997c156bd39ff0d0800000000000000
+      internalID: -3386825824255837794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_114
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 722
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f4f9411661720c0800000000000000
+      internalID: -4600683888122048635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_115
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 722
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d534aef1ed23d9cb0800000000000000
+      internalID: -4855668893635951779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_116
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 722
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb2f853b883c1e20800000000000000
+      internalID: 3322592795642768349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_117
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 725
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c016e961a3ebaa010800000000000000
+      internalID: 1200981407344517388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_118
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 725
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a60ff9157dd7e00800000000000000
+      internalID: 1044227434195479085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_119
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 706
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acac37590ccf87ad0800000000000000
+      internalID: -2704133672164668726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_120
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 706
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db3792aad59f73b0800000000000000
+      internalID: -5512522652614968367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_121
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 706
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e151a181b10ad5ef0800000000000000
+      internalID: -117761977012841186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_122
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 706
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901139f75eeb56aa0800000000000000
+      internalID: -6168314221716893431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_123
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 709
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15cc4f2d5c5fee9b0800000000000000
+      internalID: -5048827902239126447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_124
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 709
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c08f1f003cbc1ac0800000000000000
+      internalID: -3883021864102035264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_125
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 639
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96903c8f7f4c5110800000000000000
+      internalID: 1250962205733590682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_126
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 639
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b835d0546e1f29b60800000000000000
+      internalID: 7751523879961318283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_127
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 671
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141cd92e89af82b90800000000000000
+      internalID: -7266282464218332863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_128
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 351
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a7b0d830e00a070800000000000000
+      internalID: 8115501936935664231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_129
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 462
+        width: 178
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1234fe6f0f4d4a30800000000000000
+      internalID: 4201100955111141919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_130
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 559
+        width: 98
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5185cd7dba0342780800000000000000
+      internalID: -8708782264808613867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_131
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 639
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9213a817546ffdb0800000000000000
+      internalID: -4755972356241681764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_132
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 627
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49145176634a25a70800000000000000
+      internalID: 8814287974282117524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_133
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 627
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547e669d8e73dcf90800000000000000
+      internalID: -6931822778233985211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_134
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 607
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87fd0f108902e1090800000000000000
+      internalID: -8061970445706928264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_135
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 607
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9208f9bc058f2b0800000000000000
+      internalID: -5550597705249576496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_136
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 559
+        width: 82
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3511c91d888534a30800000000000000
+      internalID: 4198296622294896979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_137
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 559
+        width: 82
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a717e0b0930d6b0800000000000000
+      internalID: -5273652444001109435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_138
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 595
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d79577712532800800000000000000
+      internalID: 586402637228375448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_139
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 580
+        width: 33
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c66dc2041c19eaa0800000000000000
+      internalID: -6131338545416280378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_140
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 564
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266c99bd6d4c04c70800000000000000
+      internalID: 8953372486298879586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_141
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 564
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53e98fb22e322220800000000000000
+      internalID: 2459596665461007197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_142
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 527
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3f3169fc6026620800000000000000
+      internalID: 2765780609804792789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_143
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 527
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d7ce3938fdccb550800000000000000
+      internalID: 6178039254841477072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_144
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 527
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a38202cf1d7a250800000000000000
+      internalID: 5955959913022241423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_145
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 527
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89399bf358dc942b0800000000000000
+      internalID: -5599718689475030120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_146
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 528
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fef792be3cc8d60800000000000000
+      internalID: 7893899661654618014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_147
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 511
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71521e0302e6c8bf0800000000000000
+      internalID: -320760388912077545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_148
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 528
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29d4a365df2bafb0800000000000000
+      internalID: -4635558797901506260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_149
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 528
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee2a56e48341dd40800000000000000
+      internalID: 5607337249132392162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_150
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 528
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e02de3044f88bcb0800000000000000
+      internalID: -4847967476577918751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_151
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f3f54d5653fb5a0800000000000000
+      internalID: -6503420625428725862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_152
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 528
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e441b50ef8feed050800000000000000
+      internalID: 5827358369087427662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_153
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a783fe4bc1b970d0800000000000000
+      internalID: -3424510554877491295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_154
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 528
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bcadd40ff7f3da0800000000000000
+      internalID: -5962906711540184290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_155
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f56ea19c73138880800000000000000
+      internalID: -8610016636861258252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_156
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 528
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df541f38f35ec700800000000000000
+      internalID: 562479329143185368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_157
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d43f1a767aebd200800000000000000
+      internalID: 206016002551395539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_158
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 523
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bc9bae485f668d0800000000000000
+      internalID: -2853323362670097558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_159
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 511
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e1fc5a81f5f4bd0800000000000000
+      internalID: -2643789896777523633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_160
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 529
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23fb396a2e603e0800000000000000
+      internalID: -2087732172168416520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_161
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 495
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40640412bc3022e50800000000000000
+      internalID: 6782988159744493060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_162
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 495
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7dd2507e8fdde2f0800000000000000
+      internalID: -941850944187736710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_163
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 495
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5862588c15c036260800000000000000
+      internalID: 7089523783807346309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_164
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 512
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de20a67cb3a3f2f0800000000000000
+      internalID: -940227867350913326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_165
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 512
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91351662680b922d0800000000000000
+      internalID: -3302914761483529447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_166
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ac226e4ca75c2f0800000000000000
+      internalID: -953220760025773564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_167
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 512
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f994711466f6cf0800000000000000
+      internalID: -256874223987220620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_168
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 513
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca868c9dac6238dd0800000000000000
+      internalID: -2485099916699342676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_169
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 496
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4387ea15b080a29d0800000000000000
+      internalID: -2798415373749290956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_170
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 496
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa66f70caa1de0290800000000000000
+      internalID: -7922164163193903446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_171
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 496
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb45e5668a1232d10800000000000000
+      internalID: 2099558858440463548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_172
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 498
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5838feda8ca8975d0800000000000000
+      internalID: -3064265476932664443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_173
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 498
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b1958eba3a0b880800000000000000
+      internalID: -8597191729917387907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_174
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 463
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de4baa6b65f6ab20800000000000000
+      internalID: 3145471231464787673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_175
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 463
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cdce77bcda17dab0800000000000000
+      internalID: -4983484927388496444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_176
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 463
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a80191ff755fe420800000000000000
+      internalID: 2661439912801274020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_177
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 479
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b1e5c8a13bb14d0800000000000000
+      internalID: -3162737386692142203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_178
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717e2dad8525cc570800000000000000
+      internalID: 8488249939268396823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_179
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 465
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa79b5baab5802f0800000000000000
+      internalID: -1006453727965906178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_180
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 465
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93ef424a6ccf8740800000000000000
+      internalID: 5156564855113638811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_181
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 480
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa822565330a6bc60800000000000000
+      internalID: 7833624744209557679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_182
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 480
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50bb28ffbc9552300800000000000000
+      internalID: 226686088952068869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_183
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 480
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab8aae84394ff650800000000000000
+      internalID: 6268809696403688363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_184
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 465
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9395e9d081a2a190800000000000000
+      internalID: -7952616417199287396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_185
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 465
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16dfeca38ff1e6d20800000000000000
+      internalID: 3273589130143923553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_186
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 431
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1d10caa2cb463f0800000000000000
+      internalID: -908394333361548809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_187
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 431
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd4fcbd00059f030800000000000000
+      internalID: 3528939747639512543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_188
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 431
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c385d5b2ab46ddd20800000000000000
+      internalID: 3304908452314044476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_189
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 239
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bded7cfceddd89db0800000000000000
+      internalID: -4784830655042691365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_190
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 239
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e137e4525157420800000000000000
+      internalID: 2627029207614692925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_191
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 127
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0343602fa039930800000000000000
+      internalID: 4148671716340805799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_192
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 118
+        width: 114
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a3a8731d14dd2d0800000000000000
+      internalID: -3252370989055853978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_193
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 116
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5a0db873c9a3ce0800000000000000
+      internalID: -1424654569726499357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RetroDesktopUIFull_194
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22edc0e179946b600800000000000000
+      internalID: 483654923381956130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 31ffb37c83aece64bb581295942bb70c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RetroDesktopUIFull_0: -559458507337292170
+      RetroDesktopUIFull_1: -9103654218516918850
+      RetroDesktopUIFull_10: 7641493597947936507
+      RetroDesktopUIFull_100: -1273038439245101749
+      RetroDesktopUIFull_101: 4380360200809474888
+      RetroDesktopUIFull_102: 5391658677515279685
+      RetroDesktopUIFull_103: -166401164603428722
+      RetroDesktopUIFull_104: -8761211722894607442
+      RetroDesktopUIFull_105: -1080283096315484705
+      RetroDesktopUIFull_106: -5501047719979850082
+      RetroDesktopUIFull_107: 4892411795477467720
+      RetroDesktopUIFull_108: 7793490738067511008
+      RetroDesktopUIFull_109: 1904610284990662911
+      RetroDesktopUIFull_11: 1790563164685287638
+      RetroDesktopUIFull_110: 5946892427647825812
+      RetroDesktopUIFull_111: -5780230710764756020
+      RetroDesktopUIFull_112: -2890547365014136519
+      RetroDesktopUIFull_113: -3386825824255837794
+      RetroDesktopUIFull_114: -4600683888122048635
+      RetroDesktopUIFull_115: -4855668893635951779
+      RetroDesktopUIFull_116: 3322592795642768349
+      RetroDesktopUIFull_117: 1200981407344517388
+      RetroDesktopUIFull_118: 1044227434195479085
+      RetroDesktopUIFull_119: -2704133672164668726
+      RetroDesktopUIFull_12: -3447384629578658991
+      RetroDesktopUIFull_120: -5512522652614968367
+      RetroDesktopUIFull_121: -117761977012841186
+      RetroDesktopUIFull_122: -6168314221716893431
+      RetroDesktopUIFull_123: -5048827902239126447
+      RetroDesktopUIFull_124: -3883021864102035264
+      RetroDesktopUIFull_125: 1250962205733590682
+      RetroDesktopUIFull_126: 7751523879961318283
+      RetroDesktopUIFull_127: -7266282464218332863
+      RetroDesktopUIFull_128: 8115501936935664231
+      RetroDesktopUIFull_129: 4201100955111141919
+      RetroDesktopUIFull_13: -2123348734205188440
+      RetroDesktopUIFull_130: -8708782264808613867
+      RetroDesktopUIFull_131: -4755972356241681764
+      RetroDesktopUIFull_132: 8814287974282117524
+      RetroDesktopUIFull_133: -6931822778233985211
+      RetroDesktopUIFull_134: -8061970445706928264
+      RetroDesktopUIFull_135: -5550597705249576496
+      RetroDesktopUIFull_136: 4198296622294896979
+      RetroDesktopUIFull_137: -5273652444001109435
+      RetroDesktopUIFull_138: 586402637228375448
+      RetroDesktopUIFull_139: -6131338545416280378
+      RetroDesktopUIFull_14: 7080954518714376746
+      RetroDesktopUIFull_140: 8953372486298879586
+      RetroDesktopUIFull_141: 2459596665461007197
+      RetroDesktopUIFull_142: 2765780609804792789
+      RetroDesktopUIFull_143: 6178039254841477072
+      RetroDesktopUIFull_144: 5955959913022241423
+      RetroDesktopUIFull_145: -5599718689475030120
+      RetroDesktopUIFull_146: 7893899661654618014
+      RetroDesktopUIFull_147: -320760388912077545
+      RetroDesktopUIFull_148: -4635558797901506260
+      RetroDesktopUIFull_149: 5607337249132392162
+      RetroDesktopUIFull_15: 8932297725851368349
+      RetroDesktopUIFull_150: -4847967476577918751
+      RetroDesktopUIFull_151: -6503420625428725862
+      RetroDesktopUIFull_152: 5827358369087427662
+      RetroDesktopUIFull_153: -3424510554877491295
+      RetroDesktopUIFull_154: -5962906711540184290
+      RetroDesktopUIFull_155: -8610016636861258252
+      RetroDesktopUIFull_156: 562479329143185368
+      RetroDesktopUIFull_157: 206016002551395539
+      RetroDesktopUIFull_158: -2853323362670097558
+      RetroDesktopUIFull_159: -2643789896777523633
+      RetroDesktopUIFull_16: -3310606906741218035
+      RetroDesktopUIFull_160: -2087732172168416520
+      RetroDesktopUIFull_161: 6782988159744493060
+      RetroDesktopUIFull_162: -941850944187736710
+      RetroDesktopUIFull_163: 7089523783807346309
+      RetroDesktopUIFull_164: -940227867350913326
+      RetroDesktopUIFull_165: -3302914761483529447
+      RetroDesktopUIFull_166: -953220760025773564
+      RetroDesktopUIFull_167: -256874223987220620
+      RetroDesktopUIFull_168: -2485099916699342676
+      RetroDesktopUIFull_169: -2798415373749290956
+      RetroDesktopUIFull_17: 7383675502122839731
+      RetroDesktopUIFull_170: -7922164163193903446
+      RetroDesktopUIFull_171: 2099558858440463548
+      RetroDesktopUIFull_172: -3064265476932664443
+      RetroDesktopUIFull_173: -8597191729917387907
+      RetroDesktopUIFull_174: 3145471231464787673
+      RetroDesktopUIFull_175: -4983484927388496444
+      RetroDesktopUIFull_176: 2661439912801274020
+      RetroDesktopUIFull_177: -3162737386692142203
+      RetroDesktopUIFull_178: 8488249939268396823
+      RetroDesktopUIFull_179: -1006453727965906178
+      RetroDesktopUIFull_18: -5095017657840831254
+      RetroDesktopUIFull_180: 5156564855113638811
+      RetroDesktopUIFull_181: 7833624744209557679
+      RetroDesktopUIFull_182: 226686088952068869
+      RetroDesktopUIFull_183: 6268809696403688363
+      RetroDesktopUIFull_184: -7952616417199287396
+      RetroDesktopUIFull_185: 3273589130143923553
+      RetroDesktopUIFull_186: -908394333361548809
+      RetroDesktopUIFull_187: 3528939747639512543
+      RetroDesktopUIFull_188: 3304908452314044476
+      RetroDesktopUIFull_189: -4784830655042691365
+      RetroDesktopUIFull_19: -4369406813102706475
+      RetroDesktopUIFull_190: 2627029207614692925
+      RetroDesktopUIFull_191: 4148671716340805799
+      RetroDesktopUIFull_192: -3252370989055853978
+      RetroDesktopUIFull_193: -1424654569726499357
+      RetroDesktopUIFull_194: 483654923381956130
+      RetroDesktopUIFull_2: -3819026054275037945
+      RetroDesktopUIFull_20: -4385619257369217136
+      RetroDesktopUIFull_21: 304851261027315498
+      RetroDesktopUIFull_22: -5599035295958799035
+      RetroDesktopUIFull_23: -3176390795498639023
+      RetroDesktopUIFull_24: 7596830577329757561
+      RetroDesktopUIFull_25: -1478438309595240451
+      RetroDesktopUIFull_26: 7182662851105666079
+      RetroDesktopUIFull_27: 7848632414641009119
+      RetroDesktopUIFull_28: -410190533657833286
+      RetroDesktopUIFull_29: -6352838907549493789
+      RetroDesktopUIFull_3: 7842098332830452982
+      RetroDesktopUIFull_30: 8174500487479477160
+      RetroDesktopUIFull_31: 7520542033994876309
+      RetroDesktopUIFull_32: 6037566441911886687
+      RetroDesktopUIFull_33: -8682656113284550829
+      RetroDesktopUIFull_34: 8711397346859660519
+      RetroDesktopUIFull_35: -313231550317345069
+      RetroDesktopUIFull_36: 1163761316445199411
+      RetroDesktopUIFull_37: 5313804568738421121
+      RetroDesktopUIFull_38: 6373829746921516849
+      RetroDesktopUIFull_39: 8843475050755346734
+      RetroDesktopUIFull_4: 3787743515480269624
+      RetroDesktopUIFull_40: 7354109890887394635
+      RetroDesktopUIFull_41: 8832895651684158506
+      RetroDesktopUIFull_42: -5978732984089369525
+      RetroDesktopUIFull_43: -6961231482680918070
+      RetroDesktopUIFull_44: -7413842481853849237
+      RetroDesktopUIFull_45: 6593468175913602939
+      RetroDesktopUIFull_46: -8008376496641243855
+      RetroDesktopUIFull_47: 3810248166198364071
+      RetroDesktopUIFull_48: -1065125212918933936
+      RetroDesktopUIFull_49: 332350575934777966
+      RetroDesktopUIFull_5: -8204412328327904095
+      RetroDesktopUIFull_50: 3995241142808413947
+      RetroDesktopUIFull_51: -8399324545714068722
+      RetroDesktopUIFull_52: 8999228362294857087
+      RetroDesktopUIFull_53: -7897655713480997905
+      RetroDesktopUIFull_54: -4787439136388105550
+      RetroDesktopUIFull_55: 4744967728898792877
+      RetroDesktopUIFull_56: -8661424126707551478
+      RetroDesktopUIFull_57: 4772246949183189615
+      RetroDesktopUIFull_58: 716645140665842472
+      RetroDesktopUIFull_59: 3937701479595609663
+      RetroDesktopUIFull_6: 4795499378602967553
+      RetroDesktopUIFull_60: -7994720564122794224
+      RetroDesktopUIFull_61: -6758890936020723494
+      RetroDesktopUIFull_62: -3863047675163336874
+      RetroDesktopUIFull_63: 9037291952739723402
+      RetroDesktopUIFull_64: 4463441731400098176
+      RetroDesktopUIFull_65: -6484613560060732876
+      RetroDesktopUIFull_66: 3424269198065903073
+      RetroDesktopUIFull_67: -4010910047746102138
+      RetroDesktopUIFull_68: 3389845076788288995
+      RetroDesktopUIFull_69: -8616338279531878327
+      RetroDesktopUIFull_7: -5850118757822517175
+      RetroDesktopUIFull_70: -7047337231696410456
+      RetroDesktopUIFull_71: 4181471289185688300
+      RetroDesktopUIFull_72: 3073838152751876295
+      RetroDesktopUIFull_73: 4916494062834152482
+      RetroDesktopUIFull_74: 9108541643550714386
+      RetroDesktopUIFull_75: -5504516412168201469
+      RetroDesktopUIFull_76: 5975808873016233993
+      RetroDesktopUIFull_77: -1370458087450118348
+      RetroDesktopUIFull_78: -6551268030396909963
+      RetroDesktopUIFull_79: 7282788226742527406
+      RetroDesktopUIFull_8: 4210739596395075183
+      RetroDesktopUIFull_80: -6089995508954719100
+      RetroDesktopUIFull_81: -4428511705706851178
+      RetroDesktopUIFull_82: -8546287203469102565
+      RetroDesktopUIFull_83: -2457820867986142118
+      RetroDesktopUIFull_84: -5867556187219350917
+      RetroDesktopUIFull_85: 6347028819890329446
+      RetroDesktopUIFull_86: 6836955042144783413
+      RetroDesktopUIFull_87: -123208703216100666
+      RetroDesktopUIFull_88: 4938361078533207227
+      RetroDesktopUIFull_89: -2220785142739462603
+      RetroDesktopUIFull_9: 6821723159139470333
+      RetroDesktopUIFull_90: -1637126346621171436
+      RetroDesktopUIFull_91: -392508372750690947
+      RetroDesktopUIFull_92: 2503501213759068357
+      RetroDesktopUIFull_93: -3580516065873277977
+      RetroDesktopUIFull_94: 5301780780775749201
+      RetroDesktopUIFull_95: 3526304815366074072
+      RetroDesktopUIFull_96: -2214880862154505370
+      RetroDesktopUIFull_97: 1546671070534309339
+      RetroDesktopUIFull_98: -8656556422441472777
+      RetroDesktopUIFull_99: -2964313469367862970
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

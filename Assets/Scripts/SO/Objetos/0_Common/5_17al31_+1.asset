@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: '+1 : 17 to 31'
   desc: 'All numbers betweeen 17 to 31 get +1 - (Let it ride) '
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e32052e8c80f3f44aab131756bb79604, type: 3}
   mejoraNumero: 1
   mejoraNumeroNumsAfectados: 1100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000
   mejoraNumeroTipo: 1

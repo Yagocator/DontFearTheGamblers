@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: '+3 : Red'
   desc: All red numbers get +3
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b9a4fa5715aa3be48895d7e41fb86fa3, type: 3}
   mejoraNumero: 0
   mejoraNumeroNumsAfectados: 
   mejoraNumeroTipo: 0

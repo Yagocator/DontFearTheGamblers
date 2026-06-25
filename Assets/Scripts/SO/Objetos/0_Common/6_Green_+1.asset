@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: '+17 : Green'
   desc: All green numbers gets +17
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 449a642d2d2b26b43922eed68cb35e66, type: 3}
   mejoraNumero: 0
   mejoraNumeroNumsAfectados: 
   mejoraNumeroTipo: 1

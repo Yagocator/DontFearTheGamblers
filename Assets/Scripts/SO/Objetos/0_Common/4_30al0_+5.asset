@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: '+5 : 30 to 0'
   desc: All numbers betweeen 30 to 0 get +5
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e32052e8c80f3f44aab131756bb79604, type: 3}
   mejoraNumero: 1
   mejoraNumeroNumsAfectados: 000000001e0000001f0000002000000021000000220000002300000024000000
   mejoraNumeroTipo: 1
@@ -26,3 +26,4 @@ MonoBehaviour:
   mejoraIntcvColor: 0
   mejoraIntcvColorColorAfectado: 0
   mejoraIntcvColorColorNuevo: 0
+  rareza: 0

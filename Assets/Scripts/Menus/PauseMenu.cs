@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour
     public AudioClip abrirMaletin;
 
     public AudioClip cerrarMaletin;
+    private bool InTutorial = false;
 
 
     public GameObject Maletin;
@@ -37,10 +38,17 @@ public class PauseMenu : MonoBehaviour
 
     private void MenuPerformed(InputAction.CallbackContext context)
     {
+        print(" pulso esc");
         if (InMaletin)
         {
             Inventario.SetActive(false);
             InMaletin = false;
+            return;
+        }
+        if (InTutorial)
+        {
+            print("en tuto esc");
+            ExitTutorialMenu();
             return;
         }
 
@@ -102,16 +110,16 @@ public class PauseMenu : MonoBehaviour
 
     public void EnterTutorialMenu()
     {
+        InTutorial = true;
         GameManager.Instance.PlaySFX(buttonClic);
-        Pause.performed -= MenuPerformed;
         MenuPausa.SetActive(false);
         TutorialMenu.SetActive(true);
     }
 
     public void ExitTutorialMenu()
     {
+        InTutorial = false;
         GameManager.Instance.PlaySFX(buttonClic);
-        Pause.performed += MenuPerformed;
         MenuPausa.SetActive(true);
         TutorialMenu.SetActive(false);
     }

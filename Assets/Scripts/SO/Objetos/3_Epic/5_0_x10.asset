@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjetoSo
   nombre: 'x10 : 0'
   desc: The number 0 gets multiplied by 10
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e32052e8c80f3f44aab131756bb79604, type: 3}
   mejoraNumero: 1
   mejoraNumeroNumsAfectados: 00000000
   mejoraNumeroTipo: 0

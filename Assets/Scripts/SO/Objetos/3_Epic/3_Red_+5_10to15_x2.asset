@@ -15,7 +15,7 @@ MonoBehaviour:
   nombre: '+5 : Red & x2 : 10 to 15'
   desc: All red numbers get +5 and the numbers between 10 to 15 get multiplied by
     2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: b9a4fa5715aa3be48895d7e41fb86fa3, type: 3}
   mejoraNumero: 1
   mejoraNumeroNumsAfectados: 0a0000000b0000000c0000000d0000000e0000000f000000
   mejoraNumeroTipo: 0
