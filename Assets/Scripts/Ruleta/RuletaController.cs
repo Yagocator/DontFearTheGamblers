@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using Unity.Hierarchy.Editor;
+using TMPro;
 
 
 
@@ -54,6 +55,13 @@ public class RuletaController : MonoBehaviour
     public bool bloquearPinchosManoSiHayPinchoColocado = true;
     private bool aplicandoObjetos = false;
     public bool ruletaGirando = false;
+
+    public InitCombat initCombatInterno; 
+
+    public TextMeshProUGUI textoPinchosRestantes; 
+
+    private int ultimosPinchosColocadosMostrados = -1;
+
     private bool animandoMano = false;
 
     private RuletaScript ruletaScript;
@@ -94,6 +102,7 @@ public class RuletaController : MonoBehaviour
         createAllSloots();
         createAllHuecos();
         createAllPinchos();
+        actualizarUIPinchosRestantes();
 
         yield return StartCoroutine(applyAllObjectsAnimado());
 
@@ -985,6 +994,49 @@ public class RuletaController : MonoBehaviour
         }
 
         return true;
+    }
+    private void LateUpdate()
+    {
+        if (textoPinchosRestantes == null || pinchosScripts == null) return;
+
+        int colocados = ContarPinchosColocados();
+
+        if (colocados != ultimosPinchosColocadosMostrados)
+        {
+            actualizarUIPinchosRestantes();
+        }
+    }
+
+    private int ContarPinchosColocados()
+    {
+        if (pinchosScripts == null) return 0;
+
+        int colocados = 0;
+
+        for (int i = 0; i < pinchosScripts.Length; i++)
+        {
+            if (pinchosScripts[i] != null && pinchosScripts[i].EstaColocado())
+            {
+                colocados++;
+            }
+        }
+
+        return colocados;
+    }
+
+    public void actualizarUIPinchosRestantes()
+    {
+        if (textoPinchosRestantes == null) return;
+        if (GameManager.Instance == null || GameManager.Instance.playerSO == null) return;
+
+        int maximos = GameManager.Instance.playerSO.maximumPlayablePinchos;
+        int colocados = ContarPinchosColocados();
+        int restantes = Mathf.Max(0, maximos - colocados);
+
+        if (restantes != 0) textoPinchosRestantes.text = (restantes.ToString());
+        else if (!initCombatInterno.HayAlgunEnemigoSeleccionado()) textoPinchosRestantes.text = "Select an enemy";
+        else textoPinchosRestantes.text = "Press To Spin"; 
+        //ultimosPinchosColocadosMostrados = colocados;
     }
 }
 

@@ -7,11 +7,18 @@ public class RuletaScript : MonoBehaviour
 {
     public bool finishRotate;
 
-    public AudioClip girarRuletaSFX; 
+    [Header("Audio giro ruleta")]
+    public AudioClip girarRuletaSFX;
+    public float volumenGiroRuleta = 1f;
+    public float pitchMinGiro = 1f;
+    public float pitchMaxGiro = 1.2f;
+    public float gradosPorFrameParaPitchMax = 1.2f;
+
+    private AudioSource giroRuletaSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        finishRotate = false; 
+        finishRotate = true; 
     }
 
     // Update is called once per frame
@@ -22,14 +29,15 @@ public class RuletaScript : MonoBehaviour
 
     public void RotateRuleta()
     {
-        GameManager.Instance.PlaySFX(girarRuletaSFX);
-        finishRotate = false; 
-        DateTime d = DateTime.UtcNow; 
+        if (!finishRotate) return;
+        finishRotate = false;
+
+        DateTime d = DateTime.UtcNow;
         int seed = (d.Second + 213) * (d.Hour + 43) * (d.Day + 6456);
-        float rotationTime = 8 + ((seed / 3.2f) % 10); 
+        float rotationTime = 8 + ((seed / 3.2f) % 10);
 
         StartCoroutine(girar(rotationTime));
-    }   
+    }
 
     private float Ease(float t)
     {
@@ -47,25 +55,83 @@ public class RuletaScript : MonoBehaviour
     }
     private IEnumerator girar(float rotationTime)
     {
-        float tmp = 0; 
+        giroRuletaSource = GameManager.Instance.PlayLoopSFX(
+            girarRuletaSFX,
+            volumenGiroRuleta,
+            pitchMinGiro
+        );
+
+        float tmp = 0f;
+
         while (tmp < rotationTime)
         {
-            float t = tmp / rotationTime; 
-            float factor; 
+            float t = tmp / rotationTime;
+            float factor;
+
             if (t > 0.05f && t < 0.65f)
             {
-                if (EaseAccelerated(t) > EaseDerivate(t)) factor = EaseAccelerated(t);
-                else factor = EaseDerivate(t);
-            
+                if (EaseAccelerated(t) > EaseDerivate(t))
+                    factor = EaseAccelerated(t);
+                else
+                    factor = EaseDerivate(t);
             }
-            else factor = EaseDerivate(t);
+            else
+            {
+                factor = EaseDerivate(t);
+            }
+
+            float gradosEsteFrame = 0.8f * factor;
+
+            transform.Rotate(0.0f, 0.0f, gradosEsteFrame);
+
+            ActualizarSonidoGiro(Mathf.Abs(gradosEsteFrame));
+
             tmp += 0.01f;
-            transform.Rotate(0.0f, 0.0f, 0.8f * factor); 
+
             yield return new WaitForSeconds(0.004f);
         }
-        finishRotate = true; 
+
+        DetenerSonidoGiro();
+
+        finishRotate = true;
+    }
+    private void ActualizarSonidoGiro(float gradosEsteFrame)
+    {
+        if (giroRuletaSource == null) return;
+
+        float velocidadNormalizada = Mathf.Clamp01(
+            gradosEsteFrame / gradosPorFrameParaPitchMax
+        );
+
+        giroRuletaSource.pitch = Mathf.Lerp(
+            pitchMinGiro,
+            pitchMaxGiro,
+            velocidadNormalizada
+        );
+
+        giroRuletaSource.volume = volumenGiroRuleta * Mathf.Lerp(
+            0.55f,
+            1f,
+            velocidadNormalizada
+        );
     }
 
+    private void DetenerSonidoGiro()
+    {
+        if (giroRuletaSource == null) return;
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StopSFX(giroRuletaSource);
+        }
+
+        giroRuletaSource = null;
+    }
+
+    private void OnDisable()
+    {
+        DetenerSonidoGiro();
+    }
     public int casillaPrincipal()
     {
         float parte = 9.72972972972f; 

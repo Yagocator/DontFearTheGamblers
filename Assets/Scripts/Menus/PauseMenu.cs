@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     private void MenuPerformed(InputAction.CallbackContext context)
     {
+        GameManager.Instance.PauseAllSFX(); 
         print(" pulso esc");
         if (InMaletin)
         {
@@ -75,7 +76,7 @@ public class PauseMenu : MonoBehaviour
     public void ResumeMenu()
     {
         GameManager.Instance.PlaySFX(buttonClic);
-
+        GameManager.Instance.ResumeAllSFX(); 
         Maletin.SetActive(true);
         MenuPausa.SetActive(false);
         MenuOpciones = false;

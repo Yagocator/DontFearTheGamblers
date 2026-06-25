@@ -589,7 +589,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
         int val = RandomTriangularBajo(dmgMin, dmgMax);
 
-
+        if (accionEnemy == AccionEnemy.DEFENDER) val /= 2; 
         potencia = val;
         IntencionText.text = val.ToString();
     }
@@ -634,7 +634,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     private void escudo(int cuant)
     {
         RecibirCuracion();
-        enemySO.currentShild += (cuant / 2);
+        enemySO.currentShild += cuant;
         UpdateUI();
     }
 
@@ -661,4 +661,5 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
                 break;
         }
     }
+    
 }

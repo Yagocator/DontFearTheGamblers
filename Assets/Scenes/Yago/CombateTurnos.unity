@@ -7954,6 +7954,8 @@ MonoBehaviour:
   bloquearMovimientoTodosLosPinchos: 0
   bloquearPinchosManoSiHayPinchoColocado: 1
   ruletaGirando: 0
+  initCombatInterno: {fileID: 443234975}
+  textoPinchosRestantes: {fileID: 1707328564}
   mejorarCasilla: {fileID: 8300000, guid: 002c7aa2cd1818d4b8489fdde8e10235, type: 3}
   onHandDrawnSFX: {fileID: 8300000, guid: c123e98ce94b10049be58e913743cda5, type: 3}
   quitarPinchoSFX: {fileID: 8300000, guid: e6f649f1381750e4c868199fb554f7e6, type: 3}
@@ -8042,7 +8044,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfcb25b17b8ec754cac8ced9265d0ff0, type: 3}
   - {fileID: 21300000, guid: 21339d3de6123e64581a6c226a086cb1, type: 3}
   panelHighlight: {fileID: 837626548}
-  colorNormal: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  colorNormal: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
   colorSeleccionado: {r: 1, g: 0.75, b: 0.1, a: 1}
   escalaNormal: {x: 1, y: 1, z: 1}
   escalaSeleccionado: {x: 1.08, y: 1.08, z: 1.08}
@@ -10342,6 +10344,7 @@ GameObject:
   - component: {fileID: 1707328563}
   - component: {fileID: 1707328565}
   - component: {fileID: 1707328564}
+  - component: {fileID: 1707328566}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10358,7 +10361,7 @@ RectTransform:
   m_GameObject: {fileID: 1707328562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1943777772}
@@ -10388,17 +10391,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Prees To Spin
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80cc7d47002fe4043ac3e3961f6f3b31, type: 2}
+  m_sharedMaterial: {fileID: -3515803805402308475, guid: 80cc7d47002fe4043ac3e3961f6f3b31, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10415,12 +10420,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 137.35
+  m_fontSizeBase: 400
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 0
+  m_fontSizeMax: 400
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -10468,6 +10473,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707328562}
   m_CullTransparentMesh: 1
+--- !u!95 &1707328566
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707328562}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3156bed9d2447d4ea7aad5f5b555577, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1715869759
 GameObject:
   m_ObjectHideFlags: 0
@@ -10573,7 +10600,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfcb25b17b8ec754cac8ced9265d0ff0, type: 3}
   - {fileID: 21300000, guid: 21339d3de6123e64581a6c226a086cb1, type: 3}
   panelHighlight: {fileID: 1720451772}
-  colorNormal: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  colorNormal: {r: 0.9137255, g: 0.9137255, b: 0.9137255, a: 1}
   colorSeleccionado: {r: 1, g: 0.75, b: 0.1, a: 1}
   escalaNormal: {x: 1, y: 1, z: 1}
   escalaSeleccionado: {x: 1.08, y: 1.08, z: 1.08}

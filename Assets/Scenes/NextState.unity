@@ -1282,6 +1282,7 @@ MonoBehaviour:
   - {fileID: 4752167511786876721, guid: 5324eba012389944ca732545079108db, type: 3}
   - {fileID: 629107629557665647, guid: 86dca93ed6d17cc4e9a9bd1b6c4a36bd, type: 3}
   selectOptions: {fileID: 8300000, guid: 96ab25e19a0e63b4cb2e633e88e2df55, type: 3}
+  sleepSFX: {fileID: 8300000, guid: e11312c5fb6af1049964fed78fc5dc60, type: 3}
 --- !u!1 &1073215043
 GameObject:
   m_ObjectHideFlags: 0

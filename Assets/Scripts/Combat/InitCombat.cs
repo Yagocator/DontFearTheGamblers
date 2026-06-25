@@ -155,4 +155,24 @@ public class InitCombat : MonoBehaviour
         pjVida.text = GameManager.Instance.playerSO.vida.ToString();
         pjShild.text = GameManager.Instance.playerSO.shild.ToString();
     }
+    public bool HayAlgunEnemigoSeleccionado()
+    {
+        if (Enemys == null) return false;
+
+        for (int i = 0; i < Enemys.Length; i++)
+        {
+            if (Enemys[i] == null) continue;
+            if (!Enemys[i].activeInHierarchy) continue;
+
+            EnemyUI enemyUI = Enemys[i].GetComponent<EnemyUI>();
+
+            if (enemyUI != null && enemyUI.IsAlive && enemyUI.Fijado)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }

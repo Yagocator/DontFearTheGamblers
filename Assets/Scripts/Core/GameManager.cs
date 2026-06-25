@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public List<PinchoSO> posibles_pinchos = new List<PinchoSO>();
 
+    private List<AudioSource> pausedSFXSources = new List<AudioSource>();
+
     public float maseterVolumen;
     public float musicVolumen;
 
@@ -133,17 +135,19 @@ public class GameManager : MonoBehaviour
 
         source.Play();
 
-        float duration = (sfxClip.length / speed) + 0.05f;
-
-        StartCoroutine(RemoveSFXSourceWhenFinished(source, duration));
+        StartCoroutine(RemoveSFXSourceWhenFinished(source));
     }
-    private IEnumerator RemoveSFXSourceWhenFinished(AudioSource source, float duration)
+    private IEnumerator RemoveSFXSourceWhenFinished(AudioSource source)
     {
-        yield return new WaitForSecondsRealtime(duration);
+        while (source != null && (source.isPlaying || pausedSFXSources.Contains(source)))
+        {
+            yield return null;
+        }
 
         if (source != null)
         {
             activeSFXSources.Remove(source);
+            pausedSFXSources.Remove(source);
             Destroy(source.gameObject);
         }
     }
@@ -184,6 +188,82 @@ public class GameManager : MonoBehaviour
         }
 
         activeSFXSources.Clear();
+        pausedSFXSources.Clear();
     }
+    
+    public AudioSource PlayLoopSFX(AudioClip sfxClip, float relativeVolume = 1f, float speed = 1f)
+    {
+        if (sfxClip == null) return null;
+
+        relativeVolume = Mathf.Clamp01(relativeVolume);
+        speed = Mathf.Max(0.01f, speed);
+
+        GameObject sfxObject = new GameObject("LoopSFX_" + sfxClip.name);
+        sfxObject.transform.SetParent(transform);
+
+        AudioSource source = sfxObject.AddComponent<AudioSource>();
+
+        source.clip = sfxClip;
+        source.volume = relativeVolume;
+        source.pitch = speed;
+        source.loop = true;
+        source.playOnAwake = false;
+        source.outputAudioMixerGroup = sfxMixerGroup;
+        source.priority = 64;
+        source.mute = sfxMuted;
+
+        activeSFXSources.Add(source);
+
+        source.Play();
+
+        return source;
+    }
+
+    public void StopSFX(AudioSource source)
+    {
+        if (source == null) return;
+
+        activeSFXSources.Remove(source);
+        pausedSFXSources.Remove(source);
+
+        Destroy(source.gameObject);
+    }
+
+    public void PauseAllSFX()
+    {
+        for (int i = activeSFXSources.Count - 1; i >= 0; i--)
+        {
+            AudioSource source = activeSFXSources[i];
+
+            if (source == null)
+            {
+                activeSFXSources.RemoveAt(i);
+                continue;
+            }
+
+            if (source.isPlaying && !pausedSFXSources.Contains(source))
+            {
+                source.Pause();
+                pausedSFXSources.Add(source);
+            }
+        }
+    }
+
+    public void ResumeAllSFX()
+    {
+        for (int i = pausedSFXSources.Count - 1; i >= 0; i--)
+        {
+            AudioSource source = pausedSFXSources[i];
+
+            if (source != null)
+            {
+                source.mute = sfxMuted;
+                source.UnPause();
+            }
+        }
+
+        pausedSFXSources.Clear();
+    }
+
 }
 

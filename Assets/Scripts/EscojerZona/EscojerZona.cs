@@ -11,7 +11,10 @@ public class EscojerZona : MonoBehaviour
     public Image Dificulty;
     public Sprite[] DifficultySprite;
 
+    [Header("Audio")]
     public AudioClip selectOptions;
+
+    public AudioClip sleepSFX; 
     private void Start()
     {
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
@@ -63,8 +66,7 @@ public class EscojerZona : MonoBehaviour
         {
             item.interactable = false;
         }
-        // TODO Sonido de dormir
-        GameManager.Instance.PlaySFX(selectOptions);
+        GameManager.Instance.PlaySFX(sleepSFX);
         if (GameManager.Instance.playerSO.vida == GameManager.Instance.playerSO.vidaMax)
         {
             GameManager.Instance.playerSO.vidaMax += 60;
