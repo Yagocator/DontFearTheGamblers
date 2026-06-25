@@ -6396,7 +6396,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9215233247d580e40b2fffb4b1308716, type: 2}
   - {fileID: 11400000, guid: 7cf05fc21511c8d44ad07b53e143237a, type: 2}
   - {fileID: 11400000, guid: 8f931554d187a294985628b89608bda1, type: 2}
-  - {fileID: 11400000, guid: 41f6372d40b136242a0d06f1d2fd5aff, type: 2}
   - {fileID: 11400000, guid: 91290962876b178438d80bf6132a8a36, type: 2}
   pjVida: {fileID: 21861523}
   pjShild: {fileID: 317975510}
@@ -10395,8 +10394,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 80cc7d47002fe4043ac3e3961f6f3b31, type: 2}
-  m_sharedMaterial: {fileID: -3515803805402308475, guid: 80cc7d47002fe4043ac3e3961f6f3b31, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3769925719dc839428ad68c6a36ff705, type: 2}
+  m_sharedMaterial: {fileID: -3515803805402308475, guid: 3769925719dc839428ad68c6a36ff705, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10404,13 +10403,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 1, g: 0, b: 0, a: 1}
+    topRight: {r: 1, g: 0, b: 0, a: 1}
+    bottomLeft: {r: 0, g: 0, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -10420,10 +10419,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 137.35
-  m_fontSizeBase: 400
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 400
   m_fontStyle: 0

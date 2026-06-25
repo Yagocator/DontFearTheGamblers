@@ -11,6 +11,11 @@ public class EnemySO : ScriptableObject
     public RuntimeAnimatorController AnimatorEnemy;
     public Sprite spriteMuerto;
     public int dmg;
+
+    public override string ToString()
+    {
+        return $"Enemy: {name} | Tier: {tierEnemy} | Vida: {vida}/{vidaMax} | Escudo: {currentShild} | Daño: {dmg} | Animator: {(AnimatorEnemy != null ? AnimatorEnemy.name : "null")} | Sprite Muerto: {(spriteMuerto != null ? spriteMuerto.name : "null")}";
+    }
 }
 public enum TierEnmey
 {

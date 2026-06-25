@@ -79,7 +79,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     public AccionEnemy accionEnemy;
     public int potencia;
 
-    [Header ("Audios")]
+    [Header("Audios")]
     public AudioClip onDamageSFX;
 
     public AudioClip onDeathSFX;
@@ -281,7 +281,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     {
         Color colorInicio = panelHighlight != null ? panelHighlight.color : Color.white;
         Color colorBase = ColorObjetivo();
-        
+
         float t = 0f;
         while (t < duracionDamage)
         {
@@ -455,7 +455,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
     private void Morir()
     {
         IsAlive = false;
-
+        animator.SetTrigger("Morir");
         if (shakeCoroutine != null) { StopCoroutine(shakeCoroutine); shakeCoroutine = null; }
         if (padreRect != null) padreRect.anchoredPosition = padrePosOriginal;
         if (feedbackCoroutine != null) { StopCoroutine(feedbackCoroutine); feedbackCoroutine = null; }
@@ -589,7 +589,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 
         int val = RandomTriangularBajo(dmgMin, dmgMax);
 
-        if (accionEnemy == AccionEnemy.DEFENDER) val /= 2; 
+        if (accionEnemy == AccionEnemy.DEFENDER) val /= 2;
         potencia = val;
         IntencionText.text = val.ToString();
     }
@@ -661,5 +661,5 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
                 break;
         }
     }
-    
+
 }
