@@ -67,6 +67,7 @@ public class TurnsManager : MonoBehaviour
             }
             else
             {
+                yield return new WaitForSeconds(1.5f);
                 foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))// ejecutar acciones
                 {
                     yield return enemigo.EjecutarAccionResaltada();

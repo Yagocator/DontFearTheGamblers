@@ -98,4 +98,9 @@ public class MaunMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Credits()
+    {
+        GameManager.Instance.PlaySFX(buttonClic);
+        GameManager.Instance.LoadScene("Credits");
+    }
 }
