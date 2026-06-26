@@ -7,6 +7,7 @@ public class Credits : MonoBehaviour
     public InputActionAsset inputActions;
 
     private InputAction Pause;
+    private bool unavez = false;
 
     private void OnEnable()
     {
@@ -24,7 +25,12 @@ public class Credits : MonoBehaviour
 
     private void EscPerformed(InputAction.CallbackContext context)
     {
-        GameManager.Instance.LoadScene("Menu");
+        if (!unavez)
+        {
+            unavez = true;
+            GameManager.Instance.LoadScene("Menu");
+        }
+
     }
 
 
