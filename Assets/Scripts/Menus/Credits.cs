@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,7 +33,14 @@ public class Credits : MonoBehaviour
         }
 
     }
-
+    public void exitCrefits()
+    {
+        if (!unavez)
+        {
+            unavez = true;
+            GameManager.Instance.LoadScene("Menu");
+        }
+    }
 
 
 }
