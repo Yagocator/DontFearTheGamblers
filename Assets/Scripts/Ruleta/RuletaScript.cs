@@ -32,10 +32,7 @@ public class RuletaScript : MonoBehaviour
         if (!finishRotate) return;
         finishRotate = false;
 
-        DateTime d = DateTime.UtcNow;
-        int seed = (d.Second + 213) * (d.Hour + 43) * (d.Day + 6456);
-        float rotationTime = 4 + ((seed / 3.2f) % 10);
-
+        float rotationTime = UnityEngine.Random.Range(4f, 14f);
         StartCoroutine(girar(rotationTime));
     }
 
