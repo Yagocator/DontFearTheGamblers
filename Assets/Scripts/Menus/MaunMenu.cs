@@ -60,6 +60,7 @@ public class MaunMenu : MonoBehaviour
         GameManager.Instance.playerSO.vidaMax = 100;
         GameManager.Instance.playerSO.shild = 0;
         GameManager.Instance.playerSO.handSize = 4;
+        GameManager.Instance.playerSO.maximumPlayablePinchos = 3; 
 
         GameManager.Instance.createHand();
         GameManager.Instance.playerSO.objetos.Clear();

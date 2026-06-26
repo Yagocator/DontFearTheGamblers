@@ -17,6 +17,6 @@ MonoBehaviour:
   vidaMax: 180
   tierEnemy: 2
   currentShild: 30
-  AnimatorEnemy: {fileID: 9100000, guid: 1c4cd81d99bd17c47b0c298f5f2f9f9d, type: 2}
+  AnimatorEnemy: {fileID: 9100000, guid: 68bc7a5f7076dc8459a0183093a4acb3, type: 2}
   spriteMuerto: {fileID: 0}
   dmg: 20

@@ -127,6 +127,7 @@ public class PauseMenu : MonoBehaviour
 
     public void EnterInventario()
     {
+        GameManager.Instance.PauseAllSFX(); 
         GameManager.Instance.PlaySFX(abrirMaletin);
         Inventario.SetActive(true);
         Time.timeScale = 0;
@@ -135,6 +136,7 @@ public class PauseMenu : MonoBehaviour
     public void ExitInventario()
     {
         GameManager.Instance.PlaySFX(cerrarMaletin);
+        GameManager.Instance.ResumeAllSFX();
         Inventario.SetActive(false);
         Time.timeScale = 1;
         InMaletin = false;
