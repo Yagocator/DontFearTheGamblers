@@ -999,11 +999,14 @@ public class RuletaController : MonoBehaviour
     {
         if (textoPinchosRestantes == null || pinchosScripts == null) return;
 
-        int colocados = ContarPinchosColocados();
-
-        if (colocados != ultimosPinchosColocadosMostrados)
+        if (ruletaGirando) textoPinchosRestantes.text = ""; 
+        else
         {
-            actualizarUIPinchosRestantes();
+            int colocados = ContarPinchosColocados();
+            if (colocados != ultimosPinchosColocadosMostrados)
+            {
+                actualizarUIPinchosRestantes();
+            }
         }
     }
 
@@ -1036,7 +1039,6 @@ public class RuletaController : MonoBehaviour
         if (restantes != 0) textoPinchosRestantes.text = (restantes.ToString());
         else if (!initCombatInterno.HayAlgunEnemigoSeleccionado()) textoPinchosRestantes.text = "Select an enemy";
         else textoPinchosRestantes.text = "Press To Spin"; 
-        //ultimosPinchosColocadosMostrados = colocados;
     }
 }
 
