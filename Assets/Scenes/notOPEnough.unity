@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3163dc60501668459e7a20e2df74589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::notOPEnough
-  winSFX: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
-  gigaChadContinueSFX: {fileID: 8300000, guid: b6e9c14a03d547f4eb6b79556c3dcb04, type: 3}
+  winSFX: {fileID: 8300000, guid: fc87170b0615e5f468bc31bc6b54383c, type: 3}
+  gigaChadContinueSFX: {fileID: 8300000, guid: 0c6b2555ec7f6e343a538466e63349f6, type: 3}
 --- !u!1 &310096609
 GameObject:
   m_ObjectHideFlags: 0
