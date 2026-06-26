@@ -32,29 +32,11 @@ public class RuletaScript : MonoBehaviour
         if (!finishRotate) return;
         finishRotate = false;
 
-        // Seleccionar una casilla destino aleatoria (0-36)
-        int targetCasilla = UnityEngine.Random.Range(0, 37);
+        DateTime d = DateTime.UtcNow;
+        int seed = (d.Second + 213) * (d.Hour + 43) * (d.Day + 6456);
+        float rotationTime = 4 + ((seed / 3.2f) % 10);
 
-        // Calcular cuántos grados necesita rotar para llegar a esa casilla
-        float gradosPorCasilla = 9.72972972972f;
-        float targetRotation = targetCasilla * gradosPorCasilla;
-
-        // Calcular cuántos grados necesita rotar desde la posición actual
-        float currentZ = transform.localEulerAngles.z;
-        float rotationNeeded = targetRotation - currentZ;
-
-        // Si es negativo, agregar 360 para rotar hacia adelante
-        if (rotationNeeded < 0)
-            rotationNeeded += 360f;
-
-        // Agregar vueltas extra (1-3) para que sea más emocionante
-        int extraVueltas = UnityEngine.Random.Range(1, 4);
-        rotationNeeded += 360f * extraVueltas;
-
-        // Calcular tiempo de rotación basado en los grados (entre 4 y 8 segundos)
-        float rotationTime = 4f + (rotationNeeded / 360f) * 0.5f;
-
-        StartCoroutine(girar(rotationTime, rotationNeeded));
+        StartCoroutine(girar(rotationTime));
     }
 
     private float Ease(float t)
@@ -71,7 +53,7 @@ public class RuletaScript : MonoBehaviour
     {
         return -6 * 0.05f * 0.05f + 6 * 0.05f + t / 0.65f * 0.9f - (-6 * 0.05f * 0.05f + 6 * 0.05f);
     }
-    private IEnumerator girar(float rotationTime, float targetRotation)
+    private IEnumerator girar(float rotationTime)
     {
         giroRuletaSource = GameManager.Instance.PlayLoopSFX(
             girarRuletaSFX,
@@ -80,8 +62,6 @@ public class RuletaScript : MonoBehaviour
         );
 
         float elapsed = 0f;
-        float rotationAccumulated = 0f;
-        Vector3 startRotation = transform.localEulerAngles;
 
         while (elapsed < rotationTime)
         {
@@ -97,10 +77,9 @@ public class RuletaScript : MonoBehaviour
                 factor = EaseDerivate(t);
             }
 
-            float gradosEsteFrame = (targetRotation / rotationTime) * factor * Time.deltaTime;
+            float gradosEsteFrame = 200f * factor * Time.deltaTime;
 
             transform.Rotate(0.0f, 0.0f, gradosEsteFrame);
-            rotationAccumulated += gradosEsteFrame;
 
             ActualizarSonidoGiro(Mathf.Abs(gradosEsteFrame));
 
@@ -108,10 +87,6 @@ public class RuletaScript : MonoBehaviour
 
             yield return null;
         }
-
-        // Asegurar que termina exactamente en la rotación destino
-        float expectedZ = (startRotation.z + targetRotation) % 360f;
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, expectedZ);
 
         DetenerSonidoGiro();
 
