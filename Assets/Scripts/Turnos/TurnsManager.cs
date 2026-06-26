@@ -75,8 +75,11 @@ public class TurnsManager : MonoBehaviour
                 isPlayerTurn = true;
             }
         }
-        print("fin");
         GameManager.Instance.playerSO.shild = 0;
+        if (GameManager.Instance.nivelAct == 20)
+        {
+            GameManager.Instance.LoadScene("notOPEnough");
+        }
         if (GameManager.Instance.nivelAct % cadaXRondas == 0)
         {
             GameManager.Instance.nivelAct++;

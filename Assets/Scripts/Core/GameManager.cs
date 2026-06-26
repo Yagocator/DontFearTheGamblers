@@ -6,13 +6,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio; 
+using UnityEngine.Audio;
 
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Animator transition;
+    public bool notOPEnough = false;
 
     public PJSO playerSO;
 
@@ -151,7 +152,7 @@ public class GameManager : MonoBehaviour
             Destroy(source.gameObject);
         }
     }
-        public void SetMusicMuted(bool muted)
+    public void SetMusicMuted(bool muted)
     {
         musicMuted = muted;
 
@@ -176,7 +177,7 @@ public class GameManager : MonoBehaviour
             activeSFXSources[i].mute = sfxMuted;
         }
     }
-    public void ToggleSFXMuted() { SetSFXMuted(!sfxMuted);}
+    public void ToggleSFXMuted() { SetSFXMuted(!sfxMuted); }
     public void StopAllSFX()
     {
         for (int i = activeSFXSources.Count - 1; i >= 0; i--)
@@ -190,7 +191,7 @@ public class GameManager : MonoBehaviour
         activeSFXSources.Clear();
         pausedSFXSources.Clear();
     }
-    
+
     public AudioSource PlayLoopSFX(AudioClip sfxClip, float relativeVolume = 1f, float speed = 1f)
     {
         if (sfxClip == null) return null;

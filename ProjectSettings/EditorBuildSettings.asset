@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChouseMana.unity
     guid: dd8b6174f3ed25b4f866ba77de68323e
+  - enabled: 1
+    path: Assets/Scenes/notOPEnough.unity
+    guid: d6982488a0c728143b3429993a89a52a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

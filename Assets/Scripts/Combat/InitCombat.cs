@@ -45,7 +45,8 @@ public class InitCombat : MonoBehaviour
     {
         int nivel = GameManager.Instance.nivelAct;
         int maxSlots = MaxEnemigosParaNivel(nivel);
-        int cuantEnemys = ElegirCantidadEnemigos(nivel, maxSlots);
+        int cuantEnemys = GameManager.Instance.notOPEnough ? 3 : ElegirCantidadEnemigos(nivel, maxSlots);
+        System.Collections.Generic.HashSet<EnemySO> enemigosUsados = new System.Collections.Generic.HashSet<EnemySO>();
 
         for (int i = 0; i < Enemys.Length; i++)
         {
@@ -54,7 +55,8 @@ public class InitCombat : MonoBehaviour
                 Enemys[i].SetActive(true);
 
                 // Elegir base aleatoria según la probabilidad de tiers para el nivel actual
-                EnemySO baseOriginal = ElegirEnemyPorNivel(nivel);
+                EnemySO baseOriginal = ElegirEnemyPorNivel(nivel, enemigosUsados);
+                enemigosUsados.Add(baseOriginal);
 
                 // Crear instancia única y escalar sus stats
                 EnemySO enemyInstance = Instantiate(baseOriginal);
@@ -72,12 +74,38 @@ public class InitCombat : MonoBehaviour
         }
     }
 
-    private EnemySO ElegirEnemyPorNivel(int nivel)
+    private EnemySO ElegirEnemyPorNivel(int nivel, System.Collections.Generic.HashSet<EnemySO> enemigosUsados = null)
     {
+        EnemySO[] pool = posibleEnemySos;
+
+        if (GameManager.Instance.notOPEnough)
+        {
+            pool = System.Array.FindAll(posibleEnemySos, enemy => enemy != null && enemy.tierEnemy == TierEnmey.TIER4);
+        }
+
+        if (enemigosUsados != null)
+        {
+            EnemySO[] poolSinUsar = System.Array.FindAll(pool, enemy => enemy != null && !enemigosUsados.Contains(enemy));
+            if (poolSinUsar.Length > 0)
+            {
+                pool = poolSinUsar;
+            }
+        }
+
+        if (pool.Length == 0)
+        {
+            pool = posibleEnemySos;
+        }
+
+        if (GameManager.Instance.notOPEnough && pool.Length > 0)
+        {
+            return pool[Random.Range(0, pool.Length)];
+        }
+
         float[] tierWeights = GetTierWeightsParaNivel(nivel);
         float totalWeight = 0f;
 
-        foreach (EnemySO enemy in posibleEnemySos)
+        foreach (EnemySO enemy in pool)
         {
             int tierIndex = (int)enemy.tierEnemy;
             if (tierIndex >= 0 && tierIndex < tierWeights.Length)
@@ -86,12 +114,12 @@ public class InitCombat : MonoBehaviour
 
         if (totalWeight <= 0f)
         {
-            int fallbackIndex = Random.Range(0, posibleEnemySos.Length);
-            return posibleEnemySos[fallbackIndex];
+            int fallbackIndex = Random.Range(0, pool.Length);
+            return pool[fallbackIndex];
         }
 
         float roll = Random.Range(0f, totalWeight);
-        foreach (EnemySO enemy in posibleEnemySos)
+        foreach (EnemySO enemy in pool)
         {
             int tierIndex = (int)enemy.tierEnemy;
             if (tierIndex < 0 || tierIndex >= tierWeights.Length)
@@ -102,7 +130,7 @@ public class InitCombat : MonoBehaviour
                 return enemy;
         }
 
-        return posibleEnemySos[Random.Range(0, posibleEnemySos.Length)];
+        return pool[Random.Range(0, pool.Length)];
     }
 
     private float[] GetTierWeightsParaNivel(int nivel)

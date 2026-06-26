@@ -134,7 +134,7 @@ public class EnemyUI : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
                 nameEnemy.color = Color.darkSlateGray;
                 break;
             case TierEnmey.TIER2:
-                nameEnemy.color = Color.darkGreen;
+                nameEnemy.color = Color.green;
                 break;
             case TierEnmey.TIER3:
                 nameEnemy.color = Color.purple;
