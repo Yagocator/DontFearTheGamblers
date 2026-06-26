@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4c6510910d376f4abf0b3e103f75020, type: 3}
-  m_Name: Lluis
+  m_Name: Lopez 1
   m_EditorClassIdentifier: Assembly-CSharp::EnemySO
   name: Lluis
   vida: 180
   vidaMax: 180
   tierEnemy: 2
   currentShild: 30
-  AnimatorEnemy: {fileID: 9100000, guid: 68bc7a5f7076dc8459a0183093a4acb3, type: 2}
+  AnimatorEnemy: {fileID: 9100000, guid: 8ec9a9b145608e942812cb584884c183, type: 2}
   spriteMuerto: {fileID: 0}
   dmg: 20
