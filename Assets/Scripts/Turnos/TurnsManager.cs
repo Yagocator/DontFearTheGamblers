@@ -28,6 +28,7 @@ public class TurnsManager : MonoBehaviour
     [SerializeField] private Button GuirarRuleta;
     public PJController PJController;
     public RuletaController RuletaController;
+    public GameObject TextoRueta;
 
     public int cadaXRondas;
 
@@ -48,34 +49,52 @@ public class TurnsManager : MonoBehaviour
         {
             if (isPlayerTurn)
             {
+                // Empieza desactivado, solo se activa cuando se fija un enemigo
+                GuirarRuleta.interactable = false;
+
+                TextoRueta.SetActive(true);
                 RuletaController.drawHand();
                 fixEnemy.performed += FixEnemy;
+
                 int countenmigos = 0;
                 foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
                 {
                     countenmigos++;
                     enemigo.Intencion();
                 }
-                if (countenmigos == 0)// todos estan muertos
+
+                if (countenmigos == 0)
                 {
                     win = true;
                     break;
                 }
+
                 yield return new WaitUntil(() => jugadorListo);
+
+                // Limpiar enemigo fijado al acabar el turno
+                if (enemigoSeleccionado != null && enemigoSeleccionado.Fijado)
+                {
+                    enemigoSeleccionado.Fijar(false);
+                    seleccionBloqueada = false;
+                }
+
+                GuirarRuleta.interactable = false;
+                TextoRueta.SetActive(false);
                 jugadorListo = false;
                 isPlayerTurn = false;
             }
             else
             {
                 yield return new WaitForSeconds(1.5f);
-                foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))// ejecutar acciones
+                foreach (EnemyUI enemigo in enemigosUI.FindAll(e => e.IsAlive))
                 {
                     yield return enemigo.EjecutarAccionResaltada();
                 }
-                yield return new WaitForSeconds(0.5f); // Simulación de tiempo de acción del enemigo
+                yield return new WaitForSeconds(0.5f);
                 isPlayerTurn = true;
             }
         }
+
         GameManager.Instance.playerSO.shild = 0;
         if (GameManager.Instance.nivelAct == 20)
         {
@@ -85,7 +104,6 @@ public class TurnsManager : MonoBehaviour
         {
             GameManager.Instance.nivelAct++;
             GameManager.Instance.LoadScene("ChouseMana");
-
         }
         else
         {
@@ -221,7 +239,6 @@ public class TurnsManager : MonoBehaviour
     {
         if (enemigoSeleccionado == null) return;
 
-        // TODO Soniditos de fijar y desfijar
         if (enemigoSeleccionado.Fijado)
         {
             enemigoSeleccionado.Fijar(false);

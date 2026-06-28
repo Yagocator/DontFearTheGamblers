@@ -10703,6 +10703,7 @@ MonoBehaviour:
   GuirarRuleta: {fileID: 1943777773}
   PJController: {fileID: 49389736}
   RuletaController: {fileID: 829836820}
+  TextoRueta: {fileID: 1707328562}
   cadaXRondas: 5
   enemyConfirmed: {fileID: 8300000, guid: 02297278aeed3cf4c8c761d8e26f9438, type: 3}
   enemyActionSFX: {fileID: 8300000, guid: 914ff2cfa27bcf54d90c9802906c4030, type: 3}

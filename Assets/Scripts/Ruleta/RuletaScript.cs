@@ -32,7 +32,7 @@ public class RuletaScript : MonoBehaviour
         if (!finishRotate) return;
         finishRotate = false;
 
-        float rotationTime = UnityEngine.Random.Range(4f, 14f);
+        float rotationTime = UnityEngine.Random.Range(2f, 6f);
         StartCoroutine(girar(rotationTime));
     }
 
